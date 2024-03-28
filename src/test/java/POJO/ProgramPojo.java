@@ -3,25 +3,30 @@ package POJO;
 import java.util.ArrayList;
 
 public class ProgramPojo {
-
-	private String userLoginEmailId;
-	private String password;
 	
-	public String getUserLoginEmailId() {
-		return userLoginEmailId;
-	}
-	public void setUserLoginEmailId(String userLoginEmailId) {
-		this.userLoginEmailId = userLoginEmailId;
-	}
-	public String getPassword() {
-		return password;
-	}
-	public void setPassword(String password) {
-		this.password = password;
-	}
+	private String programDescription;
+	private String programName;
+	private String programStatus;
 	
 	
-
+	public String getProgramDescription() {
+		return programDescription;
+	}
+	public void setProgramDescription(String programDescription) {
+		this.programDescription = programDescription;
+	}
+	public String getProgramName() {
+		return programName;
+	}
+	public void setProgramName(String programName) {
+		this.programName = programName;
+	}
+	public String getProgramStatus() {
+		return programStatus;
+	}
+	public void setProgramStatus(String programStatus) {
+		this.programStatus = programStatus;
+	}
 	
 	
 	
