@@ -15,7 +15,7 @@ public class testdata {
 	public ArrayList<String> getdata(String logindetails) throws IOException {
 		
 		ArrayList<String> a= new ArrayList();
-		FileInputStream fis= new FileInputStream("C:\\Users\\User\\eclipse-workspaceAPI\\test\\src\\test\\resources\\TestDataUSR.xlsx");
+		FileInputStream fis= new FileInputStream(".\\src\\test\\resources\\TestDataUSR.xlsx");
 		XSSFWorkbook workbook=new XSSFWorkbook(fis);
 		
 		int sheets= workbook.getNumberOfSheets();

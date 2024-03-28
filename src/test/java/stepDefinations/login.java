@@ -5,6 +5,8 @@ import static org.hamcrest.Matchers.equalTo;
 
 import java.io.IOException;
 
+import org.testng.annotations.Test;
+
 import Utilities.AppConfig;
 import Utilities.datareader;
 import io.cucumber.java.en.Given;
@@ -22,12 +24,12 @@ public class login{
 				body(d.login()).when().post("/login")
 				.then().log().all().assertThat().statusCode(200).extract().response().asString();
 				
-				System.out.println(response);
+				//System.out.println(response);
 				
 		JsonPath js= new JsonPath(response);
 		String token_id=js.getString("token");
 		
-		System.out.println(token_id);
+		//System.out.println(token_id);
 		AppConfig.TOKEN = token_id;
 	}
 }

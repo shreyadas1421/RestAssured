@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-03-28T17:17:20 EDT" name="Default suite" finished-at="2024-03-28T17:17:23 EDT" duration-ms="3500">
+    <groups>
+    </groups>
+    <test started-at="2024-03-28T17:17:20 EDT" name="Default test" finished-at="2024-03-28T17:17:23 EDT" duration-ms="3500">
+      <class name="stepDefinations.Batch">
+        <test-method is-config="true" signature="specify()[pri:0, instance:stepDefinations.Batch@5119fb47]" started-at="2024-03-28T17:17:20 EDT" name="specify" finished-at="2024-03-28T17:17:20 EDT" duration-ms="238" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- specify -->
+        <test-method is-config="true" signature="authorized_with_bearer_token()[pri:0, instance:stepDefinations.Batch@5119fb47]" started-at="2024-03-28T17:17:20 EDT" name="authorized_with_bearer_token" finished-at="2024-03-28T17:17:22 EDT" duration-ms="1899" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- authorized_with_bearer_token -->
+        <test-method signature="send_http_post_request_with_endpoints_and_read_data_from_external_file()[pri:1, instance:stepDefinations.Batch@5119fb47]" started-at="2024-03-28T17:17:22 EDT" name="send_http_post_request_with_endpoints_and_read_data_from_external_file" finished-at="2024-03-28T17:17:22 EDT" duration-ms="282" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- send_http_post_request_with_endpoints_and_read_data_from_external_file -->
+        <test-method signature="batchgetbatchId()[pri:2, instance:stepDefinations.Batch@5119fb47]" started-at="2024-03-28T17:17:22 EDT" name="batchgetbatchId" finished-at="2024-03-28T17:17:22 EDT" duration-ms="218" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- batchgetbatchId -->
+        <test-method signature="batchgetbatchName()[pri:3, instance:stepDefinations.Batch@5119fb47]" started-at="2024-03-28T17:17:22 EDT" name="batchgetbatchName" finished-at="2024-03-28T17:17:22 EDT" duration-ms="220" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- batchgetbatchName -->
+        <test-method signature="batchget()[pri:4, instance:stepDefinations.Batch@5119fb47]" started-at="2024-03-28T17:17:22 EDT" name="batchget" finished-at="2024-03-28T17:17:23 EDT" duration-ms="863" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- batchget -->
+      </class> <!-- stepDefinations.Batch -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
