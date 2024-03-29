@@ -1,9 +1,9 @@
 package POJO;
 
-import java.util.ArrayList;
 
-public class LogInPojo {
+public class LoginPojo {
 
+	// pojo class
 	private String userLoginEmailId;
 	private String password;
 	
@@ -19,10 +19,5 @@ public class LogInPojo {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	
-	
 
-	
-	
-	
 }
