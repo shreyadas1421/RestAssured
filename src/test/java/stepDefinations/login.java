@@ -20,7 +20,7 @@ import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
-
+import io.restassured.RestAssured;
 
 public class login extends ReusableMethod {
 
@@ -115,4 +115,22 @@ public class login extends ReusableMethod {
 			System.out.println(response.getStatusCode());
 			assertEquals(response.getStatusCode(),401);
 		}*/
+		
+		@Given("userable to log in")
+		public void userable_to_log_in() throws IOException {
+			RestAssured.baseURI="https://lms-marchapi-hackathon-a258d2bbd43b.herokuapp.com/lms";
+			String response=given().log().all().header("Content-Type","application/json").
+					body(d.login()).when().post("/login")
+					.then().log().all().assertThat().statusCode(200).extract().response().asString();
+					
+					System.out.println(response);
+					
+			JsonPath js= new JsonPath(response);
+			String token_id=js.getString("token");
+			
+			System.out.println(token_id);
+			AppConfig.TOKEN = token_id;
+		}
+	
+		
 	}

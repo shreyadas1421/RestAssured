@@ -11,6 +11,9 @@ public class AppConfig {
 	public static String PROGRAM_NAME_1;
 	public static int BatchID;
 	public static String BatchName;
+	public static int BATCH_ID1;
+	public static String BATCH_NAME1;
+	
 	
 
 }
