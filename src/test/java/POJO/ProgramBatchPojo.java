@@ -9,7 +9,7 @@ public class ProgramBatchPojo {
 	private String batchNoOfClasses;
 	private String batchStatus;
 	private String programId;
-	private String programName;
+	
 
 	public String getBatchDescription() {
 		return batchDescription;

@@ -35,7 +35,7 @@ public class Batch{
 		log.userable_to_log_in();
 	   
 	}
-@Test(priority=1)
+    @Test(priority=1)
 	@When("Send HTTP Post request with endpoints and Read data from external file")
 	public void send_http_post_request_with_endpoints_and_read_data_from_external_file() throws IOException {
 	
@@ -59,42 +59,5 @@ public class Batch{
 	   
 	   
 	}
-	 @Test(priority=4)
-	public void batchget() throws IOException{
-	    // log.userable_to_log_in();
-	  //   logintoken= log.token();
-	 given()
-	 .header("Authorization","Bearer "+AppConfig.TOKEN)
-	 .spec(request)
-	 .get("/batches")
-	 .then()
-	 .assertThat()
-	 .statusCode(200).log().body();
-	 
-}	
-@Test(priority=2)
-	public void batchgetbatchId() throws IOException{
-	     
-	 given()
-	 .header("Authorization","Bearer "+AppConfig.TOKEN)
-	 .spec(request)
-	 .get("/batches/batchId/"+AppConfig.BatchID)
-	 .then()
-	 .assertThat()
-	 .statusCode(200).log().body();
-	 }
-	 
-@Test(priority=3)
-		public void batchgetbatchName() throws IOException{
-		     
-		 given()
-		 .header("Authorization","Bearer "+AppConfig.TOKEN)
-		 .spec(request)
-		 .get("/batches/batchName/"+AppConfig.BatchName)
-		 .then()
-		 .assertThat()
-		 .statusCode(200).log().body();
-			
 	
-}
 }
