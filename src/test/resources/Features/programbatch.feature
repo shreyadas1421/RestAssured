@@ -12,5 +12,3 @@ Given Token is expired and invalid
 When Sends Http Post batch request with endpoints 
 Then gets 401 status code with error message
 
-
- 
