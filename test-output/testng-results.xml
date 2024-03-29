@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-03-28T22:54:56 EDT" name="Default suite" finished-at="2024-03-28T22:54:58 EDT" duration-ms="1718">
+    <groups>
+    </groups>
+    <test started-at="2024-03-28T22:54:56 EDT" name="Default test" finished-at="2024-03-28T22:54:58 EDT" duration-ms="1718">
+      <class name="stepDefinations.Batch">
+        <test-method is-config="true" signature="specify()[pri:0, instance:stepDefinations.Batch@291ae]" started-at="2024-03-28T22:54:56 EDT" name="specify" finished-at="2024-03-28T22:54:56 EDT" duration-ms="228" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- specify -->
+        <test-method is-config="true" signature="authorized_with_bearer_token()[pri:0, instance:stepDefinations.Batch@291ae]" started-at="2024-03-28T22:54:56 EDT" name="authorized_with_bearer_token" finished-at="2024-03-28T22:54:58 EDT" duration-ms="1402" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- authorized_with_bearer_token -->
+        <test-method signature="send_http_post_request_with_endpoints_and_read_data_from_external_file()[pri:1, instance:stepDefinations.Batch@291ae]" started-at="2024-03-28T22:54:58 EDT" name="send_http_post_request_with_endpoints_and_read_data_from_external_file" finished-at="2024-03-28T22:54:58 EDT" duration-ms="303" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- send_http_post_request_with_endpoints_and_read_data_from_external_file -->
+      </class> <!-- stepDefinations.Batch -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

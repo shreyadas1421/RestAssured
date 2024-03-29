@@ -20,9 +20,9 @@ public ProgramBatchPojo batch() throws IOException {
 	String programId;
 	
 	
-	String path=".//src/test/resources/BatchData.xlsx";
+	String path=".//src/test/resources/TestDataUSR.xlsx";
     XSSFWorkbook workbook=new XSSFWorkbook(path);
-    XSSFSheet sheet = workbook.getSheetAt(0);
+    XSSFSheet sheet = workbook.getSheetAt(3);
     DataFormatter dataf = new DataFormatter();
     batchDescription=dataf.formatCellValue(sheet.getRow(0).getCell(1));
     System.out.println(batchDescription);

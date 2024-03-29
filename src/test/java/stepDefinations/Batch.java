@@ -46,7 +46,7 @@ public class Batch{
 				.when().post("/batches")
 				.then()
 				.assertThat().statusCode(201).extract().response().asString();
-		
+		System.out.println(response);
 		JsonPath js= new JsonPath((String) response);
 		AppConfig.BatchID=js.getInt("batchId");
 		AppConfig.BatchName=js.getString("batchName");
