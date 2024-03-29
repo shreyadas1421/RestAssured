@@ -47,7 +47,7 @@ public class Program{
 		ProgramPojo pp = new ProgramPojo();
 		Random ran = new Random();
 		
-		String programName = dataMap.get("programName")+ "-" + ran.nextInt();
+		String programName = dataMap.get("programName")+ "-" + ran.nextInt(100,500);
 		
 		pp.setProgramName(programName);
 		pp.setProgramDescription(dataMap.get("programDescription"));
@@ -73,11 +73,10 @@ public class Program{
 	
 	}
 	
-	@When("Admin sends POST Request and request Body with endpoint and invalid method")
-	public void admin_sends_https_request_and_request_body_and_with_endpoint_and_invalid_method(){
+	@When("Admin sends GET Request and request Body with endpoint and invalid method for program")
+	public void admin_sends_https_request_and_request_body_and_with_endpoint_and_invalid_method_for_program(){
 		
 		response = request.log().all().get();
-		
 	
 	}
 	
@@ -88,7 +87,8 @@ public class Program{
 	}
 	
 	@Then("Admin receives {int} {string} Status with response body for Program")
-	public void admin_receives_status_with_response_body(Integer statusCode, String statusLine) {
+	public void admin_receives_status_with_response_body_for_Program(Integer statusCode, String statusLine) {
+		
 		response.then().log().all().assertThat().statusCode(statusCode);
 		
 		if (statusCode == 201) {
@@ -98,19 +98,99 @@ public class Program{
 		}
 	}
 	
+	
+	@Then("Admin receives {int} {string} Status with response body for Program Negative")
+	public void admin_receives_status_with_response_body_for_Program_Negative(Integer statusCode, String statusLine) {
+		
+		response.then().log().all().assertThat().statusCode(statusCode);
+		
+		if (statusCode == 201) {
+			AppConfig.PROGRAM_ID_1 = response.body().jsonPath().get("programId");
+			AppConfig.PROGRAM_NAME_1 = response.body().jsonPath().getString("programName");
+			System.out.println("ProgramId_1: " + AppConfig.PROGRAM_ID_1);
+		}
+	}
+	
 	@Given("Admin creates GET Request for the LMS API")
 	public void admin_creates_get_request_for_the_lms_api() {
 		
-		
+		RestAssured.basePath = "/allPrograms";
+		request = RestAssured.given()
+					.contentType(ContentType.JSON)
+					.header("Authorization","Bearer " + AppConfig.TOKEN);
 
-	
 	}
+	
+	@Given("Admin creates GET Request for the LMS API with {string} and {string}")
+	public void admin_creates_get_request_for_the_lms_api_with_invalid_and(String endpoint, String auth) {
+		
+		RestAssured.basePath = endpoint;
+		request = RestAssured.given()
+					.contentType(ContentType.JSON)
+					.header("Authorization","Bearer " + AppConfig.TOKEN);
+		if("N".equalsIgnoreCase(auth)){
+			
+			request = request.auth().none();
+			
+		}
+	}
+	
+	@Given("Admin creates GET Request for the LMS API with programID")
+	public void admin_creates_get_request_for_the_lms_api_with_programID() {
+		
+		RestAssured.basePath = "/programs/" + AppConfig.PROGRAM_ID;
+		request = RestAssured.given()
+					.contentType(ContentType.JSON)
+					.header("Authorization","Bearer " + AppConfig.TOKEN);
+
+	}
+	
 
 	@When("Admin sends GET Request with endpoint for Program")
 	public void admin_sends_get_request_with_endpoint_for_program() {
 
+		response = request.get();
 	
+	}
 	
+	@When("Admin sends GET Request with invalid BaseURI for Program {string}")
+	public void admin_sends_get_request_with_invalid_BaseURI_for_program(String uri) {
+		
+		
+		response = request.get(uri);
+	
+	}
+	
+	@When("Admin sends POST Request with endpoint and invalid method for program")
+	public void admin_sends_get_request_with_endpoint_and_invalid_method_for_program() {
+
+		response = request.post();
+	
+	}
+	
+	@Given("Admin creates GET Request for the LMS API with invalid {string}")
+	public void admin_creates_get_request_for_the_lms_api_with_invalid(String programId) {
+		
+		RestAssured.basePath = "/programs/" + programId ;
+		request = RestAssured.given()
+					.contentType(ContentType.JSON)
+					.header("Authorization","Bearer " + AppConfig.TOKEN);
+
+	}
+	
+	@Given("Admin creates GET Request for the LMS API with {string} and {string} programId")
+	public void admin_creates_get_request_for_the_lms_api_with_invalid_and_programId(String endpoint, String auth) {
+		
+		RestAssured.basePath = endpoint + AppConfig.PROGRAM_ID;
+		request = RestAssured.given()
+					.contentType(ContentType.JSON)
+					.header("Authorization","Bearer " + AppConfig.TOKEN);
+		if("N".equalsIgnoreCase(auth)){
+			
+			request = request.auth().none();
+			
+		}
+
 	}
 	
 }
