@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="4.273" tests="10" skipped="0" failures="0" errors="0">
+<testcase classname="Post Request Program Batch module" name="Create Batches with external excel data" time="1.612">
+<system-out><![CDATA[
+Given Authorized with bearer Token..........................................passed
+When Sends HTTP Post batch request with endpoints and Read data from external file.passed
+Then Gets 201 status code with response body................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Post Request Program Batch module" name="Create Batches with invalid token" time="0.272">
+<system-out><![CDATA[
+Given Token is expired and invalid..........................................passed
+When Sends Http Post batch request with endpoints...........................passed
+Then gets 401 unauthorised status code with error message...................passed
+]]></system-out>
+</testcase>
+<testcase classname="Post Request Program Batch module" name="Create batches with invalid endpoint" time="0.361">
+<system-out><![CDATA[
+Given Authorized with bearer Token "Invalid endpoint".......................passed
+When Sends HTTP Post batch request  with invalid endpoint and Read data "API_hackathon_march24 " "SDETd5 " 5 "active " 16306.passed
+Then Gets  404 with response body...........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Post Request Program Batch module" name="create batches with different examples - Example #1.1" time="0.258">
+<system-out><![CDATA[
+Given Authorized with bearer Token "Create_batch_with_new_data".............passed
+When Sends HTTP Post batch request with valid endpoints and Read data "API_hackathon_march24" "SDETbatches4" 4 "active" 16306.passed
+Then Gets  201 with batch response body.....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Post Request Program Batch module" name="create batches with different examples - Example #1.2" time="0.299">
+<system-out><![CDATA[
+Given Authorized with bearer Token "Create_batch_with_existing_data"........passed
+When Sends HTTP Post batch request with valid endpoints and Read data "API_hackathon_march24" "SDETbatches4" 4 "active" 16306.passed
+Then Gets  400 with batch response body.....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Post Request Program Batch module" name="create batches with different examples - Example #1.3" time="0.283">
+<system-out><![CDATA[
+Given Authorized with bearer Token "Post_missing_mandatory_fields"..........passed
+When Sends HTTP Post batch request with valid endpoints and Read data "API_hackathon_march24" "" 4 "active" 16306.passed
+Then Gets  400 with batch response body.....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Post Request Program Batch module" name="create batches with different examples - Example #1.4" time="0.313">
+<system-out><![CDATA[
+Given Authorized with bearer Token "Post_missing_additional_fields_null"....passed
+When Sends HTTP Post batch request with valid endpoints and Read data "null" "SDETresta5" 4 "active" 16306.passed
+Then Gets  201 with batch response body.....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Post Request Program Batch module" name="create batches with different examples - Example #1.5" time="0.212">
+<system-out><![CDATA[
+Given Authorized with bearer Token "Post_missing_additional_fields_null"....passed
+When Sends HTTP Post batch request with valid endpoints and Read data "" "SDETapi" 4 "active" 16306.passed
+Then Gets  400 with batch response body.....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Post Request Program Batch module" name="create batches with different examples - Example #1.6" time="0.241">
+<system-out><![CDATA[
+Given Authorized with bearer Token "Invalid_Progam_Id"......................passed
+When Sends HTTP Post batch request with valid endpoints and Read data "API_hackathon_march24" "SDET" 4 "active" 16900.passed
+Then Gets  404 with batch response body.....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Post Request Program Batch module" name="create batches with different examples - Example #1.7" time="0.215">
+<system-out><![CDATA[
+Given Authorized with bearer Token "Post_invalid_data"......................passed
+When Sends HTTP Post batch request with valid endpoints and Read data "API_hackathon_march24" "SDET" 4 "active" 16306.passed
+Then Gets  400 with batch response body.....................................passed
+]]></system-out>
+</testcase>
+</testsuite>
