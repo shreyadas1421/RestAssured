@@ -6,11 +6,11 @@ import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features="src/test/resources/Features/programbatch.feature",
+@CucumberOptions(features={"src/test/resources/Features/user.feature","src/test/resources/Features/login.feature"},
 glue= {"stepDefinations"},
 dryRun =false,
 monochrome=true,
-tags= "@batch",
+//tags= "@batch",
  plugin= {"pretty", "html:Report/edge.html",
 		 "json:Report/report.json",
 			"junit:Report/report.xml",

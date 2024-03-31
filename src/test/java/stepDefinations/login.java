@@ -57,7 +57,7 @@ public class login extends ReusableMethod {
 			EndPoints endPoint=EndPoints.valueOf(resources);
 			System.out.println(endPoint.getResources());
 			
-			 resspec=new ResponseSpecBuilder().expectStatusCode(200).build();
+			// resspec=new ResponseSpecBuilder().expectStatusCode(200).build();
 			 
 			 if(method.equalsIgnoreCase("Post")){
 				 response=res.when().post(endPoint.getResources());
@@ -73,7 +73,7 @@ public class login extends ReusableMethod {
 		}
 
 		@Then("Adimn should get auto generated token")
-		public String adimn_should_get_auto_generated_token() {
+		public void adimn_should_get_auto_generated_token() {
 		resbody=response.then().log().all().extract().response();
 
 		
@@ -83,7 +83,7 @@ public class login extends ReusableMethod {
 		System.out.println(getJsonPath(resbody,"token"));
 		token_id=getJsonPath(resbody,"token");
 		
-		return token_id;
+		AppConfig.TOKEN = token_id;
 		}
 		
 		
@@ -116,7 +116,7 @@ public class login extends ReusableMethod {
 			assertEquals(response.getStatusCode(),401);
 		}*/
 		
-		/*@Given("userable to log in")
+		@Given("userable to log in")
 		public void userable_to_log_in() throws IOException {
 			RestAssured.baseURI="https://lms-marchapi-hackathon-a258d2bbd43b.herokuapp.com/lms";
 			String response=given().log().all().header("Content-Type","application/json").
@@ -130,7 +130,7 @@ public class login extends ReusableMethod {
 			
 			System.out.println(token_id);
 			AppConfig.TOKEN = token_id;
-		}*/
+		}
 	
 		
 	}

@@ -4,6 +4,7 @@ import static io.restassured.RestAssured.given;
 
 import java.io.IOException;
 
+import Utilities.AppConfig;
 import Utilities.ReusableMethod;
 import Utilities.datareader;
 import io.cucumber.java.en.Given;
@@ -24,7 +25,7 @@ public class logout extends ReusableMethod{
 		@Given("Admin creates request")
 		public void admin_creates_request() throws IOException {
 		
-		res1=given().log().all().spec(reusableSpecBuilder()).header("Authorization","Bearer "+  l.adimn_should_get_auto_generated_token());
+		res1=given().log().all().spec(reusableSpecBuilder()).header("Authorization","Bearer "+  AppConfig.TOKEN);
 		
 	
 		System.out.println(token_id);

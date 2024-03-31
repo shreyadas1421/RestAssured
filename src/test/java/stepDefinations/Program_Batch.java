@@ -41,7 +41,7 @@ public class Program_Batch {
 	    
 		
 		if(AppConfig.TOKEN==null) {
-			UserMap l = new UserMap();
+			login l = new login();
 			try {
 				l.userable_to_log_in();
 			} catch (IOException e) {

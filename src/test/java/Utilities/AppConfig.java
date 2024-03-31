@@ -13,6 +13,8 @@ public class AppConfig {
 	public static String BatchName;
 	public static int BATCH_ID1;
 	public static String BATCH_NAME1;
+	public static String userID;
+	public static String userFirstName;
 	
 	
 
