@@ -2,7 +2,7 @@ package POJO;
 
 public class Batch_UpdatePojo {
 	
-	private String batchDescription;
+	private String batchDescription = null;
 	private int batchId;
 	private String batchName;
 	private String batchStatus;

@@ -4,6 +4,8 @@ import java.io.IOException;
 import java.util.Map;
 import java.util.Random;
 
+import org.json.JSONObject;
+
 import POJO.Program_BatchPojo;
 import Utilities.AppConfig;
 import Utilities.ExcelReader;
@@ -18,6 +20,9 @@ import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 
 import static io.restassured.RestAssured.given;
+import static org.junit.Assert.assertThat;
+import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertTrue;
 
 public class Program_Batch {
 	
@@ -28,6 +33,7 @@ public class Program_Batch {
 	static String batch_id;
 	
 	Map<String, String> dataMap;
+	Program_BatchPojo batch = new Program_BatchPojo();
 	
 	
 	@Given("Admin creates POST Request  with valid data in request body {string} and {int}")
@@ -35,7 +41,7 @@ public class Program_Batch {
 	    
 		
 		if(AppConfig.TOKEN==null) {
-			login l = new login();
+			UserMap l = new UserMap();
 			try {
 				l.userable_to_log_in();
 			} catch (IOException e) {
@@ -48,7 +54,7 @@ public class Program_Batch {
 		dataMap = ExcelReaderBatch.getTestData(sheetname,rownumber);
 		System.out.println("DATA_MAP " + dataMap);
 		RestAssured.baseURI= "https://lms-marchapi-hackathon-a258d2bbd43b.herokuapp.com/lms/batches";//+dataMap.get("endPoint");
-		Program_BatchPojo batch = new Program_BatchPojo();
+		
 		Random ran = new Random();
 		
 		String batchName = dataMap.get("batchName")+ "-" + ran.nextInt();
@@ -79,7 +85,7 @@ public class Program_Batch {
 
 	@Then("Admin receives {int} and  {string} Status with response body.")
 	public void admin_receives_and_status_with_response_body(int statuscode, String statusmessage) {
-		response.then().log().all().assertThat().statusCode(statuscode);
+		response.then().log().all().assertThat().contentType(ContentType.JSON).statusCode(statuscode);
 		System.out.println("responsebody"+response);
 		
 		/*JsonPath js= new JsonPath(response);
@@ -95,7 +101,28 @@ public class Program_Batch {
 			System.out.println("responsebody"+response);
 			System.out.println("batchId: " + AppConfig.BATCH_ID1);
 		}
+		
+		JSONObject responseBatch = new JSONObject(response.getBody().asString());
+		
+	   System.out.println("response: " +responseBatch );
 	   
+	  
+	   
+	   assertTrue(responseBatch.getString("batchName") instanceof String);
+		 assertTrue(responseBatch.get("programId") instanceof Integer);
+		 assertTrue(responseBatch.getString("batchName") instanceof String);
+		 assertTrue(responseBatch.getString("batchDescription") instanceof String);
+		 assertTrue(responseBatch.get("batchNoOfClasses") instanceof Integer);
+		 assertTrue(responseBatch.getString("batchStatus") instanceof String);
+		
+		 
+		 //assertEquals(responseBatch.getString("batchName"),batch.getBatchName() );
+		 assertEquals(responseBatch.get("programId"),batch.getProgramId());
+		 assertEquals(responseBatch.getString("batchDescription"),batch.getBatchDescription());
+		 assertEquals(responseBatch.get("batchNoOfClasses") ,batch.getBatchNoOfClasses());
+		 assertEquals(responseBatch.getString("batchStatus") ,batch.getBatchStatus());
+   	
+   	
 	}
 
 

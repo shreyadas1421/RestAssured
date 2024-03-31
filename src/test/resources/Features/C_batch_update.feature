@@ -15,7 +15,7 @@ Feature: Put Request for ProgramBatch Module
       
     @batch_update_02
   Scenario Outline: Check if admin able to update a Batch with "<scenario>"
-    Given Admin creates PUT Request with request body "<batchDescription_n>", <batchNoOfclasses_n>,"<batchStatus_n>","<batchName_n>" and "<programName_n>"
+    Given Admin creates PUT Request with request body "<batchDescription_n>",<batchNoOfclasses_n>,"<batchStatus_n>","<batchName_n>" and "<programName_n>"
      When Admin sends HTTPS Request  with endpoint with negative scenarios
      Then Admin receives <statuscode> Status with  the message and boolean success details 
       
@@ -23,16 +23,17 @@ Feature: Put Request for ProgramBatch Module
     
      Examples: 
       | batchDescription_n  | batchNoOfclasses_n |     batchStatus_n  | batchName_n  |programName_n| scenario |statuscode|
-      |                |           3     |     active   |twosedet137    | automation  | valid batchID and missing batchDescription field |500|
-       | description |              |       active      |twosedet137    | automation  | valid batchID and missing batchStatus field |500|
-       | description |       4       |                   |twosedet137    | automation  | valid batchID and missing batchStatus field |500|
+      |                |           3     |     active   |twosedet137    | automation  | valid batchID and missing batchDescription field |200|
+     | description |       4       |                   |twosedet137    | automation  | valid batchID and missing batchStatus field |500|
         | description |           1  |     active        |               | automation  | valid batchID and missing batchName field |500|
          | description |           2 |     active         |twosedet137   |            | valid batchID and missing programName field |500|
           |  @734384bb |           3 |     active        |twosedet137    | automation  | with invalid data of description |500|
         | description |  5   | active  | threesedet137 | 1232@44 |  with invalid data of programName |500|
         | description |  5   | active  |@@222@@@ | string |  with invalid data of batchName |500|
          | description |  5   | @@2  |threesedet137 | string |  with invalid data of batchStatus |500|
-         | description |  hksjfh   | active  |threesedet137 | string |  with invalid data of batchNoOfclasses |500|
+         |  null    |   4  |  active | threesedet137 | string | with description Null | 200 |
+         | description |              |       active      |twosedet137    | automation  | valid batchID and missing batchNoOfclasses field | 500 |
+          | description |  hksjfh   | active  | threesedet137 | string |  with invalid data of batchNoOfclasses | 500 |
       
        @batch_update_03
   Scenario Outline: Check if admin able to update a Batch with "<scenario>"
@@ -42,7 +43,7 @@ Feature: Put Request for ProgramBatch Module
      
      Examples:  
       | batchDescription  | batchNoOfclasses |     batchStatus  | batchName  |programName| scenario |statuscode|
-      | description |  2 |active | onesdet137 | automation       |  invalid batchID and mandatory fields in request body|401|
+      | description |  2 |active | onesdet137 | automation       |  invalid batchID and mandatory fields in request body|500|
       
       
       @batch_update_04

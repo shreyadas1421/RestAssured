@@ -116,7 +116,7 @@ public class login extends ReusableMethod {
 			assertEquals(response.getStatusCode(),401);
 		}*/
 		
-		@Given("userable to log in")
+		/*@Given("userable to log in")
 		public void userable_to_log_in() throws IOException {
 			RestAssured.baseURI="https://lms-marchapi-hackathon-a258d2bbd43b.herokuapp.com/lms";
 			String response=given().log().all().header("Content-Type","application/json").
@@ -130,7 +130,7 @@ public class login extends ReusableMethod {
 			
 			System.out.println(token_id);
 			AppConfig.TOKEN = token_id;
-		}
+		}*/
 	
 		
 	}

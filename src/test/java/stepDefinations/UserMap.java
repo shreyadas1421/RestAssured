@@ -5,6 +5,7 @@ import static org.hamcrest.Matchers.equalTo;
 
 import java.io.IOException;
 
+import Utilities.AppConfig;
 import Utilities.datareader;
 import io.cucumber.java.en.Given;
 import io.restassured.RestAssured;
@@ -27,6 +28,8 @@ public class UserMap{
 		String token_id=js.getString("token");
 		
 		System.out.println(token_id);
+		
+		AppConfig.TOKEN = token_id;
 		
 	}
 }
