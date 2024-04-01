@@ -19,11 +19,11 @@ public class ReusableMethod {
 	
 	RequestSpecification req;
 	RequestSpecification reqWithTocken;
-
+	
 	
 	public RequestSpecification reusableSpecBuilder() throws IOException {
 		
-		PrintStream log= new PrintStream(new FileOutputStream("log.text",true));
+		PrintStream log= new PrintStream(new FileOutputStream("log.text"));
 		
 		 req=new RequestSpecBuilder().setBaseUri(GlobalProprties("baseUrl"))
 				.addFilter(RequestLoggingFilter.logRequestTo(log))
@@ -53,13 +53,7 @@ public class ReusableMethod {
 	public String GlobalProprties(String key) throws IOException {
 		
 		Properties prop= new Properties();
-<<<<<<< HEAD
 		FileInputStream fs= new FileInputStream(".//src/test/resources/GlobalProperty.properties");
-=======
-		String Projdir = System.getProperty("user.dir");
-		//FileInputStream fs= new FileInputStream(Projdir + "./resource/GlobalProperty.properties"C:\\Users\\User\\eclipse-workspaceAPI\\Team4_APITroopers\\src\\test\\resources\\GlobalProperty.properties");
-		FileInputStream fs= new FileInputStream(Projdir + "/src/test/resources/GlobalProperty.properties");
->>>>>>> branch 'master' of https://github.com/shreyadas1421/RestAssured.git
 		prop.load(fs);
 		
 		prop.getProperty(key);
