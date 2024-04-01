@@ -8,6 +8,7 @@ import java.util.Map;
 import POJO.LoginPojo;
 import POJO.UserPUT_updateUserLoginStatus;
 import POJO.UserPUT_updateUserRoleID;
+import POJO.UserPUT_updateUserRoleProgramBatchStatus;
 import POJO.UserPUT_updateUserRoleStatus;
 import POJO.UserPostPojo;
 import POJO.UserPost_userLoginPojo;
@@ -15,6 +16,7 @@ import POJO.UserPost_userRoleMaps;
 import POJO.UserPutPojo;
 import POJO.userLoginPojo;
 import POJO.userRoleMaps;
+import POJO.userRoleProgramBatches;
 
 
 public class datareader {
@@ -202,4 +204,43 @@ public UserPUT_updateUserLoginStatus updateUserLoginStatus(String loginStatus, S
 	return loginStat;
 }
 
+public UserPUT_updateUserRoleProgramBatchStatus updateUserRoleProgramBatchStatus() {
+	
+	
+	UserPUT_updateUserRoleProgramBatchStatus userRoleProgramBatch= new UserPUT_updateUserRoleProgramBatchStatus();
+	
+	userRoleProgramBatch.setProgramId(AppConfig.PROGRAM_ID_1);
+	userRoleProgramBatch.setRoleId("R01");
+	
+	userRoleProgramBatches us= new userRoleProgramBatches();
+	us.setBatchId(AppConfig.BATCH_ID1);
+	us.setUserRoleProgramBatchStatus("Active");
+	
+	List<userRoleProgramBatches> mylist2= new ArrayList<userRoleProgramBatches>();
+	
+	mylist2.add(us);
+	
+	userRoleProgramBatch.setUserRoleProgramBatches(mylist2);
+	
+	return userRoleProgramBatch;
 }
+
+	
+}	
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
