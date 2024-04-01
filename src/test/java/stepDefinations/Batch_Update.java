@@ -1,3 +1,5 @@
+
+
 package stepDefinations;
 
 import static io.restassured.RestAssured.given;
@@ -30,19 +32,19 @@ public class Batch_Update {
 	RequestSpecification request;
 	Response response;
 	int batchid_dummy=8530;
-	int programid= 16270;    //AppConfig.PROGRAM_ID_1;
+	int programid= 17024;    //AppConfig.PROGRAM_ID_1;
 	
 	Batch_UpdatePojo batch_update = new Batch_UpdatePojo();
 	
 	Map<String, String> dataMap;
 	
-	
+	login log = new login();
 
 @Given("Admin creates PUT Request with the valid BatchId anddata {string} and {int}")
 public void admin_creates_put_request_with_the_valid_batch_id_anddata_and(String sheetname, Integer rownumber) {
     
-	if(AppConfig.TOKEN==null) {
-		login l = new login();
+	/*if(AppConfig.TOKEN==null) {
+		UserMap l = new UserMap();
 		try {
 			l.userable_to_log_in();
 		} catch (IOException e) {
@@ -50,7 +52,7 @@ public void admin_creates_put_request_with_the_valid_batch_id_anddata_and(String
 			e.printStackTrace();
 		}
 		
-	}
+	}*/
 	System.out.println("Token: " + AppConfig.TOKEN);
 	
 	dataMap = ExcelReaderBatch.getTestData(sheetname,rownumber);

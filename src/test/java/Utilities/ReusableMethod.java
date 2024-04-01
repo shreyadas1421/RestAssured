@@ -23,11 +23,10 @@ public class ReusableMethod {
 	
 	public RequestSpecification reusableSpecBuilder() throws IOException {
 		
-		PrintStream log= new PrintStream(new FileOutputStream("log.text"));
+		//PrintStream log= new PrintStream(new FileOutputStream("log.text"));
 		
 		 req=new RequestSpecBuilder().setBaseUri(GlobalProprties("baseUrl"))
-				.addFilter(RequestLoggingFilter.logRequestTo(log))
-				.addFilter(ResponseLoggingFilter.logResponseTo(log))
+				
 				 .addHeader("Content-Type", "application/json").build();
 				
 			return req;	
@@ -44,6 +43,8 @@ public class ReusableMethod {
 				.addFilter(ResponseLoggingFilter.logResponseTo(log))
 				 .addHeader("Content-Type", "application/json").build();
 				
+				addFilter(RequestLoggingFilter.logRequestTo(log))
+				.addFilter(ResponseLoggingFilter.logResponseTo(log))
 			return req;	
 	}*/
 	
