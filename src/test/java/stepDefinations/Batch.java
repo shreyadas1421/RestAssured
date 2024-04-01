@@ -11,6 +11,7 @@ import org.testng.annotations.Test;
 import static org.hamcrest.Matchers.equalTo;
 import Utilities.AppConfig;
 import Utilities.Batchdatareader;
+import Utilities.ReusableMethod;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -19,7 +20,7 @@ import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 
-public class Batch{
+public class Batch extends ReusableMethod{
 	
 	Response response,re, res;
 
@@ -28,12 +29,12 @@ public class Batch{
 	login log = new login();
 	Batchdatareader b=new Batchdatareader();
 	String Token ;
- RequestSpecification request;  
+ /*RequestSpecification request;  
 		@Before
 		public void specify() {
 			request=given().baseUri("https://lms-marchapi-hackathon-a258d2bbd43b.herokuapp.com/lms");
 			
-		}
+		}*/
 
 	@Given("Authorized with bearer Token")
 	public void authorized_with_bearer_token() throws IOException {
@@ -46,8 +47,8 @@ public class Batch{
     	postresponse=given()
 		.header("Authorization","Bearer "+AppConfig.TOKEN)
 		.header("Content-Type", "application/json")
-		.spec(request)
-        .body(b.batch())
+		.spec(reusableSpecBuilder())
+        .body(b.batch()).log().all()
 		.when().post("/batches")
 		.then()
 		.assertThat().statusCode(201).extract().response().asPrettyString();
@@ -76,8 +77,8 @@ AppConfig.BatchName=js.getString("batchName");
     	 re=given()
 				.header("Authorization","Bearer "+Token)
 				.header("Content-Type", "application/json")
-				.spec(request)
-	            .body(b.batch())
+				.spec(reusableSpecBuilder())
+	            .body(b.batch()).log().all()
 				.when().post("/batches")
 				.then()
 				.assertThat().statusCode(401).extract().response();
@@ -103,7 +104,7 @@ AppConfig.BatchName=js.getString("batchName");
     	
     }
     @When("Sends HTTP Post batch request  with invalid endpoint and Read data {string} {string} {int} {string} {int}")
-    public void sends_http_post_batch_request_with_invalid_endpoint_and_read_data( String Bd, String Bn, Integer Bnc, String Bs, Integer PI) {
+    public void sends_http_post_batch_request_with_invalid_endpoint_and_read_data( String Bd, String Bn, Integer Bnc, String Bs, Integer PI) throws IOException {
 
          JSONObject req= new JSONObject();
     	 req.put("batchDescription",Bd);
@@ -116,13 +117,13 @@ AppConfig.BatchName=js.getString("batchName");
 	response=given()
 			.header("Authorization","Bearer "+AppConfig.TOKEN)
 			.header("Content-Type", "application/json")
-			.spec(request)
-            .body(req.toJSONString())
+			.spec(reusableSpecBuilder())
+            .body(req.toJSONString()).log().all()
 			.when().post("\batch")
 			.then()
 			.assertThat().extract().response();
 	System.out.println(response);
-	
+	System.out.println(response.asPrettyString());
 	//Assert.assertEquals(statusCode, code , "Correct status code returned");
 }
 @Test
@@ -131,7 +132,7 @@ public void gets_with_response_body(Integer code) throws IOException {
   
 	
 	int statusCode = response.getStatusCode();
-	System.out.println("Expected status code returned::::: "+statusCode);
+	System.out.println(" status code returned::::: "+statusCode);
 	Assert.assertEquals(statusCode, code , "Expected status code returned");
 	Assert.assertEquals(response.contentType(),"application/json");
 	Assert.assertTrue(response.body().asString().contains("Not Found"));
@@ -139,7 +140,7 @@ public void gets_with_response_body(Integer code) throws IOException {
 }
 
 @When("Sends HTTP Post batch request with valid endpoints and Read data {string} {string} {int} {string} {int}")
-public void sends_http_post_batch_request_with_valid_endpoints_and_read_data(String Bd, String Bn, Integer Bnc, String Bs, Integer PI) {
+public void sends_http_post_batch_request_with_valid_endpoints_and_read_data(String Bd, String Bn, Integer Bnc, String Bs, Integer PI) throws IOException {
    
 	 JSONObject req= new JSONObject();
 	 req.put("batchDescription",Bd);
@@ -152,19 +153,20 @@ public void sends_http_post_batch_request_with_valid_endpoints_and_read_data(Str
 res=given()
 .header("Authorization","Bearer "+AppConfig.TOKEN)
 .header("Content-Type", "application/json")
-.spec(request)
-.body(req.toJSONString())
+.spec(reusableSpecBuilder())
+.body(req.toJSONString()).log().all()
 .when().post("/batches")
 .then()
 .assertThat().extract().response();
 System.out.println(res);
+System.out.println(res.asPrettyString());
 }
 
 
 @Then("Gets  {int} with batch response body")
 public void gets_with_batch_response_body(Integer code) {
 	int statusCode = res.getStatusCode();
-	System.out.println("Expected status code returned::::: "+statusCode);
+	System.out.println(" status code returned::::: "+statusCode);
 	Assert.assertEquals(statusCode, code , " Expected status code returned");	
 	Assert.assertEquals(res.contentType(),"application/json");
 	if(code==201) {

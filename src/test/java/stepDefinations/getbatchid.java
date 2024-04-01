@@ -3,22 +3,25 @@ package stepDefinations;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 
+import java.io.IOException;
+
 import org.testng.Assert;
 
 import Utilities.AppConfig;
+import Utilities.ReusableMethod;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.*;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 
-public class getbatchid {
-	RequestSpecification request; 
+public class getbatchid extends ReusableMethod {
+	//RequestSpecification request; 
 	Response geta,getb,getc;
-	@Before
+	/*@Before
 	public void specify() {
 		request=given().baseUri("https://lms-marchapi-hackathon-a258d2bbd43b.herokuapp.com/lms");
 		
-	}
+	}*/
 @Given("GET BatchId Authorized with bearer Token")
 public void get_batch_id_authorized_with_bearer_token() {
     
@@ -26,10 +29,10 @@ public void get_batch_id_authorized_with_bearer_token() {
 }
 
 @When("Sends HTTP GET batch request with BatchId valid endpoints")
-public void sends_http_get_batch_request_with_batch_id_valid_endpoints() {
+public void sends_http_get_batch_request_with_batch_id_valid_endpoints() throws IOException {
 	geta=given()
 			 .header("Authorization","Bearer "+AppConfig.TOKEN)
-			 .spec(request)
+			 .spec(reusableSpecBuilder())
 			 .get("/batches/batchId/"+AppConfig.BatchID)
 			 .then().extract()
 			 .response();
@@ -62,10 +65,10 @@ public void get_batch_id_token_is_invalid() {
 
 
 @When("Sends HTTP GET batch requests  with BatchId valid endpoints")
-public void sends_http_get_batch_requests_with_batch_id_valid_endpoints() {
+public void sends_http_get_batch_requests_with_batch_id_valid_endpoints() throws IOException {
 	getb=given()
 			 .header("Authorization","Bearer 12"+AppConfig.TOKEN)
-			 .spec(request)
+			 .spec(reusableSpecBuilder())
 			 .get("/batches/batchId/"+AppConfig.BatchID)
 			 .then().extract()
 			 .response(); 
@@ -85,11 +88,11 @@ public void gets_status_code_for_get_batch_id_with_unauthorised_message(Integer 
 }
 
 @When("Sends HTTP GET batch request with BatchId invalid endpoints")
-public void sends_http_get_batch_request_with_batch_id_invalid_endpoints() {
+public void sends_http_get_batch_request_with_batch_id_invalid_endpoints() throws IOException {
     
 	getc= given()
 			 .header("Authorization","Bearer "+AppConfig.TOKEN)
-			 .spec(request)
+			 .spec(reusableSpecBuilder())
 			 .get("/batches/batchId/")
 			 .then().extract()
 			 .response(); 
@@ -114,11 +117,11 @@ public void gets_status_for_get_batch_id_with_error_message(Integer code) {
 }
 
 @When("Sends HTTP GET batch request with invalid BatchId and valid endpoints")
-public void sends_http_get_batch_request_with_invalid_batch_id_and_valid_endpoints() {
+public void sends_http_get_batch_request_with_invalid_batch_id_and_valid_endpoints() throws IOException {
     
 	getc= given()
 			 .header("Authorization","Bearer "+AppConfig.TOKEN)
-			 .spec(request)
+			 .spec(reusableSpecBuilder())
 			 .get("/batches/batchId/2345")
 			 .then().extract()
 			 .response();   
@@ -126,10 +129,10 @@ public void sends_http_get_batch_request_with_invalid_batch_id_and_valid_endpoin
 }
 
 @When("Sends HTTP GET batch request with BatchId parameter and value")
-public void sends_http_get_batch_request_with_batch_id_parameter_and_value() {
+public void sends_http_get_batch_request_with_batch_id_parameter_and_value() throws IOException {
 	geta=given()
 			 .header("Authorization","Bearer "+AppConfig.TOKEN)
-			 .spec(request)
+			 .spec(reusableSpecBuilder())
 			 .get("/batches/batchId/"+AppConfig.BatchID+"?batches=6909")
 			 .then().extract()
 			 .response(); 

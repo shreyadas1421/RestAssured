@@ -1,73 +1,209 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="4.273" tests="10" skipped="0" failures="0" errors="0">
-<testcase classname="Post Request Program Batch module" name="Create Batches with external excel data" time="1.612">
+<testsuite name="Cucumber" time="3.589" tests="10" skipped="0" failures="9" errors="0">
+<testcase classname="Post Request Program Batch module" name="Create Batches with external excel data" time="1.385">
+<failure type="java.lang.AssertionError" message="1 expectation failed.
+Expected status code &lt;201&gt; but was &lt;401&gt;.
+">
+<![CDATA[java.lang.AssertionError: 1 expectation failed.
+Expected status code <201> but was <401>.
+
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:57)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:139)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:49)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
+	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:49)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+	at stepDefinations.Batch.sends_http_post_batch_request_with_endpoints_and_read_data_from_external_file(Batch.java:53)
+	at ✽.Sends HTTP Post batch request with endpoints and Read data from external file(file:///Users/sathishkumar/git/RestAssured/src/test/resources/Features/programbatch.feature:8)
+]]>
+</failure>
 <system-out><![CDATA[
 Given Authorized with bearer Token..........................................passed
-When Sends HTTP Post batch request with endpoints and Read data from external file.passed
-Then Gets 201 status code with response body................................passed
+When Sends HTTP Post batch request with endpoints and Read data from external file.failed
+Then Gets 201 status code with response body................................skipped
 ]]></system-out>
 </testcase>
-<testcase classname="Post Request Program Batch module" name="Create Batches with invalid token" time="0.272">
+<testcase classname="Post Request Program Batch module" name="Create Batches with invalid token" time="0.246">
 <system-out><![CDATA[
 Given Token is expired and invalid..........................................passed
 When Sends Http Post batch request with endpoints...........................passed
 Then gets 401 unauthorised status code with error message...................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Post Request Program Batch module" name="Create batches with invalid endpoint" time="0.361">
+<testcase classname="Post Request Program Batch module" name="Create batches with invalid endpoint" time="0.227">
+<failure type="java.lang.AssertionError" message="Expected status code returned expected [404] but found [401]">
+<![CDATA[java.lang.AssertionError: Expected status code returned expected [404] but found [401]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1419)
+	at org.testng.Assert.assertEquals(Assert.java:1407)
+	at stepDefinations.Batch.gets_with_response_body(Batch.java:135)
+	at ✽.Gets  404 with response body(file:///Users/sathishkumar/git/RestAssured/src/test/resources/Features/programbatch.feature:19)
+]]>
+</failure>
 <system-out><![CDATA[
 Given Authorized with bearer Token "Invalid endpoint".......................passed
 When Sends HTTP Post batch request  with invalid endpoint and Read data "API_hackathon_march24 " "SDETd5 " 5 "active " 16306.passed
-Then Gets  404 with response body...........................................passed
+Then Gets  404 with response body...........................................failed
 ]]></system-out>
 </testcase>
-<testcase classname="Post Request Program Batch module" name="create batches with different examples - Example #1.1" time="0.258">
+<testcase classname="Post Request Program Batch module" name="create batches with different examples - Example #1.1" time="0.218">
+<failure type="java.lang.AssertionError" message=" Expected status code returned expected [201] but found [401]">
+<![CDATA[java.lang.AssertionError:  Expected status code returned expected [201] but found [401]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1419)
+	at org.testng.Assert.assertEquals(Assert.java:1407)
+	at stepDefinations.Batch.gets_with_batch_response_body(Batch.java:169)
+	at ✽.Gets  201 with batch response body(file:///Users/sathishkumar/git/RestAssured/src/test/resources/Features/programbatch.feature:24)
+]]>
+</failure>
 <system-out><![CDATA[
 Given Authorized with bearer Token "Create_batch_with_new_data".............passed
-When Sends HTTP Post batch request with valid endpoints and Read data "API_hackathon_march24" "SDETbatches4" 4 "active" 16306.passed
-Then Gets  201 with batch response body.....................................passed
+When Sends HTTP Post batch request with valid endpoints and Read data "API_hackathon_march24" "SDETbatchess" 4 "active" 16306.passed
+Then Gets  201 with batch response body.....................................failed
 ]]></system-out>
 </testcase>
-<testcase classname="Post Request Program Batch module" name="create batches with different examples - Example #1.2" time="0.299">
+<testcase classname="Post Request Program Batch module" name="create batches with different examples - Example #1.2" time="0.221">
+<failure type="java.lang.AssertionError" message=" Expected status code returned expected [400] but found [401]">
+<![CDATA[java.lang.AssertionError:  Expected status code returned expected [400] but found [401]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1419)
+	at org.testng.Assert.assertEquals(Assert.java:1407)
+	at stepDefinations.Batch.gets_with_batch_response_body(Batch.java:169)
+	at ✽.Gets  400 with batch response body(file:///Users/sathishkumar/git/RestAssured/src/test/resources/Features/programbatch.feature:24)
+]]>
+</failure>
 <system-out><![CDATA[
 Given Authorized with bearer Token "Create_batch_with_existing_data"........passed
-When Sends HTTP Post batch request with valid endpoints and Read data "API_hackathon_march24" "SDETbatches4" 4 "active" 16306.passed
-Then Gets  400 with batch response body.....................................passed
+When Sends HTTP Post batch request with valid endpoints and Read data "API_hackathon_march24" "SDETbatchess" 4 "active" 16306.passed
+Then Gets  400 with batch response body.....................................failed
 ]]></system-out>
 </testcase>
-<testcase classname="Post Request Program Batch module" name="create batches with different examples - Example #1.3" time="0.283">
+<testcase classname="Post Request Program Batch module" name="create batches with different examples - Example #1.3" time="0.211">
+<failure type="java.lang.AssertionError" message=" Expected status code returned expected [400] but found [401]">
+<![CDATA[java.lang.AssertionError:  Expected status code returned expected [400] but found [401]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1419)
+	at org.testng.Assert.assertEquals(Assert.java:1407)
+	at stepDefinations.Batch.gets_with_batch_response_body(Batch.java:169)
+	at ✽.Gets  400 with batch response body(file:///Users/sathishkumar/git/RestAssured/src/test/resources/Features/programbatch.feature:24)
+]]>
+</failure>
 <system-out><![CDATA[
 Given Authorized with bearer Token "Post_missing_mandatory_fields"..........passed
 When Sends HTTP Post batch request with valid endpoints and Read data "API_hackathon_march24" "" 4 "active" 16306.passed
-Then Gets  400 with batch response body.....................................passed
+Then Gets  400 with batch response body.....................................failed
 ]]></system-out>
 </testcase>
-<testcase classname="Post Request Program Batch module" name="create batches with different examples - Example #1.4" time="0.313">
+<testcase classname="Post Request Program Batch module" name="create batches with different examples - Example #1.4" time="0.235">
+<failure type="java.lang.AssertionError" message=" Expected status code returned expected [201] but found [401]">
+<![CDATA[java.lang.AssertionError:  Expected status code returned expected [201] but found [401]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1419)
+	at org.testng.Assert.assertEquals(Assert.java:1407)
+	at stepDefinations.Batch.gets_with_batch_response_body(Batch.java:169)
+	at ✽.Gets  201 with batch response body(file:///Users/sathishkumar/git/RestAssured/src/test/resources/Features/programbatch.feature:24)
+]]>
+</failure>
 <system-out><![CDATA[
 Given Authorized with bearer Token "Post_missing_additional_fields_null"....passed
-When Sends HTTP Post batch request with valid endpoints and Read data "null" "SDETresta5" 4 "active" 16306.passed
-Then Gets  201 with batch response body.....................................passed
+When Sends HTTP Post batch request with valid endpoints and Read data "null" "SDETrests" 4 "active" 16306.passed
+Then Gets  201 with batch response body.....................................failed
 ]]></system-out>
 </testcase>
-<testcase classname="Post Request Program Batch module" name="create batches with different examples - Example #1.5" time="0.212">
+<testcase classname="Post Request Program Batch module" name="create batches with different examples - Example #1.5" time="0.217">
+<failure type="java.lang.AssertionError" message=" Expected status code returned expected [400] but found [401]">
+<![CDATA[java.lang.AssertionError:  Expected status code returned expected [400] but found [401]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1419)
+	at org.testng.Assert.assertEquals(Assert.java:1407)
+	at stepDefinations.Batch.gets_with_batch_response_body(Batch.java:169)
+	at ✽.Gets  400 with batch response body(file:///Users/sathishkumar/git/RestAssured/src/test/resources/Features/programbatch.feature:24)
+]]>
+</failure>
 <system-out><![CDATA[
 Given Authorized with bearer Token "Post_missing_additional_fields_null"....passed
 When Sends HTTP Post batch request with valid endpoints and Read data "" "SDETapi" 4 "active" 16306.passed
-Then Gets  400 with batch response body.....................................passed
+Then Gets  400 with batch response body.....................................failed
 ]]></system-out>
 </testcase>
-<testcase classname="Post Request Program Batch module" name="create batches with different examples - Example #1.6" time="0.241">
+<testcase classname="Post Request Program Batch module" name="create batches with different examples - Example #1.6" time="0.213">
+<failure type="java.lang.AssertionError" message=" Expected status code returned expected [400] but found [401]">
+<![CDATA[java.lang.AssertionError:  Expected status code returned expected [400] but found [401]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1419)
+	at org.testng.Assert.assertEquals(Assert.java:1407)
+	at stepDefinations.Batch.gets_with_batch_response_body(Batch.java:169)
+	at ✽.Gets  400 with batch response body(file:///Users/sathishkumar/git/RestAssured/src/test/resources/Features/programbatch.feature:24)
+]]>
+</failure>
 <system-out><![CDATA[
 Given Authorized with bearer Token "Invalid_Progam_Id"......................passed
 When Sends HTTP Post batch request with valid endpoints and Read data "API_hackathon_march24" "SDET" 4 "active" 16900.passed
-Then Gets  404 with batch response body.....................................passed
+Then Gets  400 with batch response body.....................................failed
 ]]></system-out>
 </testcase>
-<testcase classname="Post Request Program Batch module" name="create batches with different examples - Example #1.7" time="0.215">
+<testcase classname="Post Request Program Batch module" name="create batches with different examples - Example #1.7" time="0.231">
+<failure type="java.lang.AssertionError" message=" Expected status code returned expected [400] but found [401]">
+<![CDATA[java.lang.AssertionError:  Expected status code returned expected [400] but found [401]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1419)
+	at org.testng.Assert.assertEquals(Assert.java:1407)
+	at stepDefinations.Batch.gets_with_batch_response_body(Batch.java:169)
+	at ✽.Gets  400 with batch response body(file:///Users/sathishkumar/git/RestAssured/src/test/resources/Features/programbatch.feature:24)
+]]>
+</failure>
 <system-out><![CDATA[
 Given Authorized with bearer Token "Post_invalid_data"......................passed
 When Sends HTTP Post batch request with valid endpoints and Read data "API_hackathon_march24" "SDET" 4 "active" 16306.passed
-Then Gets  400 with batch response body.....................................passed
+Then Gets  400 with batch response body.....................................failed
 ]]></system-out>
 </testcase>
 </testsuite>

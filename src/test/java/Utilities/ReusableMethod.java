@@ -53,7 +53,7 @@ public class ReusableMethod {
 	public String GlobalProprties(String key) throws IOException {
 		
 		Properties prop= new Properties();
-		FileInputStream fs= new FileInputStream("C:\\Users\\User\\eclipse-workspaceAPI\\Team4_APITroopers\\src\\test\\resources\\GlobalProperty.properties");
+		FileInputStream fs= new FileInputStream(".//src/test/resources/GlobalProperty.properties");
 		prop.load(fs);
 		
 		prop.getProperty(key);

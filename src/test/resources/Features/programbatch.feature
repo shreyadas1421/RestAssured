@@ -25,12 +25,12 @@ Then Gets  <statuscode> with batch response body
 
 Examples:
 |scenario                            |Batchdescription        | Batchname  |Batchnoclasses|Batchstatus  |programID |statuscode|
-| Create_batch_with_new_data         |API_hackathon_march24   |SDETbatches5 |4     |active     |16306    |201   |      
-| Create_batch_with_existing_data    |API_hackathon_march24   |SDETbatches5 |4      |active     |16306    |400   |
+| Create_batch_with_new_data         |API_hackathon_march24   |SDETbatchess |4     |active     |16306    |201   |      
+| Create_batch_with_existing_data    |API_hackathon_march24   |SDETbatchess |4      |active     |16306    |400   |
 | Post_missing_mandatory_fields      |API_hackathon_march24   |             |4      |active     |16306    |400   |
-| Post_missing_additional_fields_null|null                    |SDETresta6   |4      |active     |16306    |201   |
+| Post_missing_additional_fields_null|null                    |SDETrests   |4      |active     |16306    |201   |
 | Post_missing_additional_fields_null|                        |SDETapi     |4      |active     |16306    |400   |
-| Invalid_Progam_Id                  |API_hackathon_march24   |SDET        |4      |active     |16900    |404   |
+| Invalid_Progam_Id                  |API_hackathon_march24   |SDET        |4      |active     |16900    |400   |
 | Post_invalid_data                  |API_hackathon_march24   |SDET        |4     |active     |16306    |400   |
  
  
