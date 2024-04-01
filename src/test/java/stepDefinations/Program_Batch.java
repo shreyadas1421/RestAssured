@@ -34,13 +34,13 @@ public class Program_Batch {
 	
 	Map<String, String> dataMap;
 	Program_BatchPojo batch = new Program_BatchPojo();
-	
+	login log = new login();
 	
 	@Given("Admin creates POST Request  with valid data in request body {string} and {int}")
 	public void admin_creates_post_request_with_valid_data_in_request_body_and(String sheetname, int rownumber) {
 	    
 		
-		if(AppConfig.TOKEN==null) {
+		/*if(AppConfig.TOKEN==null) {
 			login l = new login();
 			try {
 				l.userable_to_log_in();
@@ -48,7 +48,7 @@ public class Program_Batch {
 				
 				e.printStackTrace();
 			}
-		}
+		*/
 		System.out.println("Token: " + AppConfig.TOKEN);
 		
 		dataMap = ExcelReaderBatch.getTestData(sheetname,rownumber);
@@ -58,7 +58,7 @@ public class Program_Batch {
 		Random ran = new Random();
 		
 		String batchName = dataMap.get("batchName")+ "-" + ran.nextInt();
-		int programid= 16306;    //AppConfig.PROGRAM_ID_1;
+		int programid= 17024;    //AppConfig.PROGRAM_ID_1;
 		
 		batch.setProgramId(programid);
 		batch.setBatchName(batchName);
