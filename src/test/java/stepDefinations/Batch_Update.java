@@ -42,7 +42,7 @@ public class Batch_Update {
 public void admin_creates_put_request_with_the_valid_batch_id_anddata_and(String sheetname, Integer rownumber) {
     
 	if(AppConfig.TOKEN==null) {
-		UserMap l = new UserMap();
+		login l = new login();
 		try {
 			l.userable_to_log_in();
 		} catch (IOException e) {
