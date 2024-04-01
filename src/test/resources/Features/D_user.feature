@@ -151,16 +151,27 @@ Feature: User Module
 	 #Examples: 
 	 #| loginStatus | password | roleIds|status| userLoginEmail|
 	 #|     Active  |       123|     R01   | Active | Shtest65@gmail.com|
-	 
-	 @delete_user
-	 Scenario: Check if Admin able to delete a Staff with valid Admin Id
-	 Given User creates post Request to delete Staff details
-	 When User sends "LMSdeleteUser" with "Delete" Request with endpoint
+	
+	@update_user_UpdateUserBatchProgram
+	 Scenario Outline: Check if admin is able to update UserRoleProgramBatchStatus
+	 Given User creates PUT request with all fields
+	 When User sends "LMSupdateUserRoleProgramBatchStatus" with "Put" Request with endpoint
 	 Then User receives 200 Created Status with response body
+
+	 #Examples: 
+	 #| userRoleList | 
+	 #|R01|
+	
 	 
-	  @delete_user
-	 Scenario: Check if Admin able to delete a Student with valid Admin Id
-	 Given User creates post Request to delete Student details
-	 When User sends "LMSdeleteUser" with "Delete" Request with endpoint
-	 Then User receives 200 Created Status with response body
+	# @delete_user
+	# Scenario: Check if Admin able to delete a Staff with valid Admin Id
+	# Given User creates post Request to delete Staff details
+	# When User sends "LMSdeleteUser" with "Delete" Request with endpoint
+	# Then User receives 200 Created Status with response body
+	 
+	 # @delete_user
+	 #Scenario: Check if Admin able to delete a Student with valid Admin Id
+	 #Given User creates post Request to delete Student details
+	 #When User sends "LMSdeleteUser" with "Delete" Request with endpoint
+	 #Then User receives 200 Created Status with response body
 	 

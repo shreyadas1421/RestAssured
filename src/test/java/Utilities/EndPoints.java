@@ -17,7 +17,13 @@ public enum EndPoints {
 	LMSupdateUserStatus("/users/roleStatus"),
 	LMSupdateUserRoleId("/users/roleId"),
 	LMSupdateUserLoginStatus("/users/userLogin"),
-	LMSdeleteUser("/users");
+	LMSdeleteUser("/users"),
+	LMSupdateUserRoleProgramBatchStatus("/users/roleProgramBatchStatus"),
+	LMSgetProgramBatche("/userRoleProgramBatchMap"),//userRoleProgramBatch
+	LMSgetUserProgramBatch("/userRoleProgramBatchMap"),
+	LMSgetUserProgramBatchInvalid("/userRoleProgramBatchMap"),
+	LMSDeleteProgramBatche("/userRoleProgramBatchMap/deleteAll"),
+	LMSDeleteProgramBatcheInvalid("/userRoleProgramBatchMap/deleteAll");
 	
 	
 
