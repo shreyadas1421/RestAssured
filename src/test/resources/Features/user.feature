@@ -109,46 +109,58 @@ Feature: User Module
 #---PUT Request---
 
 	#--Update user--
-	 @update_user
-	Scenario Outline: Check if admin is able to update role status of a Admin with valid Admin id
-	 Given User creates POST request with all fields "<userComments>","<userEduPg>","<userEduUg>","<userFirstName>", "<userLastName>","<userMiddleName>","<userLinkedinUrl>", "<userLocation>","<userPhoneNumber>","<userTimeZone>","<userVisaStatus>"
-	 When User sends "LMSupdateUser" with "Put" Request with endpoint
-	 Then User receives 200 Created Status with response body
+	# @update_user
+	#Scenario Outline: Check if admin is able to update role status of a Admin with valid Admin id
+	# Given User creates POST request with all fields "<userComments>","<userEduPg>","<userEduUg>","<userFirstName>", "<userLastName>","<userMiddleName>","<userLinkedinUrl>", "<userLocation>","<userPhoneNumber>","<userTimeZone>","<userVisaStatus>"
+	# When User sends "LMSupdateUser" with "Put" Request with endpoint
+	# Then User receives 200 Created Status with response body
 	 
-	Examples: 
-			 	  | userComments | userEduPg| userEduUg|userFirstName|userLastName|userMiddleName| userLinkedinUrl|userLocation|userPhoneNumber|userTimeZone|userVisaStatus|
-				  | User Admin Updated | BCA      | MCA      | FirstUser   | Last     | M           |www.linkedin.com|USA         |   55  | EST        | H4-EAD       |
+	#Examples: 
+		#	 	  | userComments | userEduPg| userEduUg|userFirstName|userLastName|userMiddleName| userLinkedinUrl|userLocation|userPhoneNumber|userTimeZone|userVisaStatus|
+		#		  | User Updated | BCA      | MCA      | User Updated   | Last     | M           |www.linkedin.com|USA         |   55  | EST        | H4-EAD       |
 	
 	#---(Update user Role Status)---
-#	@update_user_UpdateuserRoleStatus
+	#@update_user_UpdateuserRoleStatus
 	# Scenario Outline: Check if admin is able to update role status of a Admin with valid Admin id
 	# Given User creates PUT request with all fields "<roleId>","<userRoleStatus>"
 	# When User sends "LMSupdateUserStatus" with "Put" Request with endpoint
-	#Then User receives 200 Created Status with response body
+	# Then User receives 200 Created Status with response body
 
 	 #Examples: 
 	 #| roleId | userRoleStatus|
-	 #|R01|Inactive|  	 
+	 #|R03|Inactive|  	 
 
 	 #---(Update user Role ID)---
 
 	#@update_user_UpdateuserRoleID
-	# Scenario Outline: Check if admin is able to update role ID 
-	# Given User creates PUT request with all fields "<userRoleList>"
-	# When User sends "LMSupdateUserRoleId" with "Put" Request with endpoint
-	# Then User receives 200 Created Status with response body
+	 #Scenario Outline: Check if admin is able to update role ID 
+	 #Given User creates PUT request with all fields "<userRoleList>"
+	 #When User sends "LMSupdateUserRoleId" with "Put" Request with endpoint
+	 #Then User receives 200 Created Status with response body
 
-	# Examples: 
-	# | userRoleList | 
-	# |R03|
+	 #Examples: 
+	 #| userRoleList | 
+	 #|R01|
 	
 	#@update_user_updateUserLoginStatus
-	# Scenario Outline: Check if admin is able to update role ID 
+	# Scenario Outline: Check if admin is able to update UserLoginStatus 
 	# Given User creates PUT request with all fields "<loginStatus>","<password>","<roleIds>","<status>","<userLoginEmail>"
 	# When User sends "LMSupdateUserLoginStatus" with "Put" Request with endpoint
 	# Then User receives 200 Created Status with response body
 
 	 #Examples: 
 	 #| loginStatus | password | roleIds|status| userLoginEmail|
-	 #| null|null | null| Active | Shtest03@gmail.com|
+	 #|     Active  |       123|     R01   | Active | Shtest65@gmail.com|
+	 
+	 @delete_user
+	 Scenario: Check if Admin able to delete a Staff with valid Admin Id
+	 Given User creates post Request to delete Staff details
+	 When User sends "LMSdeleteUser" with "Delete" Request with endpoint
+	 Then User receives 200 Created Status with response body
+	 
+	  @delete_user
+	 Scenario: Check if Admin able to delete a Student with valid Admin Id
+	 Given User creates post Request to delete Student details
+	 When User sends "LMSdeleteUser" with "Delete" Request with endpoint
+	 Then User receives 200 Created Status with response body
 	 

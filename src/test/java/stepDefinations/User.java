@@ -14,6 +14,7 @@ import Utilities.datareader;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import io.restassured.RestAssured;
 import io.restassured.builder.ResponseSpecBuilder;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
@@ -31,6 +32,8 @@ public class User extends ReusableMethod{
 	RequestSpecification res3;
 	RequestSpecification res4;
 	RequestSpecification res5;
+	static RequestSpecification res6;
+	static RequestSpecification res7;
 	
 	// Store newly created User roles 
 	static Map<String, String> ioMapRoles= new HashMap<>();
@@ -113,6 +116,21 @@ public class User extends ReusableMethod{
 							 .header("Authorization","Bearer "+ AppConfig.TOKEN);
 			 
 						}
+				
+	//DELETE--user staff
+				@Given("User creates post Request to delete Staff details")
+				public void user_creates_post_request_to_delete_staff_details() throws IOException {
+					res6=given().log().all().spec(reusableSpecBuilder()).header("Authorization","Bearer "+ AppConfig.TOKEN);
+					
+				}
+				
+	//DELETE--user student
+				@Given("User creates post Request to delete Student details")
+				public void user_creates_post_request_to_delete_student_details() throws IOException {
+						res7=given().log().all().spec(reusableSpecBuilder()).header("Authorization","Bearer "+ AppConfig.TOKEN);
+					
+				}
+
 			
 	//Sending http request with endpoint
 			
@@ -124,8 +142,10 @@ public class User extends ReusableMethod{
 				 resspec=new ResponseSpecBuilder().build();
 				 
 				 if(method1.equalsIgnoreCase("Post")){
-					 response=res.when().post(endPoint.getResources());
-				 }else if(method1.equalsIgnoreCase("Get")) {
+						 	
+						 response=res.when().post(endPoint.getResources());
+				 }
+				 else if(method1.equalsIgnoreCase("Get")) {
 					 
 					 	 if(resources1.equalsIgnoreCase("LMSgetSingleUser")) 
 						 {
@@ -138,7 +158,7 @@ public class User extends ReusableMethod{
 				 }else if (method1.equalsIgnoreCase("Put")) {
 					 if(resources1.equalsIgnoreCase("LMSupdateUser"))
 					 {
-					 
+					
 					 response=res2.when().put(endPoint.getResources()+ "/" + userId);
 					 }
 					 
@@ -155,7 +175,12 @@ public class User extends ReusableMethod{
 				    {
 					 response=res5.when().put(endPoint.getResources()+ "/" + userId);
 				    }
-				 }		}
+				 }else if(method1.equalsIgnoreCase("Delete")) {
+						 response=res6.when().delete(endPoint.getResources()+ "/" + ioMapRoles.get("New User Staff"));
+						 response=res7.when().delete(endPoint.getResources()+ "/" + ioMapRoles.get("New User Student"));
+					
+				 }
+			}
 			
 			
 		// Response body validation with status code

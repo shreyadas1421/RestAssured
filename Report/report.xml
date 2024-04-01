@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="12.561" tests="6" skipped="0" failures="0" errors="0">
-<testcase classname="AdminLogin Controller" name="Check if Admin able to generate token with valid credential" time="8.186">
+<testsuite name="Cucumber" time="17.071" tests="7" skipped="0" failures="1" errors="0">
+<testcase classname="AdminLogin Controller" name="Check if Admin able to generate token with valid credential" time="10.037">
 <system-out><![CDATA[
 Given Admin creates request with valid credentials..........................passed
 When Admin calls "LMSLogIn" with "Post" http request with valid endpoint....passed
@@ -8,28 +8,28 @@ Then Admin Should get 200 status............................................pass
 And Adimn should get auto generated token...................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="User Module" name="Check if user is able to create a new Admin,Staff &amp; Student with valid endpoint and request body with mandatory fields - Example #1.1" time="0.888">
+<testcase classname="User Module" name="Check if user is able to create a new Admin,Staff &amp; Student with valid endpoint and request body with mandatory fields - Example #1.1" time="1.7">
 <system-out><![CDATA[
 Given User creates POST Request for the LMS with request body "USER" and 1..passed
 When User sends "LMScreateUser" with "Post" Request with endpoint...........passed
 Then User receives 201 Created Status with response body....................passed
 ]]></system-out>
 </testcase>
-<testcase classname="User Module" name="Check if user is able to create a new Admin,Staff &amp; Student with valid endpoint and request body with mandatory fields - Example #1.2" time="1.008">
+<testcase classname="User Module" name="Check if user is able to create a new Admin,Staff &amp; Student with valid endpoint and request body with mandatory fields - Example #1.2" time="1.365">
 <system-out><![CDATA[
 Given User creates POST Request for the LMS with request body "USER" and 2..passed
 When User sends "LMScreateUser" with "Post" Request with endpoint...........passed
 Then User receives 201 Created Status with response body....................passed
 ]]></system-out>
 </testcase>
-<testcase classname="User Module" name="Check if user is able to create a new Admin,Staff &amp; Student with valid endpoint and request body with mandatory fields - Example #1.3" time="0.998">
+<testcase classname="User Module" name="Check if user is able to create a new Admin,Staff &amp; Student with valid endpoint and request body with mandatory fields - Example #1.3" time="1.309">
 <system-out><![CDATA[
 Given User creates POST Request for the LMS with request body "USER" and 3..passed
 When User sends "LMScreateUser" with "Post" Request with endpoint...........passed
 Then User receives 201 Created Status with response body....................passed
 ]]></system-out>
 </testcase>
-<testcase classname="User Module" name="Check if user is able to get the user" time="0.334">
+<testcase classname="User Module" name="Check if user is able to get the user" time="0.562">
 <system-out><![CDATA[
 Given User creates get request with Authorization...........................passed
 When User sends "LMSgetSingleUser" with "Get" Request with endpoint.........passed
@@ -37,10 +37,23 @@ Then User receives 200 Created Status with response body....................pass
 And User validate the response json.........................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="User Module" name="Check if admin is able to update role status of a Admin with valid Admin id - Example #1.1" time="0.189">
+<testcase classname="User Module" name="Check if Admin able to delete a Staff with valid Admin Id" time="0.465">
+<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;io.restassured.specification.RequestSpecification.when()&quot; because &quot;this.res7&quot; is null">
+<![CDATA[java.lang.NullPointerException: Cannot invoke "io.restassured.specification.RequestSpecification.when()" because "this.res7" is null
+	at stepDefinations.User.user_sends_with_request_with_endpoint(User.java:180)
+	at ✽.User sends "LMSdeleteUser" with "Delete" Request with endpoint(file:///C:/Users/User/Desktop/Git%20Project1/RestAssured/src/test/resources/Features/user.feature:158)
+]]>
+</failure>
 <system-out><![CDATA[
-Given User creates POST request with all fields "User Admin Updated","BCA","MCA","FirstUser", "Last","M","www.linkedin.com", "USA","55","EST","H4-EAD".passed
-When User sends "LMSupdateUser" with "Put" Request with endpoint............passed
+Given User creates post Request to delete Staff details.....................passed
+When User sends "LMSdeleteUser" with "Delete" Request with endpoint.........failed
+Then User receives 200 Created Status with response body....................skipped
+]]></system-out>
+</testcase>
+<testcase classname="User Module" name="Check if Admin able to delete a Student with valid Admin Id" time="0.391">
+<system-out><![CDATA[
+Given User creates post Request to delete Student details...................passed
+When User sends "LMSdeleteUser" with "Delete" Request with endpoint.........passed
 Then User receives 200 Created Status with response body....................passed
 ]]></system-out>
 </testcase>

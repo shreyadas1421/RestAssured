@@ -16,7 +16,8 @@ public enum EndPoints {
 	LMSupdateUser("/users"),
 	LMSupdateUserStatus("/users/roleStatus"),
 	LMSupdateUserRoleId("/users/roleId"),
-	LMSupdateUserLoginStatus("/users/userLogin");
+	LMSupdateUserLoginStatus("/users/userLogin"),
+	LMSdeleteUser("/users");
 	
 	
 
