@@ -1,13 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="10.654" tests="27" skipped="0" failures="8" errors="0">
-<testcase classname="Post Request for ProgramBatch Module" name="Check if admin able to create a Batch with valid endpoint and request body (non existing values) - Example #1.1" time="1.834">
+<testsuite name="Cucumber" time="12.508" tests="27" skipped="0" failures="9" errors="0">
+<testcase classname="Post Request for ProgramBatch Module" name="Check if admin able to create a Batch with valid endpoint and request body (non existing values) - Example #1.1" time="1.475">
+<failure type="java.lang.AssertionError" message="1 expectation failed.
+Expected status code &lt;201&gt; but was &lt;401&gt;.
+">
+<![CDATA[java.lang.AssertionError: 1 expectation failed.
+Expected status code <201> but was <401>.
+
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:57)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:49)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
+	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:49)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+	at stepDefinations.Program_Batch.admin_receives_and_status_with_response_body(Program_Batch.java:88)
+	at ✽.Admin receives 201 and  "Created" Status with response body.(file:///Users/sathishkumar/git/RestAssured/src/test/resources/Features/B_program_batch.feature:9)
+]]>
+</failure>
 <system-out><![CDATA[
 Given Admin creates POST Request  with valid data in request body "Batch" and 1.passed
 When Admin sends HTTPS Request with endpoint................................passed
-Then Admin receives 201 and  "Created" Status with response body............passed
+Then Admin receives 201 and  "Created" Status with response body............failed
 ]]></system-out>
 </testcase>
-<testcase classname="Post Request Program Batch module" name="Create Batches with external excel data" time="0.052">
+<testcase classname="Post Request Program Batch module" name="Create Batches with external excel data" time="0.558">
 <failure type="java.lang.NullPointerException" message="Cannot invoke &quot;org.apache.poi.xssf.usermodel.XSSFRow.getCell(int)&quot; because the return value of &quot;org.apache.poi.xssf.usermodel.XSSFSheet.getRow(int)&quot; is null">
 <![CDATA[java.lang.NullPointerException: Cannot invoke "org.apache.poi.xssf.usermodel.XSSFRow.getCell(int)" because the return value of "org.apache.poi.xssf.usermodel.XSSFSheet.getRow(int)" is null
 	at Utilities.Batchdatareader.batch(Batchdatareader.java:35)
@@ -21,7 +58,7 @@ When Sends HTTP Post batch request with endpoints and Read data from external fi
 Then Gets 201 status code with response body................................skipped
 ]]></system-out>
 </testcase>
-<testcase classname="Post Request Program Batch module" name="Create Batches with invalid token" time="0.025">
+<testcase classname="Post Request Program Batch module" name="Create Batches with invalid token" time="0.026">
 <failure type="java.lang.NullPointerException" message="Cannot invoke &quot;org.apache.poi.xssf.usermodel.XSSFRow.getCell(int)&quot; because the return value of &quot;org.apache.poi.xssf.usermodel.XSSFSheet.getRow(int)&quot; is null">
 <![CDATA[java.lang.NullPointerException: Cannot invoke "org.apache.poi.xssf.usermodel.XSSFRow.getCell(int)" because the return value of "org.apache.poi.xssf.usermodel.XSSFSheet.getRow(int)" is null
 	at Utilities.Batchdatareader.batch(Batchdatareader.java:35)
@@ -35,14 +72,14 @@ When Sends Http Post batch request with endpoints...........................fail
 Then gets 401 unauthorised status code with error message...................skipped
 ]]></system-out>
 </testcase>
-<testcase classname="Post Request Program Batch module" name="Create batches with invalid endpoint" time="0.341">
+<testcase classname="Post Request Program Batch module" name="Create batches with invalid endpoint" time="0.343">
 <system-out><![CDATA[
 Given Authorized with bearer Token "Invalid endpoint".......................passed
 When Sends HTTP Post batch request  with invalid endpoint and Read data "API_hackathon_march24 " "SDETd5 " 5 "active " 16306.passed
 Then Gets  404 with response body...........................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Post Request Program Batch module" name="create batches with different examples - Example #1.1" time="0.232">
+<testcase classname="Post Request Program Batch module" name="create batches with different examples - Example #1.1" time="0.25">
 <failure type="java.lang.AssertionError" message=" Expected status code returned expected [201] but found [400]">
 <![CDATA[java.lang.AssertionError:  Expected status code returned expected [201] but found [400]
 	at org.testng.Assert.fail(Assert.java:111)
@@ -61,21 +98,21 @@ When Sends HTTP Post batch request with valid endpoints and Read data "API_hacka
 Then Gets  201 with batch response body.....................................failed
 ]]></system-out>
 </testcase>
-<testcase classname="Post Request Program Batch module" name="create batches with different examples - Example #1.2" time="0.444">
+<testcase classname="Post Request Program Batch module" name="create batches with different examples - Example #1.2" time="0.439">
 <system-out><![CDATA[
 Given Authorized with bearer Token "Create_batch_with_existing_data"........passed
 When Sends HTTP Post batch request with valid endpoints and Read data "API_hackathon_march24" "SDETbatchess1" 4 "active" 16306.passed
 Then Gets  400 with batch response body.....................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Post Request Program Batch module" name="create batches with different examples - Example #1.3" time="0.445">
+<testcase classname="Post Request Program Batch module" name="create batches with different examples - Example #1.3" time="0.498">
 <system-out><![CDATA[
 Given Authorized with bearer Token "Post_missing_mandatory_fields"..........passed
 When Sends HTTP Post batch request with valid endpoints and Read data "API_hackathon_march24" "" 4 "active" 16306.passed
 Then Gets  400 with batch response body.....................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Post Request Program Batch module" name="create batches with different examples - Example #1.4" time="0.232">
+<testcase classname="Post Request Program Batch module" name="create batches with different examples - Example #1.4" time="0.227">
 <failure type="java.lang.AssertionError" message=" Expected status code returned expected [201] but found [400]">
 <![CDATA[java.lang.AssertionError:  Expected status code returned expected [201] but found [400]
 	at org.testng.Assert.fail(Assert.java:111)
@@ -94,63 +131,63 @@ When Sends HTTP Post batch request with valid endpoints and Read data "null" "SD
 Then Gets  201 with batch response body.....................................failed
 ]]></system-out>
 </testcase>
-<testcase classname="Post Request Program Batch module" name="create batches with different examples - Example #1.5" time="0.744">
+<testcase classname="Post Request Program Batch module" name="create batches with different examples - Example #1.5" time="1.684">
 <system-out><![CDATA[
 Given Authorized with bearer Token "Post_missing_additional_fields_null"....passed
 When Sends HTTP Post batch request with valid endpoints and Read data "" "SDETapi" 4 "active" 16306.passed
 Then Gets  400 with batch response body.....................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Post Request Program Batch module" name="create batches with different examples - Example #1.6" time="0.45">
+<testcase classname="Post Request Program Batch module" name="create batches with different examples - Example #1.6" time="0.468">
 <system-out><![CDATA[
 Given Authorized with bearer Token "Invalid_Progam_Id"......................passed
 When Sends HTTP Post batch request with valid endpoints and Read data "API_hackathon_march24" "SDET" 4 "active" 16900.passed
 Then Gets  400 with batch response body.....................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Post Request Program Batch module" name="create batches with different examples - Example #1.7" time="0.466">
+<testcase classname="Post Request Program Batch module" name="create batches with different examples - Example #1.7" time="0.455">
 <system-out><![CDATA[
 Given Authorized with bearer Token "Post_invalid_data"......................passed
 When Sends HTTP Post batch request with valid endpoints and Read data "API_hackathon_march24" "SDET" 4 "active" 16306.passed
 Then Gets  400 with batch response body.....................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="GET Request Program Batch module" name="Get all batches" time="0.518">
+<testcase classname="GET Request Program Batch module" name="Get all batches" time="0.52">
 <system-out><![CDATA[
 Given GET Batches Authorized with bearer Token..............................passed
 When Sends HTTP GET batch request with valid endpoints......................passed
 Then Gets 200 status code for get batch with response body..................passed
 ]]></system-out>
 </testcase>
-<testcase classname="GET Request Program Batch module" name="Get all batches as Unauthorized" time="0.609">
+<testcase classname="GET Request Program Batch module" name="Get all batches as Unauthorized" time="0.586">
 <system-out><![CDATA[
 Given Get batch token is invalid............................................passed
 When Sends HTTP GET batch request with valid endpoints......................passed
 Then Gets 401 status code for get batch with unauthorised message...........passed
 ]]></system-out>
 </testcase>
-<testcase classname="GET Request Program Batch module" name="Get all batches with invalid enpoints" time="0.252">
+<testcase classname="GET Request Program Batch module" name="Get all batches with invalid enpoints" time="0.225">
 <system-out><![CDATA[
 Given GET Batches Authorized with bearer Token..............................passed
 When Sends HTTP GET batch request with invalid endpoints....................passed
 Then Gets 404 status for get batch with error message Not Found.............passed
 ]]></system-out>
 </testcase>
-<testcase classname="GET Request Program Batch module" name="Get all batches with search string" time="0.537">
+<testcase classname="GET Request Program Batch module" name="Get all batches with search string" time="0.527">
 <system-out><![CDATA[
 Given GET Batches Authorized with bearer Token..............................passed
 When Sends HTTP GET batch request with search endpoints.....................passed
 Then Gets 200 status for get batch with response body.......................passed
 ]]></system-out>
 </testcase>
-<testcase classname="GET Request Program Batch module" name="Get all batches with search parameter with value" time="0.638">
+<testcase classname="GET Request Program Batch module" name="Get all batches with search parameter with value" time="0.653">
 <system-out><![CDATA[
 Given GET Batches Authorized with bearer Token..............................passed
 When Sends HTTP GET batch request with parameter and value..................passed
 Then Gets 200 status for get batch with response body.......................passed
 ]]></system-out>
 </testcase>
-<testcase classname="GET BatchId Request Program Batch module" name="Get Batches with BatchId" time="0.22">
+<testcase classname="GET BatchId Request Program Batch module" name="Get Batches with BatchId" time="0.214">
 <failure type="java.lang.AssertionError" message="Expected status code returned expected [200] but found [404]">
 <![CDATA[java.lang.AssertionError: Expected status code returned expected [200] but found [404]
 	at org.testng.Assert.fail(Assert.java:111)
@@ -159,7 +196,7 @@ Then Gets 200 status for get batch with response body.......................pass
 	at org.testng.Assert.assertEquals(Assert.java:132)
 	at org.testng.Assert.assertEquals(Assert.java:1419)
 	at org.testng.Assert.assertEquals(Assert.java:1407)
-	at stepDefinations.getbatchid.gets_status_code_for_get_batch_id_with_response_body(getbatchid.java:49)
+	at stepDefinations.getbatchid.gets_status_code_for_get_batch_id_with_response_body(getbatchid.java:51)
 	at ✽.Gets 200 status code for get batchID with response body(file:///Users/sathishkumar/git/RestAssured/src/test/resources/Features/F_getbatchid.feature:9)
 ]]>
 </failure>
@@ -169,28 +206,28 @@ When Sends HTTP GET batch request with BatchId valid endpoints..............pass
 Then Gets 200 status code for get batchID with response body................failed
 ]]></system-out>
 </testcase>
-<testcase classname="GET BatchId Request Program Batch module" name="Get Batches with BatchId as Unauthorized" time="0.229">
+<testcase classname="GET BatchId Request Program Batch module" name="Get Batches with BatchId as Unauthorized" time="0.212">
 <system-out><![CDATA[
 Given Get batchId token is invalid..........................................passed
 When Sends HTTP GET batch requests  with BatchId valid endpoints............passed
 Then Gets 401 status code for get batchID with unauthorised message.........passed
 ]]></system-out>
 </testcase>
-<testcase classname="GET BatchId Request Program Batch module" name="Get Batches with BatchId with invalid enpoints" time="0.226">
+<testcase classname="GET BatchId Request Program Batch module" name="Get Batches with BatchId with invalid enpoints" time="0.218">
 <system-out><![CDATA[
 Given GET BatchId Authorized with bearer Token..............................passed
 When Sends HTTP GET batch request with BatchId invalid endpoints............passed
 Then Gets 405 status for get batchID with error message.....................passed
 ]]></system-out>
 </testcase>
-<testcase classname="GET BatchId Request Program Batch module" name="Get Batches with Invalid BatchId" time="0.242">
+<testcase classname="GET BatchId Request Program Batch module" name="Get Batches with Invalid BatchId" time="0.213">
 <system-out><![CDATA[
 Given GET BatchId Authorized with bearer Token..............................passed
 When Sends HTTP GET batch request with invalid BatchId and valid endpoints..passed
 Then Gets 404 status for get batchID with error message.....................passed
 ]]></system-out>
 </testcase>
-<testcase classname="GET BatchId Request Program Batch module" name="Get Batches with BatchId with search parameter with value" time="0.218">
+<testcase classname="GET BatchId Request Program Batch module" name="Get Batches with BatchId with search parameter with value" time="0.244">
 <failure type="java.lang.AssertionError" message="Expected status code returned expected [200] but found [404]">
 <![CDATA[java.lang.AssertionError: Expected status code returned expected [200] but found [404]
 	at org.testng.Assert.fail(Assert.java:111)
@@ -199,7 +236,7 @@ Then Gets 404 status for get batchID with error message.....................pass
 	at org.testng.Assert.assertEquals(Assert.java:132)
 	at org.testng.Assert.assertEquals(Assert.java:1419)
 	at org.testng.Assert.assertEquals(Assert.java:1407)
-	at stepDefinations.getbatchid.gets_status_for_get_batch_id_with_response_body(getbatchid.java:149)
+	at stepDefinations.getbatchid.gets_status_for_get_batch_id_with_response_body(getbatchid.java:153)
 	at ✽.Gets 200 status for get batchID with response body(file:///Users/sathishkumar/git/RestAssured/src/test/resources/Features/F_getbatchid.feature:29)
 ]]>
 </failure>
@@ -209,7 +246,7 @@ When Sends HTTP GET batch request with BatchId parameter and value..........pass
 Then Gets 200 status for get batchID with response body.....................failed
 ]]></system-out>
 </testcase>
-<testcase classname="GET BatchName Request Program Batch module" name="Get Batches with BatchName" time="0.221">
+<testcase classname="GET BatchName Request Program Batch module" name="Get Batches with BatchName" time="0.225">
 <failure type="java.lang.AssertionError" message="Expected status code returned expected [200] but found [404]">
 <![CDATA[java.lang.AssertionError: Expected status code returned expected [200] but found [404]
 	at org.testng.Assert.fail(Assert.java:111)
@@ -218,7 +255,7 @@ Then Gets 200 status for get batchID with response body.....................fail
 	at org.testng.Assert.assertEquals(Assert.java:132)
 	at org.testng.Assert.assertEquals(Assert.java:1419)
 	at org.testng.Assert.assertEquals(Assert.java:1407)
-	at stepDefinations.getbatchname.gets_status_code_for_get_batch_name_with_response_body(getbatchname.java:49)
+	at stepDefinations.getbatchname.gets_status_code_for_get_batch_name_with_response_body(getbatchname.java:50)
 	at ✽.Gets 200 status code for get BatchName with response body(file:///Users/sathishkumar/git/RestAssured/src/test/resources/Features/G_getbatchname.feature:9)
 ]]>
 </failure>
@@ -228,28 +265,28 @@ When Sends HTTP GET batch request with BatchName valid endpoints............pass
 Then Gets 200 status code for get BatchName with response body..............failed
 ]]></system-out>
 </testcase>
-<testcase classname="GET BatchName Request Program Batch module" name="Get Batches with BatchName as Unauthorized" time="0.221">
+<testcase classname="GET BatchName Request Program Batch module" name="Get Batches with BatchName as Unauthorized" time="0.619">
 <system-out><![CDATA[
 Given Get BatchName token is invalid........................................passed
 When Sends HTTP GET batch requests  with BatchName valid endpoints..........passed
 Then Gets 401 status code for get BatchName with unauthorised message.......passed
 ]]></system-out>
 </testcase>
-<testcase classname="GET BatchName Request Program Batch module" name="Get Batches with BatchName with invalid enpoints" time="0.228">
+<testcase classname="GET BatchName Request Program Batch module" name="Get Batches with BatchName with invalid enpoints" time="0.635">
 <system-out><![CDATA[
 Given GET BatchName Authorized with bearer Token............................passed
 When Sends HTTP GET batch request with BatchName invalid endpoints..........passed
 Then Gets 405 status for get BatchName with error message...................passed
 ]]></system-out>
 </testcase>
-<testcase classname="GET BatchName Request Program Batch module" name="Get Batches with Invalid BatchName" time="0.227">
+<testcase classname="GET BatchName Request Program Batch module" name="Get Batches with Invalid BatchName" time="0.216">
 <system-out><![CDATA[
 Given GET BatchName Authorized with bearer Token............................passed
 When Sends HTTP GET batch request with invalid BatchName and valid endpoints.passed
 Then Gets 404 status for get BatchName with error message...................passed
 ]]></system-out>
 </testcase>
-<testcase classname="GET BatchName Request Program Batch module" name="Get Batches with BatchName with BatchId value as a parameter" time="0.239">
+<testcase classname="GET BatchName Request Program Batch module" name="Get Batches with BatchName with BatchId value as a parameter" time="0.258">
 <failure type="java.lang.AssertionError" message="Expected status code returned expected [200] but found [404]">
 <![CDATA[java.lang.AssertionError: Expected status code returned expected [200] but found [404]
 	at org.testng.Assert.fail(Assert.java:111)
@@ -258,7 +295,7 @@ Then Gets 404 status for get BatchName with error message...................pass
 	at org.testng.Assert.assertEquals(Assert.java:132)
 	at org.testng.Assert.assertEquals(Assert.java:1419)
 	at org.testng.Assert.assertEquals(Assert.java:1407)
-	at stepDefinations.getbatchname.gets_status_for_get_batch_name_with_response_body(getbatchname.java:152)
+	at stepDefinations.getbatchname.gets_status_for_get_batch_name_with_response_body(getbatchname.java:154)
 	at ✽.Gets 200 status for get BatchName with response body(file:///Users/sathishkumar/git/RestAssured/src/test/resources/Features/G_getbatchname.feature:29)
 ]]>
 </failure>
@@ -268,7 +305,7 @@ When Sends HTTP GET batch request with BatchName parameter and value........pass
 Then Gets 200 status for get BatchName with response body...................failed
 ]]></system-out>
 </testcase>
-<testcase classname="Post Request for ProgramBatch Module" name="Check if admin able to create a Batch with valid endpoint and request body (non existing values) - Example #1.1" time="0.29">
+<testcase classname="Post Request for ProgramBatch Module" name="Check if admin able to create a Batch with valid endpoint and request body (non existing values) - Example #1.1" time="0.278">
 <system-out><![CDATA[
 Given Admin creates POST Request  with valid data in request body "Batch" and 1.passed
 When Admin sends HTTPS Request with endpoint................................passed
