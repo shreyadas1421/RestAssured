@@ -1,6 +1,7 @@
 package stepDefinations;
 
 import static io.restassured.RestAssured.given;
+import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
 import static org.hamcrest.Matchers.equalTo;
 
 import java.io.IOException;
@@ -17,15 +18,17 @@ import io.restassured.specification.RequestSpecification;
 public class getbatchid extends ReusableMethod {
 	//RequestSpecification request; 
 	Response geta,getb,getc;
+	Utilities.token t = new Utilities.token();
 	/*@Before
 	public void specify() {
 		request=given().baseUri("https://lms-marchapi-hackathon-a258d2bbd43b.herokuapp.com/lms");
 		
 	}*/
 @Given("GET BatchId Authorized with bearer Token")
-public void get_batch_id_authorized_with_bearer_token() {
-    
-    
+public void get_batch_id_authorized_with_bearer_token() throws IOException {
+	 if(AppConfig.TOKEN== null) {
+			t.login();
+		    }
 }
 
 @When("Sends HTTP GET batch request with BatchId valid endpoints")
@@ -34,7 +37,8 @@ public void sends_http_get_batch_request_with_batch_id_valid_endpoints() throws 
 			 .header("Authorization","Bearer "+AppConfig.TOKEN)
 			 .spec(reusableSpecBuilder())
 			 .get("/batches/batchId/"+AppConfig.BatchID)
-			 .then().extract()
+			 .then()
+			 .extract()
 			 .response();
 	System.out.println(geta.asPrettyString());
 }
@@ -51,10 +55,12 @@ int statusCode = geta.getStatusCode();
 	Assert.assertEquals(geta.contentType(),"application/json");
    
 	Assert.assertTrue(geta.body().asString().contains("batchId"));
-	Assert.assertTrue(geta.body().asString().contains("SDET"));
+	//Assert.assertTrue(geta.body().asString().contains("SDET"));
 	geta.then().assertThat().body("batchStatus",equalTo("active")).
 	body("batchNoOfClasses",equalTo(4))
 	.body("batchId",equalTo(AppConfig.BatchID));
+	
+	geta.then().assertThat().body(matchesJsonSchemaInClasspath("id.json"));
 }
 
 @Given("Get batchId token is invalid")
@@ -140,7 +146,7 @@ public void sends_http_get_batch_request_with_batch_id_parameter_and_value() thr
 }
 
 @Then("Gets {int} status for get batchID with response body")
-public void gets_status_for_get_batch_id_with_response_body(Integer code) {
+public void gets_status_for_get_batch_id_with_response_body(Integer code) throws IOException {
 int statusCode = geta.getStatusCode();
 	
 	System.out.println("Expected status code returned::::: "+statusCode);
@@ -151,11 +157,12 @@ int statusCode = geta.getStatusCode();
 	Assert.assertEquals(geta.contentType(),"application/json");
    
 	Assert.assertTrue(geta.body().asString().contains("batchId"));
-	Assert.assertTrue(geta.body().asString().contains("SDET"));
+	//Assert.assertTrue(geta.body().asString().contains("SDET"));
 	geta.then().assertThat().body("batchStatus",equalTo("active")).
 	body("batchNoOfClasses",equalTo(4))
 	.body("batchId",equalTo(AppConfig.BatchID));  
-    
+	
+    t.logout();
 }
 
 

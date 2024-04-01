@@ -1,6 +1,7 @@
 package stepDefinations;
 
 import static io.restassured.RestAssured.given;
+import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
 import static org.hamcrest.Matchers.equalTo;
 
 import java.io.IOException;
@@ -17,15 +18,17 @@ import io.restassured.specification.RequestSpecification;
 public class getbatchname extends ReusableMethod {
 	//RequestSpecification request; 
 	Response geta;
+	Utilities.token t = new Utilities.token();
 	/*@Before
 	public void specify() {
 		request=given().baseUri("https://lms-marchapi-hackathon-a258d2bbd43b.herokuapp.com/lms");
 		
 	}*/
 @Given("GET BatchName Authorized with bearer Token")
-public void get_batch_name_authorized_with_bearer_token() {
-    
-    
+public void get_batch_name_authorized_with_bearer_token() throws IOException {
+    if(AppConfig.TOKEN== null) {
+	t.login();
+    }
 }
 
 @When("Sends HTTP GET batch request with BatchName valid endpoints")
@@ -52,6 +55,7 @@ public void gets_status_code_for_get_batch_name_with_response_body(Integer code)
    
 	Assert.assertTrue(geta.body().asString().contains("batchId"));
 	Assert.assertTrue(geta.body().asString().contains("SDET"));
+	geta.then().assertThat().body(matchesJsonSchemaInClasspath("id.json"));
 	//geta.then().assertThat()
 	//.body("batchStatus",equalTo("active"))
 	//.body("batchNoOfClasses",equalTo(4))

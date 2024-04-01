@@ -1,6 +1,7 @@
 package stepDefinations;
 
 import static io.restassured.RestAssured.given;
+import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
 import static org.hamcrest.Matchers.equalTo;
 
 import java.io.IOException;
@@ -26,11 +27,13 @@ public class getBatch extends ReusableMethod {
 		request=given().baseUri("https://lms-marchapi-hackathon-a258d2bbd43b.herokuapp.com/lms");
 		
 	}*/
-
+Utilities.token t = new Utilities.token();
 @Given("GET Batches Authorized with bearer Token")
-public void get_batches_authorized_with_bearer_token() {
+public void get_batches_authorized_with_bearer_token() throws IOException {
 	
-   
+	 if(AppConfig.TOKEN== null) {
+			t.login();
+		    }
 }
 
 @When("Sends HTTP GET batch request with valid endpoints")
@@ -54,7 +57,7 @@ public void gets_status_code_for_get_batch_with_response_body(Integer code) {
 	System.out.println(statusLine);
 	Assert.assertEquals(statusLine, "HTTP/1.1 200 ", "Correct status code is not returned");
 	Assert.assertEquals(geta.contentType(),"application/json");
-   
+	//geta.then().assertThat().body(matchesJsonSchemaInClasspath("id.json"));
 	Assert.assertTrue(geta.body().asString().contains("batchId"));
    
 }
@@ -138,6 +141,7 @@ public void sends_http_get_batch_request_with_parameter_and_value() throws IOExc
 			 .get("/batches?batches=400")
 			 .then().extract()
 			 .response();
+	t.logout();
 	
 }
 

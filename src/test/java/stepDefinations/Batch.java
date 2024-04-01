@@ -29,6 +29,7 @@ public class Batch extends ReusableMethod{
 	login log = new login();
 	Batchdatareader b=new Batchdatareader();
 	String Token ;
+	Utilities.token t = new Utilities.token();
  /*RequestSpecification request;  
 		@Before
 		public void specify() {
@@ -38,7 +39,9 @@ public class Batch extends ReusableMethod{
 
 	@Given("Authorized with bearer Token")
 	public void authorized_with_bearer_token() throws IOException {
-	
+		 if(AppConfig.TOKEN== null) {
+				t.login();
+			    }
 	}
    
 @Test
@@ -164,7 +167,7 @@ System.out.println(res.asPrettyString());
 
 
 @Then("Gets  {int} with batch response body")
-public void gets_with_batch_response_body(Integer code) {
+public void gets_with_batch_response_body(Integer code) throws IOException {
 	int statusCode = res.getStatusCode();
 	System.out.println(" status code returned::::: "+statusCode);
 	Assert.assertEquals(statusCode, code , " Expected status code returned");	
@@ -181,7 +184,7 @@ public void gets_with_batch_response_body(Integer code) {
 		Assert.assertTrue(res.body().asString().contains("message"));
 			
 	}
-	
+	t.logout();
 }
 }
 	
