@@ -22,6 +22,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
+import io.restassured.module.jsv.JsonSchemaValidator;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 
@@ -100,7 +101,7 @@ public void admin_sends_https_request_with_endpoints() {
 @Then("Admin receives {int} and  Status messeage with updated value in response body.")
 public void admin_receives_and_status_messeage_with_updated_value_in_response_body(Integer statuscode) {
     
-	response.then().log().all().assertThat().contentType(ContentType.JSON).statusCode(statuscode);
+	response.then().log().all().assertThat().body(JsonSchemaValidator.matchesJsonSchemaInClasspath("batchUpdate.json")).contentType(ContentType.JSON).statusCode(statuscode);
 	
 	JSONObject responseBatch = new JSONObject(response.getBody().asString());
 	
@@ -163,8 +164,8 @@ public void admin_receives_statuscode_status_with_the_message_and_boolean_succes
 }
 
 
-@Given("Admin creates PUT Request with request body {string}, ,{string},{string} and {string}")
-public void admin_creates_put_request_with_request_body_and(String batchDescription_n, String batchStatus, String batchName_n, String programName_n) {
+@Given("Admin creates PUT Request with request body of {string},<batchNoOfclasses_n1> ,{string},{string} and {string}")
+public void admin_creates_put_request_with_request_body_of_batch_no_Ofclasses_n1_and(String batchDescription_n,Integer batchNoOfclasses_n1, String batchStatus, String batchName_n, String programName_n) {
 	
 	
 	
@@ -174,7 +175,7 @@ public void admin_creates_put_request_with_request_body_and(String batchDescript
 	batch_update.setProgramName(programName_n);
 	batch_update.setBatchDescription(batchDescription_n);
 	
-	//batch_update.setBatchNoOfClasses(batchNoOfclasses_n);
+	batch_update.setBatchNoOfClasses(batchNoOfclasses_n1);
 	batch_update.setBatchStatus(batchStatus);
 	//batch_update.setBatchNoOfClasses(Integer.parseInt(batchNo) );
 	//batch_update.setBatchStatus(dataMap.get("batchStatus"));
@@ -187,8 +188,8 @@ public void admin_creates_put_request_with_request_body_and(String batchDescript
 	
 	
 }
-@Given("Admin creates PUT Request with request body {string}, hksjfh,{string},{string} and {string}")
-public void admin_creates_put_request_with_request_body_hksjfh_and(String batchDescription_n, String batchStatus, String batchName_n, String programName_n) {
+@Given("Admin creates PUT Request with request body  {string}, <batchNoOfclasses_n2>,{string},{string} and {string}")
+public void admin_creates_put_request_with_request_body(String batchDescription_n,Integer batchNoOfclasses_n2, String batchStatus, String batchName_n, String programName_n) {
 	
 	batch_update.setProgramId(programid);
 	batch_update.setBatchId(AppConfig.BATCH_ID1);

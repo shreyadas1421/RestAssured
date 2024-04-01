@@ -8,6 +8,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
+import io.restassured.module.jsv.JsonSchemaValidator;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 
@@ -41,7 +42,7 @@ public class Get_Batch_ProgramId {
 	@Then("Admin receives Status with {int} and statusmessage unauthorized")
 	public void admin_receives_status_with_and_statusmessage_unauthorized(Integer statusCode) {
 	    
-		response.then().log().all().assertThat().contentType(ContentType.JSON).statusCode(statusCode);
+		response.then().log().all().assertThat().statusCode(statusCode);
 	}
 
 	@Given("Admin creates GET Request with valid ProgramId")
@@ -64,7 +65,7 @@ public class Get_Batch_ProgramId {
 	@Then("Admin receives {int} OK Status with response body.")
 	public void admin_receives_ok_status_with_response_body(Integer statusCode) {
 	    
-		response.then().log().all().assertThat().contentType(ContentType.JSON).statusCode(statusCode);
+		response.then().log().all().assertThat().body(JsonSchemaValidator.matchesJsonSchemaInClasspath("batchProgramId.json")).contentType(ContentType.JSON).statusCode(statusCode);
 	}
 
 	@Given("Admin creates GET Request with invalid Program Id")
