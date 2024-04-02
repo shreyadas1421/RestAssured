@@ -58,7 +58,7 @@ public class Program {
 
 		Random ran = new Random();
 
-		String programName = dataMap.get("programName") + "-" + ran.nextInt(100, 500);
+		String programName = dataMap.get("programName") + "-" + ran.nextInt(1000, 9999);
 
 		pp.setProgramName(programName);
 		pp.setProgramDescription(dataMap.get("programDescription"));

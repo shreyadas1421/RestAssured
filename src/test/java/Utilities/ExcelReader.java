@@ -16,9 +16,9 @@ public class ExcelReader{
 		
 		Map<String, String> ioMap = new HashMap<>();
 		ioMap.clear();
-		
-		try {
-			XSSFWorkbook workbook = new XSSFWorkbook(ExcelReader.class.getResourceAsStream("/TestDataUSR.xlsx"));
+		XSSFWorkbook workbook = null;
+		try{
+			workbook = new XSSFWorkbook(ExcelReader.class.getResourceAsStream("/TestDataUSR.xlsx"));
 			XSSFSheet sheet = workbook.getSheet(sheetName);
 			XSSFRow headerRow = sheet.getRow(0);
 			XSSFRow testRow = sheet.getRow(rowNumber);
@@ -38,6 +38,13 @@ public class ExcelReader{
 		} catch (IOException e) {
 			
 			e.printStackTrace();
+		}finally {
+			try {
+				workbook.close();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 		return ioMap;
 	}
