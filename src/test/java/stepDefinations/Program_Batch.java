@@ -58,7 +58,7 @@ public class Program_Batch {
 		Random ran = new Random();
 		
 		String batchName = dataMap.get("batchName")+ "-" + ran.nextInt();
-		int programid= 17024;    //AppConfig.PROGRAM_ID_1;
+		int programid= AppConfig.PROGRAM_ID;
 		
 		batch.setProgramId(programid);
 		batch.setBatchName(batchName);

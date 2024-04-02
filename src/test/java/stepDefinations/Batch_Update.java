@@ -33,7 +33,7 @@ public class Batch_Update {
 	RequestSpecification request;
 	Response response;
 	int batchid_dummy=8530;
-	int programid= 17024;    //AppConfig.PROGRAM_ID_1;
+	int programid= AppConfig.PROGRAM_ID;
 	
 	Batch_UpdatePojo batch_update = new Batch_UpdatePojo();
 	

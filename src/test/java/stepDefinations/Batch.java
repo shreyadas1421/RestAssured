@@ -150,7 +150,7 @@ public void sends_http_post_batch_request_with_valid_endpoints_and_read_data(Str
 	 req.put("batchName",Bn);
 	 req.put("batchNoOfClasses",Bnc);
 	 req.put("batchStatus",Bs);
-	 req.put("programId",PI);
+	 req.put("programId",AppConfig.PROGRAM_ID);
 	 System.out.println(req.toJSONString());
 	
 res=given()

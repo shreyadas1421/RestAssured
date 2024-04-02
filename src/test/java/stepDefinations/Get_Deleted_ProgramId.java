@@ -20,7 +20,7 @@ public class Get_Deleted_ProgramId {
 	public void admin_creates_get_request_with_deleted_program_id() {
 	   
 		
-RestAssured.baseURI= "https://lms-marchapi-hackathon-a258d2bbd43b.herokuapp.com/lms/batches/program/16306"; //AppConfig.PROGRAM_ID_1;
+RestAssured.baseURI= "https://lms-marchapi-hackathon-a258d2bbd43b.herokuapp.com/lms/batches/program"+ AppConfig.PROGRAM_ID_1;
 	    
 		
 		request = given()

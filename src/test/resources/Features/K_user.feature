@@ -163,15 +163,15 @@ Feature: User Module
 	 #|R01|
 	
 	 
-	# @delete_user
-	# Scenario: Check if Admin able to delete a Staff with valid Admin Id
-	# Given User creates post Request to delete Staff details
-	# When User sends "LMSdeleteUser" with "Delete" Request with endpoint
-	# Then User receives 200 Created Status with response body
+	 @delete_user
+	 Scenario: Check if Admin able to delete a Staff with valid Admin Id
+	 Given User creates post Request to delete Staff details
+	 When User sends "LMSdeleteUser" with "Delete" Request with endpoint
+	 Then User receives 200 Created Status with response body
 	 
-	 # @delete_user
-	 #Scenario: Check if Admin able to delete a Student with valid Admin Id
-	 #Given User creates post Request to delete Student details
-	 #When User sends "LMSdeleteUser" with "Delete" Request with endpoint
-	 #Then User receives 200 Created Status with response body
+	  @delete_user
+	 Scenario: Check if Admin able to delete a Student with valid Admin Id
+	 Given User creates post Request to delete Student details
+	 When User sends "LMSdeleteUser" with "Delete" Request with endpoint
+	 Then User receives 200 Created Status with response body
 	 

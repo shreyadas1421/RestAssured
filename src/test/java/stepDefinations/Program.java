@@ -21,11 +21,13 @@ public class Program {
 	Response response;
 
 	Map<String, String> dataMap;
+	
+	//login log = new login();
 
 	@Given("User is Authorized")
 	public void user_is_authorized() {
 
-		if (AppConfig.TOKEN == null) {
+		/*if (AppConfig.TOKEN == null) {
 			login l = new login();
 			try {
 				l.userable_to_log_in();
@@ -33,7 +35,7 @@ public class Program {
 
 				e.printStackTrace();
 			}
-		}
+		}*/
 		System.out.println("Token: " + AppConfig.TOKEN);
 	}
 
@@ -44,7 +46,8 @@ public class Program {
 		System.out.println("DATA_MAP " + dataMap);
 
 		ProgramPojo pp = new ProgramPojo();
-
+		
+		RestAssured.baseURI= "https://lms-marchapi-hackathon-a258d2bbd43b.herokuapp.com/lms";
 		String ep = dataMap.get("endPoint");
 
 		ep = ep.replaceAll("\\{programId\\}", AppConfig.PROGRAM_ID_1 + "");

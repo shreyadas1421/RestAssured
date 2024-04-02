@@ -209,7 +209,7 @@ public UserPUT_updateUserRoleProgramBatchStatus updateUserRoleProgramBatchStatus
 	
 	UserPUT_updateUserRoleProgramBatchStatus userRoleProgramBatch= new UserPUT_updateUserRoleProgramBatchStatus();
 	
-	userRoleProgramBatch.setProgramId(AppConfig.PROGRAM_ID_1);
+	userRoleProgramBatch.setProgramId(AppConfig.PROGRAM_ID);
 	userRoleProgramBatch.setRoleId("R01");
 	
 	userRoleProgramBatches us= new userRoleProgramBatches();
