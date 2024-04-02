@@ -47,9 +47,7 @@ public class Batch extends ReusableMethod{
 @Test
     @When("Sends HTTP Post batch request with endpoints and Read data from external file")
     public void sends_http_post_batch_request_with_endpoints_and_read_data_from_external_file() throws IOException {
-	if(AppConfig.TOKEN== null) {
-		t.login();
-	    }	
+		
 	postresponse=given()
 			.header("Authorization","Bearer "+AppConfig.TOKEN)
 			.header("Content-Type", "application/json")

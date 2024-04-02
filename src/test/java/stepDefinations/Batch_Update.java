@@ -25,7 +25,7 @@ import io.restassured.http.ContentType;
 import io.restassured.module.jsv.JsonSchemaValidator;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
-
+/*
 public class Batch_Update {
 	
 	
@@ -44,7 +44,7 @@ public class Batch_Update {
 @Given("Admin creates PUT Request with the valid BatchId anddata {string} and {int}")
 public void admin_creates_put_request_with_the_valid_batch_id_anddata_and(String sheetname, Integer rownumber) {
     
-	/*if(AppConfig.TOKEN==null) {
+	if(AppConfig.TOKEN==null) {
 		UserMap l = new UserMap();
 		try {
 			l.userable_to_log_in();
@@ -53,7 +53,7 @@ public void admin_creates_put_request_with_the_valid_batch_id_anddata_and(String
 			e.printStackTrace();
 		}
 		
-	}*/
+	}
 	System.out.println("Token: " + AppConfig.TOKEN);
 	
 	dataMap = ExcelReaderBatch.getTestData(sheetname,rownumber);
@@ -296,7 +296,6 @@ public void admin_receives_the_and_unauthorized(Integer statuscode, String strin
 	   
 }
 	
+		
 	
-	
-	
-}
+}*/

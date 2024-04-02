@@ -52,21 +52,21 @@ public class User extends ReusableMethod{
 	//POST--Create User
 	
 	   //Using Scenario outline
-			/*@Given("Admin creates POST request with all fields {string},{string},{string},{string}, {string},{string},{string},{string},{string}, {string},{string},{string},{string},{string}")
-			public void admin_creates_post_request_with_all_fields(String userComments, String userEduPg, String userEduUg, String userFirstName, String userLastName, String userLinkedinUrl, String password, String userLoginEmail, String userMiddleName, String userPhoneNumber, String roleId, String userRoleStatus, String userTimeZone, String userVisaStatus) throws IOException
+			@Given("User creates POST request with all fields {string},{string},{string},{string}, {string},{string},{string},{string},{string}, {string},{string},{string},{string},{string}")
+			public void user_creates_post_request_with_all_fields(String userComments, String userEduPg, String userEduUg, String userFirstName, String userLastName, String userLinkedinUrl, String password, String userLoginEmail, String userMiddleName, String userPhoneNumber, String roleId, String userRoleStatus, String userTimeZone, String userVisaStatus) throws IOException
 				   {
 					      
-						res=given().log().all().spec(reusableSpecBuilder()).body(d.userCreation(userComments,userEduPg,userEduUg,userFirstName,userLastName,userLinkedinUrl,password,userLoginEmail,userMiddleName,userPhoneNumber,roleId,userRoleStatus,userTimeZone,userVisaStatus))
-								 .header("Authorization","Bearer "+ l.adimn_should_get_auto_generated_token());
+						res=given().log().all().spec(reusableSpecBuilder()).body(d.userCreationFeature(userComments,userEduPg,userEduUg,userFirstName,userLastName,userLinkedinUrl,password,userLoginEmail,userMiddleName,userPhoneNumber,roleId,userRoleStatus,userTimeZone,userVisaStatus))
+								 .header("Authorization","Bearer "+ AppConfig.TOKEN);
 	 
-					}*/
+					}
 	
 		//Excel DataDriven
 			@Given("User creates POST Request for the LMS with request body {string} and {int}")
 				public void user_creates_post_request_for_the_lms_with_request_body_and(String sheetname, int rownumber) throws IOException
 					{
 	    
-					res=given().log().all().spec(reusableSpecBuilder()).body(d.userCreation(sheetname,rownumber))
+					res=given().log().all().spec(reusableSpecBuilder()).body(d.userCreationexcel(sheetname,rownumber))
 							.header("Authorization","Bearer "+ AppConfig.TOKEN);
 	
 					}

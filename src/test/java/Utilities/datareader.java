@@ -41,7 +41,7 @@ public class datareader {
 	}
 	
 //POST request	
-	public UserPostPojo userCreation(String sheetname, int rownumber)
+	public UserPostPojo userCreationexcel(String sheetname, int rownumber)
 	{
    
 		dataMap = ExcelReaderUser.getTestData(sheetname,rownumber);
@@ -91,7 +91,7 @@ public class datareader {
 		
 	}
 	
-	/*public UserPostPojo userCreation(String userComments, String userEduPg, String userEduUg, String userFirstName, String userLastName, String userLinkedinUrl, String password, String userLoginEmail, String userMiddleName, String userPhoneNumber, String roleId, String userRoleStatus, String userTimeZone, String userVisaStatus)
+	public UserPostPojo userCreationFeature(String userComments, String userEduPg, String userEduUg, String userFirstName, String userLastName, String userLinkedinUrl, String password, String userLoginEmail, String userMiddleName, String userPhoneNumber, String roleId, String userRoleStatus, String userTimeZone, String userVisaStatus)
 	{
    
 		
@@ -137,7 +137,7 @@ public class datareader {
 		
 		return usr;
 		
-	}*/
+	}
 
 //POST Request	
 	public UserPutPojo userUpdate(String userComments, String userEduPg, String userEduUg, String userFirstName, String userLastName, String userLinkedinUrl, String userMiddleName, String userPhoneNumber, String userTimeZone, String userVisaStatus, String userLocation)
@@ -209,11 +209,11 @@ public UserPUT_updateUserRoleProgramBatchStatus updateUserRoleProgramBatchStatus
 	
 	UserPUT_updateUserRoleProgramBatchStatus userRoleProgramBatch= new UserPUT_updateUserRoleProgramBatchStatus();
 	
-	userRoleProgramBatch.setProgramId(AppConfig.PROGRAM_ID);
+	userRoleProgramBatch.setProgramId(16323);//AppConfig.PROGRAM_ID);
 	userRoleProgramBatch.setRoleId("R01");
 	
 	userRoleProgramBatches us= new userRoleProgramBatches();
-	us.setBatchId(AppConfig.BATCH_ID1);
+	us.setBatchId(8520);//AppConfig.BatchID);
 	us.setUserRoleProgramBatchStatus("Active");
 	
 	List<userRoleProgramBatches> mylist2= new ArrayList<userRoleProgramBatches>();

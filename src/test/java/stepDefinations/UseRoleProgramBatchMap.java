@@ -17,7 +17,7 @@ import io.restassured.specification.RequestSpecification;
 
 public class UseRoleProgramBatchMap extends ReusableMethod{
 	
-	RequestSpecification resUserRole;
+	static RequestSpecification resUserRole;
 	RequestSpecification resdelete;
 	Response responseUserRole;
 	static Response resbodyUsrRole;

@@ -12,6 +12,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
+import io.restassured.module.jsv.JsonSchemaValidator;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 
@@ -117,6 +118,9 @@ public class Program {
 		response.then().log().all().assertThat().statusCode(statusCode);
 
 		if (statusCode == 201) {
+			
+			response.then().assertThat().contentType(ContentType.JSON).body(JsonSchemaValidator.matchesJsonSchemaInClasspath("program.json"));
+			
 			if (AppConfig.PROGRAM_ID == 0 || AppConfig.PROGRAM_NAME == null) {
 
 				AppConfig.PROGRAM_ID = response.body().jsonPath().get("programId");
@@ -136,6 +140,8 @@ public class Program {
 		if ("PUT".equalsIgnoreCase(dataMap.get("method"))) {
 
 			if (statusCode == 200) {
+				
+				response.then().assertThat().contentType(ContentType.JSON).body(JsonSchemaValidator.matchesJsonSchemaInClasspath("program.json"));
 
 				AppConfig.PROGRAM_NAME_1 = response.body().jsonPath().getString("programName");
 
