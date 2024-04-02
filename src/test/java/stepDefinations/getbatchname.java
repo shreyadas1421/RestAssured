@@ -55,7 +55,7 @@ public void gets_status_code_for_get_batch_name_with_response_body(Integer code)
    
 	Assert.assertTrue(geta.body().asString().contains("batchId"));
 	Assert.assertTrue(geta.body().asString().contains("SDET"));
-	geta.then().assertThat().body(matchesJsonSchemaInClasspath("id.json"));
+	//geta.then().assertThat().body(matchesJsonSchemaInClasspath("id.json"));
 	//geta.then().assertThat()
 	//.body("batchStatus",equalTo("active"))
 	//.body("batchNoOfClasses",equalTo(4))

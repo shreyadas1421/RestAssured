@@ -1,4 +1,4 @@
-@batch
+@batchs
 Feature: Post Request for ProgramBatch Module
  Background: Checking user creates batch 
 

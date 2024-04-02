@@ -10,7 +10,7 @@ import io.cucumber.junit.CucumberOptions;
 glue= {"stepDefinations"},
 dryRun =false,
 monochrome=true,
-
+tags="@batch",
 
  plugin= {"pretty", "html:Report/edge.html",
 		 "json:Report/report.json",

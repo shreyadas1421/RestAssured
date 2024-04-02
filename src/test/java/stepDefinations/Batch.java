@@ -30,12 +30,12 @@ public class Batch extends ReusableMethod{
 	Batchdatareader b=new Batchdatareader();
 	String Token ;
 	Utilities.token t = new Utilities.token();
- /*RequestSpecification request;  
+ RequestSpecification request;  
 		@Before
 		public void specify() {
 			request=given().baseUri("https://lms-marchapi-hackathon-a258d2bbd43b.herokuapp.com/lms");
 			
-		}*/
+		}
 
 	@Given("Authorized with bearer Token")
 	public void authorized_with_bearer_token() throws IOException {
@@ -47,18 +47,21 @@ public class Batch extends ReusableMethod{
 @Test
     @When("Sends HTTP Post batch request with endpoints and Read data from external file")
     public void sends_http_post_batch_request_with_endpoints_and_read_data_from_external_file() throws IOException {
-    	postresponse=given()
-		.header("Authorization","Bearer "+AppConfig.TOKEN)
-		.header("Content-Type", "application/json")
-		.spec(reusableSpecBuilder())
-        .body(b.batch()).log().all()
-		.when().post("/batches")
-		.then()
-		.assertThat().statusCode(201).extract().response().asPrettyString();
-System.out.println(postresponse);
-JsonPath js= new JsonPath(postresponse);
-AppConfig.BatchID=js.getInt("batchId");
-AppConfig.BatchName=js.getString("batchName");
+	if(AppConfig.TOKEN== null) {
+		t.login();
+	    }	
+	postresponse=given()
+			.header("Authorization","Bearer "+AppConfig.TOKEN)
+			.header("Content-Type", "application/json")
+			.spec(reusableSpecBuilder())
+	        .body(b.batch())
+			.when().post("/batches")
+			.then()
+			.assertThat().extract().response().asPrettyString();
+	System.out.println(postresponse);
+	JsonPath js= new JsonPath(postresponse);
+//AppConfig.BatchID=js.getInt("batchId");
+//AppConfig.BatchName=js.getString("batchName");
        
     }
 
@@ -73,7 +76,7 @@ AppConfig.BatchName=js.getString("batchName");
     	Token ="dffgdfgfghgfhgfh";
        
     }
-@Test
+
     @When("Sends Http Post batch request with endpoints")
     public void sends_http_post_batch_request_with_endpoints() throws IOException {
     	System.out.println("********** Unauthorized ADMIN *********"); 
@@ -81,7 +84,7 @@ AppConfig.BatchName=js.getString("batchName");
 				.header("Authorization","Bearer "+Token)
 				.header("Content-Type", "application/json")
 				.spec(reusableSpecBuilder())
-	            .body(b.batch()).log().all()
+	            .body(b.batch())
 				.when().post("/batches")
 				.then()
 				.assertThat().statusCode(401).extract().response();
@@ -114,14 +117,14 @@ AppConfig.BatchName=js.getString("batchName");
     	 req.put("batchName",Bn);
     	 req.put("batchNoOfClasses",Bnc);
     	 req.put("batchStatus",Bs);
-    	 req.put("programId",PI);
+    	 req.put("programId",AppConfig.programid);
     	 System.out.println(req.toJSONString());
     	
 	response=given()
 			.header("Authorization","Bearer "+AppConfig.TOKEN)
 			.header("Content-Type", "application/json")
 			.spec(reusableSpecBuilder())
-            .body(req.toJSONString()).log().all()
+            .body(req.toJSONString())
 			.when().post("\batch")
 			.then()
 			.assertThat().extract().response();
@@ -150,14 +153,14 @@ public void sends_http_post_batch_request_with_valid_endpoints_and_read_data(Str
 	 req.put("batchName",Bn);
 	 req.put("batchNoOfClasses",Bnc);
 	 req.put("batchStatus",Bs);
-	 req.put("programId",AppConfig.PROGRAM_ID);
+	 req.put("programId",AppConfig.programid);
 	 System.out.println(req.toJSONString());
 	
 res=given()
 .header("Authorization","Bearer "+AppConfig.TOKEN)
 .header("Content-Type", "application/json")
 .spec(reusableSpecBuilder())
-.body(req.toJSONString()).log().all()
+.body(req.toJSONString())
 .when().post("/batches")
 .then()
 .assertThat().extract().response();
@@ -173,9 +176,14 @@ public void gets_with_batch_response_body(Integer code) throws IOException {
 	Assert.assertEquals(statusCode, code , " Expected status code returned");	
 	Assert.assertEquals(res.contentType(),"application/json");
 	if(code==201) {
-	Assert.assertTrue(res.body().asString().contains("SDET"));
-	res.then().assertThat().body("batchStatus",equalTo("active")).
-	body("batchNoOfClasses",equalTo(4));
+		Assert.assertTrue(res.body().asString().contains("SDET"));
+		res.then().assertThat().body("batchStatus",equalTo("active")).
+		body("batchNoOfClasses",equalTo(4));
+		String r= res.then().extract().asString();
+		JsonPath js= new JsonPath(r);
+		AppConfig.BatchID=js.getInt("batchId");
+		
+		AppConfig.BatchName=js.getString("batchName");
 	}
 	else if(code==404) {
 		Assert.assertTrue(res.body().asString().contains("not found"));

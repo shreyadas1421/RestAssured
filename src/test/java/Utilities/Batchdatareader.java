@@ -42,7 +42,7 @@ public ProgramBatchPojo batch() throws IOException {
 		bt.setBatchName(batchName);
 		bt.setBatchNoOfClasses(batchNoOfClasses);
 		bt.setBatchStatus(batchStatus);
-		bt.setProgramId(programId);
+		bt.setProgramId(AppConfig.programid);
 		
 	return bt;
 	}

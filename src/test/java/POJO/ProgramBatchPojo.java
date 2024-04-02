@@ -8,8 +8,8 @@ public class ProgramBatchPojo {
     private String batchName;
 	private String batchNoOfClasses;
 	private String batchStatus;
-	private String programId;
-	private String programName;
+	private int programId;
+	
 
 	public String getBatchDescription() {
 		return batchDescription;
@@ -35,10 +35,10 @@ public class ProgramBatchPojo {
 	public void setBatchStatus(String batchStatus) {
 		this.batchStatus = batchStatus;
 	}
-	public String getProgramId() {
+	public int getProgramId() {
 		return programId;
 	}
-	public void setProgramId(String programId) {
+	public void setProgramId(int programId) {
 		this.programId = programId;
 	}
 	
