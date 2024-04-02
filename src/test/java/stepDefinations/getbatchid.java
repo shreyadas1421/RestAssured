@@ -35,8 +35,9 @@ public void get_batch_id_authorized_with_bearer_token() throws IOException {
 public void sends_http_get_batch_request_with_batch_id_valid_endpoints() throws IOException {
 	geta=given()
 			 .header("Authorization","Bearer "+AppConfig.TOKEN)
-			 .spec(reusableSpecBuilder())
-			 .get("/batches/batchId/"+AppConfig.BatchID)
+			 //.spec(reusableSpecBuilder())
+			 //.get("/batches/batchId/"+AppConfig.BatchID)
+			 .get("https://lms-marchapi-hackathon-a258d2bbd43b.herokuapp.com/lms/batches/batchId/8563")
 			 .then()
 			 .extract()
 			 .response();
@@ -56,7 +57,7 @@ int statusCode = geta.getStatusCode();
    
 	Assert.assertTrue(geta.body().asString().contains("batchId"));
 	//Assert.assertTrue(geta.body().asString().contains("SDET"));
-	geta.then().assertThat().body("batchStatus",equalTo("active")).
+	geta.then().assertThat().body("batchStatus",equalTo("Active")).
 	body("batchNoOfClasses",equalTo(4))
 	.body("batchId",equalTo(AppConfig.BatchID));
 	
@@ -74,7 +75,7 @@ public void get_batch_id_token_is_invalid() {
 public void sends_http_get_batch_requests_with_batch_id_valid_endpoints() throws IOException {
 	getb=given()
 			 .header("Authorization","Bearer 12"+AppConfig.TOKEN)
-			 .spec(reusableSpecBuilder())
+			 //.spec(reusableSpecBuilder())
 			 .get("/batches/batchId/"+AppConfig.BatchID)
 			 .then().extract()
 			 .response(); 
@@ -98,8 +99,9 @@ public void sends_http_get_batch_request_with_batch_id_invalid_endpoints() throw
     
 	getc= given()
 			 .header("Authorization","Bearer "+AppConfig.TOKEN)
-			 .spec(reusableSpecBuilder())
-			 .get("/batches/batchId/")
+			 //.spec(reusableSpecBuilder())
+			// .get("/batches/batchId/")
+			 .get("https://lms-marchapi-hackathon-a258d2bbd43b.herokuapp.com/lms/batchesbatchId/8563")
 			 .then().extract()
 			 .response(); 
 	System.out.println(getc.asPrettyString());
@@ -127,8 +129,9 @@ public void sends_http_get_batch_request_with_invalid_batch_id_and_valid_endpoin
     
 	getc= given()
 			 .header("Authorization","Bearer "+AppConfig.TOKEN)
-			 .spec(reusableSpecBuilder())
-			 .get("/batches/batchId/2345")
+			 //.spec(reusableSpecBuilder())
+			 //.get("/batches/batchId/2345")
+			 .get("https://lms-marchapi-hackathon-a258d2bbd43b.herokuapp.com/lms/batches/batchId/5552222")
 			 .then().extract()
 			 .response();   
 	System.out.println(getc.asPrettyString());
@@ -138,8 +141,9 @@ public void sends_http_get_batch_request_with_invalid_batch_id_and_valid_endpoin
 public void sends_http_get_batch_request_with_batch_id_parameter_and_value() throws IOException {
 	geta=given()
 			 .header("Authorization","Bearer "+AppConfig.TOKEN)
-			 .spec(reusableSpecBuilder())
-			 .get("/batches/batchId/"+AppConfig.BatchID+"?batches=6909")
+			 //.spec(reusableSpecBuilder())
+			 //.get("/batches/batchId/"+AppConfig.BatchID+"?batches=6909")
+			 .get("https://lms-marchapi-hackathon-a258d2bbd43b.herokuapp.com/lms/batches/batchId/8563?batches=6909")
 			 .then().extract()
 			 .response(); 
 	System.out.println(geta.asPrettyString());
@@ -158,7 +162,7 @@ int statusCode = geta.getStatusCode();
    
 	Assert.assertTrue(geta.body().asString().contains("batchId"));
 	//Assert.assertTrue(geta.body().asString().contains("SDET"));
-	geta.then().assertThat().body("batchStatus",equalTo("active")).
+	geta.then().assertThat().body("batchStatus",equalTo("Active")).
 	body("batchNoOfClasses",equalTo(4))
 	.body("batchId",equalTo(AppConfig.BatchID));  
 	

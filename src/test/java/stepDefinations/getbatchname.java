@@ -35,8 +35,9 @@ public void get_batch_name_authorized_with_bearer_token() throws IOException {
 public void sends_http_get_batch_request_with_batch_name_valid_endpoints() throws IOException {
 	geta=given()
 			 .header("Authorization","Bearer "+AppConfig.TOKEN)
-			 .spec(reusableSpecBuilder())
-			 .get("/batches/batchName/"+AppConfig.BatchName)
+			 //.spec(reusableSpecBuilder())
+			 //.get("/batches/batchName/"+AppConfig.BatchName)
+			 .get("https://lms-marchapi-hackathon-a258d2bbd43b.herokuapp.com/lms/batches/batchName/SDET251")
 			 .then().extract()
 			 .response();
 	System.out.println(geta.asPrettyString()); 
@@ -96,8 +97,9 @@ public void gets_status_code_for_get_batch_name_with_unauthorised_message(Intege
 public void sends_http_get_batch_request_with_batch_name_invalid_endpoints() throws IOException {
 	geta=given()
 			 .header("Authorization","Bearer "+AppConfig.TOKEN)
-			 .spec(reusableSpecBuilder())
-			 .get("/batches/batchName"+AppConfig.BatchName)
+			 //.spec(reusableSpecBuilder())
+			 //.get("/batches/batchName"+AppConfig.BatchName)
+			 .get("https://lms-marchapi-hackathon-a258d2bbd43b.herokuapp.com/lms/batches/batchNameSDET251")
 			 .then().extract()
 			 .response(); 
 	System.out.println(geta.asPrettyString());  
@@ -127,8 +129,8 @@ public void sends_http_get_batch_request_with_invalid_batch_name_and_valid_endpo
     
 	geta=given()
 			 .header("Authorization","Bearer "+AppConfig.TOKEN)
-			 .spec(reusableSpecBuilder())
-			 .get("/batches/batchName/q"+AppConfig.BatchName)
+			 //.spec(reusableSpecBuilder())
+			 .get("https://lms-marchapi-hackathon-a258d2bbd43b.herokuapp.com/lms/batches/batchName/qSDET251")
 			 .then().extract()
 			 .response(); 
 	System.out.println(geta.asPrettyString());  
@@ -139,8 +141,9 @@ public void sends_http_get_batch_request_with_invalid_batch_name_and_valid_endpo
 public void sends_http_get_batch_request_with_batch_name_parameter_and_value() throws IOException {
 	geta=given()
 			 .header("Authorization","Bearer "+AppConfig.TOKEN)
-			 .spec(reusableSpecBuilder())
-			 .get("/batches/batchName/"+AppConfig.BatchName+"?batchId=8494")
+			 //.spec(reusableSpecBuilder())
+			 //.get("/batches/batchName/"+AppConfig.BatchName+"?batchId=8494")
+			 .get("https://lms-marchapi-hackathon-a258d2bbd43b.herokuapp.com/lms/batches/batchName/SDET251?batchId=8494")
 			 .then().extract()
 			 .response(); 
 	System.out.println(geta.asPrettyString());  

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="92.994" tests="102" skipped="0" failures="30" errors="0">
-<testcase classname="AdminLogin Controller" name="Check if Admin able to generate token with valid credential" time="21.04">
+<testsuite name="Cucumber" time="30.235" tests="94" skipped="0" failures="12" errors="0">
+<testcase classname="AdminLogin Controller" name="Check if Admin able to generate token with valid credential" time="1.734">
 <system-out><![CDATA[
 Given Admin creates request with valid credentials..........................passed
 When Admin calls "LMSLogIn" with "Post" http request with valid endpoint....passed
@@ -8,7 +8,7 @@ Then Admin Should get 200 status............................................pass
 And Adimn should get auto generated token...................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="POST REQUEST for Program Module" name="Check if Admin able to create a program with &quot;&lt;scenarioName&gt;&quot; - Example #1.1" time="2.838">
+<testcase classname="POST REQUEST for Program Module" name="Check if Admin able to create a program with &quot;&lt;scenarioName&gt;&quot; - Example #1.1" time="0.441">
 <system-out><![CDATA[
 Given User is Authorized....................................................passed
 Given Admin creates "POST" Request for the LMS with request body "Program" and 1.passed
@@ -16,7 +16,7 @@ When Admin sends "POST" Request and request Body with endpoint for Program..pass
 Then Admin receives 201 "Created" Status with response body for Program.....passed
 ]]></system-out>
 </testcase>
-<testcase classname="POST REQUEST for Program Module" name="Check if Admin able to create a program with &quot;&lt;scenarioName&gt;&quot; - Example #1.2" time="0.837">
+<testcase classname="POST REQUEST for Program Module" name="Check if Admin able to create a program with &quot;&lt;scenarioName&gt;&quot; - Example #1.2" time="0.266">
 <system-out><![CDATA[
 Given User is Authorized....................................................passed
 Given Admin creates "POST" Request for the LMS with request body "Program" and 1.passed
@@ -24,7 +24,7 @@ When Admin sends "POST" Request and request Body with endpoint for Program..pass
 Then Admin receives 201 "Created" Status with response body for Program.....passed
 ]]></system-out>
 </testcase>
-<testcase classname="POST REQUEST for Program Module" name="Check if Admin able to create a program with &quot;&lt;scenarioName&gt;&quot; - Example #1.3" time="0.891">
+<testcase classname="POST REQUEST for Program Module" name="Check if Admin able to create a program with &quot;&lt;scenarioName&gt;&quot; - Example #1.3" time="0.232">
 <system-out><![CDATA[
 Given User is Authorized....................................................passed
 Given Admin creates "POST" Request for the LMS with request body "Program" and 2.passed
@@ -32,7 +32,7 @@ When Admin sends "POST" Request and request Body with endpoint for Program..pass
 Then Admin receives 401 "Unauthorized" Status with response body for Program.passed
 ]]></system-out>
 </testcase>
-<testcase classname="POST REQUEST for Program Module" name="Check if Admin able to create a program with &quot;&lt;scenarioName&gt;&quot; - Example #1.4" time="1.289">
+<testcase classname="POST REQUEST for Program Module" name="Check if Admin able to create a program with &quot;&lt;scenarioName&gt;&quot; - Example #1.4" time="0.346">
 <system-out><![CDATA[
 Given User is Authorized....................................................passed
 Given Admin creates "POST" Request for the LMS with request body "Program" and 3.passed
@@ -40,7 +40,7 @@ When Admin sends "POST" Request and request Body with endpoint for Program..pass
 Then Admin receives 404 "Not Found" Status with response body for Program...passed
 ]]></system-out>
 </testcase>
-<testcase classname="POST REQUEST for Program Module" name="Check if Admin able to create a program with &quot;&lt;scenarioName&gt;&quot; - Example #1.5" time="0.896">
+<testcase classname="POST REQUEST for Program Module" name="Check if Admin able to create a program with &quot;&lt;scenarioName&gt;&quot; - Example #1.5" time="0.263">
 <system-out><![CDATA[
 Given User is Authorized....................................................passed
 Given Admin creates "GET" Request for the LMS with request body "Program" and 4.passed
@@ -48,7 +48,7 @@ When Admin sends "GET" Request and request Body with endpoint for Program...pass
 Then Admin receives 405 "Method Not Allowed" Status with response body for Program.passed
 ]]></system-out>
 </testcase>
-<testcase classname="POST REQUEST for Program Module" name="Check if Admin able to create a program with &quot;&lt;scenarioName&gt;&quot; - Example #1.6" time="0.649">
+<testcase classname="POST REQUEST for Program Module" name="Check if Admin able to create a program with &quot;&lt;scenarioName&gt;&quot; - Example #1.6" time="0.237">
 <system-out><![CDATA[
 Given User is Authorized....................................................passed
 Given Admin creates "POST" Request for the LMS with request body "Program" and 5.passed
@@ -56,7 +56,7 @@ When Admin sends "POST" Request and request Body with endpoint for Program..pass
 Then Admin receives 400 "Bad Request" Status with response body for Program.passed
 ]]></system-out>
 </testcase>
-<testcase classname="POST REQUEST for Program Module" name="Check if Admin able to create a program with &quot;&lt;scenarioName&gt;&quot; - Example #1.7" time="1.991">
+<testcase classname="POST REQUEST for Program Module" name="Check if Admin able to create a program with &quot;&lt;scenarioName&gt;&quot; - Example #1.7" time="0.247">
 <system-out><![CDATA[
 Given User is Authorized....................................................passed
 Given Admin creates "PUT" Request for the LMS with request body "Program" and 8.passed
@@ -64,561 +64,16 @@ When Admin sends "PUT" Request and request Body with endpoint for Program...pass
 Then Admin receives 200 "Ok" Status with response body for Program..........passed
 ]]></system-out>
 </testcase>
-<testcase classname="POST REQUEST for Program Module" name="Check if Admin able to create a program with &quot;&lt;scenarioName&gt;&quot; - Example #1.8" time="0.713">
-<system-out><![CDATA[
-Given User is Authorized....................................................passed
-Given Admin creates "PUT" Request for the LMS with request body "Program" and 9.passed
-When Admin sends "PUT" Request and request Body with endpoint for Program...passed
-Then Admin receives 200 "Ok" Status with response body for Program..........passed
-]]></system-out>
-</testcase>
-<testcase classname="POST REQUEST for Program Module" name="Check if Admin able to create a program with &quot;&lt;scenarioName&gt;&quot; - Example #1.9" time="1.826">
-<system-out><![CDATA[
-Given User is Authorized....................................................passed
-Given Admin creates "PUT" Request for the LMS with request body "Program" and 10.passed
-When Admin sends "PUT" Request and request Body with endpoint for Program...passed
-Then Admin receives 401 "Unauthorized" Status with response body for Program.passed
-]]></system-out>
-</testcase>
-<testcase classname="POST REQUEST for Program Module" name="Check if Admin able to create a program with &quot;&lt;scenarioName&gt;&quot; - Example #1.10" time="0.467">
-<system-out><![CDATA[
-Given User is Authorized....................................................passed
-Given Admin creates "GET" Request for the LMS with request body "Program" and 11.passed
-When Admin sends "GET" Request and request Body with endpoint for Program...passed
-Then Admin receives 405 "Method Not Allowed" Status with response body for Program.passed
-]]></system-out>
-</testcase>
-<testcase classname="POST REQUEST for Program Module" name="Check if Admin able to create a program with &quot;&lt;scenarioName&gt;&quot; - Example #1.11" time="2.195">
-<system-out><![CDATA[
-Given User is Authorized....................................................passed
-Given Admin creates "PUT" Request for the LMS with request body "Program" and 12.passed
-When Admin sends "PUT" Request and request Body with endpoint for Program...passed
-Then Admin receives 404 "Not Found" Status with response body for Program...passed
-]]></system-out>
-</testcase>
-<testcase classname="POST REQUEST for Program Module" name="Check if Admin able to create a program with &quot;&lt;scenarioName&gt;&quot; - Example #1.12" time="0.473">
-<system-out><![CDATA[
-Given User is Authorized....................................................passed
-Given Admin creates "PUT" Request for the LMS with request body "Program" and 13.passed
-When Admin sends "PUT" Request and request Body with endpoint for Program...passed
-Then Admin receives 400 "Bad Request" Status with response body for Program.passed
-]]></system-out>
-</testcase>
-<testcase classname="POST REQUEST for Program Module" name="Check if Admin able to create a program with &quot;&lt;scenarioName&gt;&quot; - Example #1.13" time="0.579">
-<system-out><![CDATA[
-Given User is Authorized....................................................passed
-Given Admin creates "PUT" Request for the LMS with request body "Program" and 16.passed
-When Admin sends "PUT" Request and request Body with endpoint for Program...passed
-Then Admin receives 401 "Unauthorized" Status with response body for Program.passed
-]]></system-out>
-</testcase>
-<testcase classname="POST REQUEST for Program Module" name="Check if Admin able to create a program with &quot;&lt;scenarioName&gt;&quot; - Example #1.14" time="0.798">
-<system-out><![CDATA[
-Given User is Authorized....................................................passed
-Given Admin creates "GET" Request for the LMS with request body "Program" and 17.passed
-When Admin sends "GET" Request and request Body with endpoint for Program...passed
-Then Admin receives 405 "Method Not Allowed" Status with response body for Program.passed
-]]></system-out>
-</testcase>
-<testcase classname="POST REQUEST for Program Module" name="Check if Admin able to create a program with &quot;&lt;scenarioName&gt;&quot; - Example #1.15" time="1.232">
-<system-out><![CDATA[
-Given User is Authorized....................................................passed
-Given Admin creates "PUT" Request for the LMS with request body "Program" and 18.passed
-When Admin sends "PUT" Request and request Body with endpoint for Program...passed
-Then Admin receives 404 "Not Found" Status with response body for Program...passed
-]]></system-out>
-</testcase>
-<testcase classname="POST REQUEST for Program Module" name="Check if Admin able to create a program with &quot;&lt;scenarioName&gt;&quot; - Example #1.16" time="0.379">
-<system-out><![CDATA[
-Given User is Authorized....................................................passed
-Given Admin creates "PUT" Request for the LMS with request body "Program" and 19.passed
-When Admin sends "PUT" Request and request Body with endpoint for Program...passed
-Then Admin receives 400 "Bad Request" Status with response body for Program.passed
-]]></system-out>
-</testcase>
-<testcase classname="POST REQUEST for Program Module" name="Check if Admin able to create a program with &quot;&lt;scenarioName&gt;&quot; - Example #1.17" time="0.851">
-<system-out><![CDATA[
-Given User is Authorized....................................................passed
-Given Admin creates "GET" Request for the LMS with request body "Program" and 22.passed
-When Admin sends "GET" Request and request Body with endpoint for Program...passed
-Then Admin receives 200 "Ok" Status with response body for Program..........passed
-]]></system-out>
-</testcase>
-<testcase classname="POST REQUEST for Program Module" name="Check if Admin able to create a program with &quot;&lt;scenarioName&gt;&quot; - Example #1.18" time="0.915">
-<system-out><![CDATA[
-Given User is Authorized....................................................passed
-Given Admin creates "GET" Request for the LMS with request body "Program" and 23.passed
-When Admin sends "GET" Request and request Body with endpoint for Program...passed
-Then Admin receives 200 "Ok" Status with response body for Program..........passed
-]]></system-out>
-</testcase>
-<testcase classname="POST REQUEST for Program Module" name="Check if Admin able to create a program with &quot;&lt;scenarioName&gt;&quot; - Example #1.19" time="1.196">
-<system-out><![CDATA[
-Given User is Authorized....................................................passed
-Given Admin creates "GET" Request for the LMS with request body "Program" and 24.passed
-When Admin sends "GET" Request and request Body with endpoint for Program...passed
-Then Admin receives 200 "Ok" Status with response body for Program..........passed
-]]></system-out>
-</testcase>
-<testcase classname="POST REQUEST for Program Module" name="Check if Admin able to create a program with &quot;&lt;scenarioName&gt;&quot; - Example #1.20" time="0.501">
-<system-out><![CDATA[
-Given User is Authorized....................................................passed
-Given Admin creates "GET" Request for the LMS with request body "Program" and 25.passed
-When Admin sends "GET" Request and request Body with endpoint for Program...passed
-Then Admin receives 404 "Not Found" Status with response body for Program...passed
-]]></system-out>
-</testcase>
-<testcase classname="POST REQUEST for Program Module" name="Check if Admin able to create a program with &quot;&lt;scenarioName&gt;&quot; - Example #1.21" time="0.519">
-<system-out><![CDATA[
-Given User is Authorized....................................................passed
-Given Admin creates "GET" Request for the LMS with request body "Program" and 26.passed
-When Admin sends "GET" Request and request Body with endpoint for Program...passed
-Then Admin receives 401 "Unauthorized" Status with response body for Program.passed
-]]></system-out>
-</testcase>
-<testcase classname="POST REQUEST for Program Module" name="Check if Admin able to create a program with &quot;&lt;scenarioName&gt;&quot; - Example #1.22" time="0.626">
-<system-out><![CDATA[
-Given User is Authorized....................................................passed
-Given Admin creates "GET" Request for the LMS with request body "Program" and 27.passed
-When Admin sends "GET" Request and request Body with endpoint for Program...passed
-Then Admin receives 404 "Not Found" Status with response body for Program...passed
-]]></system-out>
-</testcase>
-<testcase classname="POST REQUEST for Program Module" name="Check if Admin able to create a program with &quot;&lt;scenarioName&gt;&quot; - Example #1.23" time="0.498">
-<system-out><![CDATA[
-Given User is Authorized....................................................passed
-Given Admin creates "GET" Request for the LMS with request body "Program" and 28.passed
-When Admin sends "GET" Request and request Body with endpoint for Program...passed
-Then Admin receives 401 "Unauthorized" Status with response body for Program.passed
-]]></system-out>
-</testcase>
-<testcase classname="POST REQUEST for Program Module" name="Check if Admin able to create a program with &quot;&lt;scenarioName&gt;&quot; - Example #1.24" time="0.33">
-<system-out><![CDATA[
-Given User is Authorized....................................................passed
-Given Admin creates "GET" Request for the LMS with request body "Program" and 29.passed
-When Admin sends "GET" Request and request Body with endpoint for Program...passed
-Then Admin receives 404 "Not Found" Status with response body for Program...passed
-]]></system-out>
-</testcase>
-<testcase classname="POST REQUEST for Program Module" name="Check if Admin able to create a program with &quot;&lt;scenarioName&gt;&quot; - Example #1.25" time="0.999">
-<system-out><![CDATA[
-Given User is Authorized....................................................passed
-Given Admin creates "GET" Request for the LMS with request body "Program" and 30.passed
-When Admin sends "GET" Request and request Body with endpoint for Program...passed
-Then Admin receives 401 "Unauthorized" Status with response body for Program.passed
-]]></system-out>
-</testcase>
-<testcase classname="POST REQUEST for Program Module" name="Check if Admin able to create a program with &quot;&lt;scenarioName&gt;&quot; - Example #1.26" time="0.422">
-<system-out><![CDATA[
-Given User is Authorized....................................................passed
-Given Admin creates "POST" Request for the LMS with request body "Program" and 31.passed
-When Admin sends "POST" Request and request Body with endpoint for Program..passed
-Then Admin receives 405 "Method Not Allowed" Status with response body for Program.passed
-]]></system-out>
-</testcase>
-<testcase classname="POST REQUEST for Program Module" name="Check if Admin able to create a program with &quot;&lt;scenarioName&gt;&quot; - Example #1.27" time="0.458">
-<system-out><![CDATA[
-Given User is Authorized....................................................passed
-Given Admin creates "POST" Request for the LMS with request body "Program" and 32.passed
-When Admin sends "POST" Request and request Body with endpoint for Program..passed
-Then Admin receives 405 "Method Not Allowed" Status with response body for Program.passed
-]]></system-out>
-</testcase>
-<testcase classname="POST REQUEST for Program Module" name="Check if Admin able to create a program with &quot;&lt;scenarioName&gt;&quot; - Example #1.28" time="0.523">
-<system-out><![CDATA[
-Given User is Authorized....................................................passed
-Given Admin creates "POST" Request for the LMS with request body "Program" and 33.passed
-When Admin sends "POST" Request and request Body with endpoint for Program..passed
-Then Admin receives 405 "Method Not Allowed" Status with response body for Program.passed
-]]></system-out>
-</testcase>
-<testcase classname="POST REQUEST for Program Module" name="Check if Admin able to create a program with &quot;&lt;scenarioName&gt;&quot; - Example #1.29" time="1.361">
-<system-out><![CDATA[
-Given User is Authorized....................................................passed
-Given Admin creates "GET" Request for the LMS with request body "Program" and 34.passed
-When Admin sends "GET" Request and request Body with endpoint for Program...passed
-Then Admin receives 404 "Not Found" Status with response body for Program...passed
-]]></system-out>
-</testcase>
-<testcase classname="POST REQUEST for Program Module" name="Check if Admin able to create a program with &quot;&lt;scenarioName&gt;&quot; - Example #1.30" time="0.47">
-<system-out><![CDATA[
-Given User is Authorized....................................................passed
-Given Admin creates "DELETE" Request for the LMS with request body "Program" and 35.passed
-When Admin sends "DELETE" Request and request Body with endpoint for Program.passed
-Then Admin receives 200 "Ok" Status with response body for Program..........passed
-]]></system-out>
-</testcase>
-<testcase classname="POST REQUEST for Program Module" name="Check if Admin able to create a program with &quot;&lt;scenarioName&gt;&quot; - Example #1.31" time="0.482">
-<system-out><![CDATA[
-Given User is Authorized....................................................passed
-Given Admin creates "DELETE" Request for the LMS with request body "Program" and 36.passed
-When Admin sends "DELETE" Request and request Body with endpoint for Program.passed
-Then Admin receives 200 "Ok" Status with response body for Program..........passed
-]]></system-out>
-</testcase>
-<testcase classname="POST REQUEST for Program Module" name="Check if Admin able to create a program with &quot;&lt;scenarioName&gt;&quot; - Example #1.32" time="0.518">
-<system-out><![CDATA[
-Given User is Authorized....................................................passed
-Given Admin creates "DELETE" Request for the LMS with request body "Program" and 37.passed
-When Admin sends "DELETE" Request and request Body with endpoint for Program.passed
-Then Admin receives 404 "Not Found" Status with response body for Program...passed
-]]></system-out>
-</testcase>
-<testcase classname="POST REQUEST for Program Module" name="Check if Admin able to create a program with &quot;&lt;scenarioName&gt;&quot; - Example #1.33" time="0.804">
-<system-out><![CDATA[
-Given User is Authorized....................................................passed
-Given Admin creates "DELETE" Request for the LMS with request body "Program" and 38.passed
-When Admin sends "DELETE" Request and request Body with endpoint for Program.passed
-Then Admin receives 404 "Not Found" Status with response body for Program...passed
-]]></system-out>
-</testcase>
-<testcase classname="POST REQUEST for Program Module" name="Check if Admin able to create a program with &quot;&lt;scenarioName&gt;&quot; - Example #1.34" time="0.408">
-<system-out><![CDATA[
-Given User is Authorized....................................................passed
-Given Admin creates "DELETE" Request for the LMS with request body "Program" and 39.passed
-When Admin sends "DELETE" Request and request Body with endpoint for Program.passed
-Then Admin receives 401 "Unauthorized" Status with response body for Program.passed
-]]></system-out>
-</testcase>
-<testcase classname="POST REQUEST for Program Module" name="Check if Admin able to create a program with &quot;&lt;scenarioName&gt;&quot; - Example #1.35" time="0.542">
-<system-out><![CDATA[
-Given User is Authorized....................................................passed
-Given Admin creates "DELETE" Request for the LMS with request body "Program" and 40.passed
-When Admin sends "DELETE" Request and request Body with endpoint for Program.passed
-Then Admin receives 401 "Unauthorized" Status with response body for Program.passed
-]]></system-out>
-</testcase>
-<testcase classname="POST REQUEST for Program Module" name="Check if Admin able to create a program with &quot;&lt;scenarioName&gt;&quot; - Example #1.36" time="0.565">
-<system-out><![CDATA[
-Given User is Authorized....................................................passed
-Given Admin creates "DELETE" Request for the LMS with request body "Program" and 41.passed
-When Admin sends "DELETE" Request and request Body with endpoint for Program.passed
-Then Admin receives 404 "Not Found" Status with response body for Program...passed
-]]></system-out>
-</testcase>
-<testcase classname="POST REQUEST for Program Module" name="Check if Admin able to create a program with &quot;&lt;scenarioName&gt;&quot; - Example #1.37" time="0.499">
-<system-out><![CDATA[
-Given User is Authorized....................................................passed
-Given Admin creates "DELETE" Request for the LMS with request body "Program" and 42.passed
-When Admin sends "DELETE" Request and request Body with endpoint for Program.passed
-Then Admin receives 404 "Not Found" Status with response body for Program...passed
-]]></system-out>
-</testcase>
-<testcase classname="POST REQUEST for Program Module" name="Check if Admin able to retrieve a program with invalid baseURI - Example #1.1" time="0.956">
-<system-out><![CDATA[
-Given User is Authorized....................................................passed
-Given Admin creates "GET" Request for the LMS API with programID............passed
-When Admin sends "GET" Request with invalid BaseURI for Program "https://asdf.com/programs/".passed
-Then Admin receives 404 "not found" Status with response body for Program for invalid base url.passed
-]]></system-out>
-</testcase>
-<testcase classname="POST REQUEST for Program Module" name="Check if Admin able to retrieve a program with invalid baseURI - Example #1.2" time="0.537">
-<system-out><![CDATA[
-Given User is Authorized....................................................passed
-Given Admin creates "PUT" Request for the LMS API with programID............passed
-When Admin sends "PUT" Request with invalid BaseURI for Program "https://asdf.com//putprogram/".passed
-Then Admin receives 404 "not found" Status with response body for Program for invalid base url.passed
-]]></system-out>
-</testcase>
-<testcase classname="POST REQUEST for Program Module" name="Check if Admin able to create a program with &quot;&lt;scenarioName&gt;&quot; - Example #1.1" time="1.399">
-<system-out><![CDATA[
-Given User is Authorized....................................................passed
-Given Admin creates "POST" Request for the LMS with request body "Program" and 1.passed
-When Admin sends "POST" Request and request Body with endpoint for Program..passed
-Then Admin receives 201 "Created" Status with response body for Program.....passed
-Then Admin receives 400 "Bad Request" Status with response body for Program.passed
-]]></system-out>
-</testcase>
-<testcase classname="Post Request Program Batch module" name="Create Batches with external excel data" time="0.276">
-<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;org.apache.poi.xssf.usermodel.XSSFRow.getCell(int)&quot; because the return value of &quot;org.apache.poi.xssf.usermodel.XSSFSheet.getRow(int)&quot; is null">
-<![CDATA[java.lang.NullPointerException: Cannot invoke "org.apache.poi.xssf.usermodel.XSSFRow.getCell(int)" because the return value of "org.apache.poi.xssf.usermodel.XSSFSheet.getRow(int)" is null
-	at Utilities.Batchdatareader.batch(Batchdatareader.java:35)
-	at stepDefinations.Batch.sends_http_post_batch_request_with_endpoints_and_read_data_from_external_file(Batch.java:55)
-	at ✽.Sends HTTP Post batch request with endpoints and Read data from external file(file:///C:/Users/User/Desktop/Git%20Project_Final/RestAssured/src/test/resources/Features/C_programbatch.feature:8)
-]]>
-</failure>
-<system-out><![CDATA[
-Given Authorized with bearer Token..........................................passed
-When Sends HTTP Post batch request with endpoints and Read data from external file.failed
-Then Gets 201 status code with response body................................skipped
-]]></system-out>
-</testcase>
-<testcase classname="Post Request Program Batch module" name="Create Batches with invalid token" time="0.227">
-<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;org.apache.poi.xssf.usermodel.XSSFRow.getCell(int)&quot; because the return value of &quot;org.apache.poi.xssf.usermodel.XSSFSheet.getRow(int)&quot; is null">
-<![CDATA[java.lang.NullPointerException: Cannot invoke "org.apache.poi.xssf.usermodel.XSSFRow.getCell(int)" because the return value of "org.apache.poi.xssf.usermodel.XSSFSheet.getRow(int)" is null
-	at Utilities.Batchdatareader.batch(Batchdatareader.java:35)
-	at stepDefinations.Batch.sends_http_post_batch_request_with_endpoints(Batch.java:85)
-	at ✽.Sends Http Post batch request with endpoints(file:///C:/Users/User/Desktop/Git%20Project_Final/RestAssured/src/test/resources/Features/C_programbatch.feature:13)
-]]>
-</failure>
-<system-out><![CDATA[
-Given Token is expired and invalid..........................................passed
-When Sends Http Post batch request with endpoints...........................failed
-Then gets 401 unauthorised status code with error message...................skipped
-]]></system-out>
-</testcase>
-<testcase classname="Post Request Program Batch module" name="Create batches with invalid endpoint" time="0.376">
-<system-out><![CDATA[
-Given Authorized with bearer Token "Invalid endpoint".......................passed
-When Sends HTTP Post batch request  with invalid endpoint and Read data "API_hackathon_march24 " "SDETd5 " 5 "active " 16306.passed
-Then Gets  404 with response body...........................................passed
-]]></system-out>
-</testcase>
-<testcase classname="Post Request Program Batch module" name="create batches with different examples - Example #1.1" time="0.553">
-<failure type="java.lang.AssertionError" message=" Expected status code returned expected [201] but found [404]">
-<![CDATA[java.lang.AssertionError:  Expected status code returned expected [201] but found [404]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:1419)
-	at org.testng.Assert.assertEquals(Assert.java:1407)
-	at stepDefinations.Batch.gets_with_batch_response_body(Batch.java:174)
-	at ✽.Gets  201 with batch response body(file:///C:/Users/User/Desktop/Git%20Project_Final/RestAssured/src/test/resources/Features/C_programbatch.feature:24)
-]]>
-</failure>
-<system-out><![CDATA[
-Given Authorized with bearer Token "Create_batch_with_new_data".............passed
-When Sends HTTP Post batch request with valid endpoints and Read data "API_hackathon_march24" "SDETProgramsss4" 4 "active" 16323.passed
-Then Gets  201 with batch response body.....................................failed
-]]></system-out>
-</testcase>
-<testcase classname="Post Request Program Batch module" name="create batches with different examples - Example #1.2" time="0.62">
-<failure type="java.lang.AssertionError" message=" Expected status code returned expected [400] but found [404]">
-<![CDATA[java.lang.AssertionError:  Expected status code returned expected [400] but found [404]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:1419)
-	at org.testng.Assert.assertEquals(Assert.java:1407)
-	at stepDefinations.Batch.gets_with_batch_response_body(Batch.java:174)
-	at ✽.Gets  400 with batch response body(file:///C:/Users/User/Desktop/Git%20Project_Final/RestAssured/src/test/resources/Features/C_programbatch.feature:24)
-]]>
-</failure>
-<system-out><![CDATA[
-Given Authorized with bearer Token "Create_batch_with_existing_data"........passed
-When Sends HTTP Post batch request with valid endpoints and Read data "API_hackathon_march24" "SDETProgramsss4" 4 "active" 16323.passed
-Then Gets  400 with batch response body.....................................failed
-]]></system-out>
-</testcase>
-<testcase classname="Post Request Program Batch module" name="create batches with different examples - Example #1.3" time="1.069">
-<failure type="java.lang.AssertionError" message=" Expected status code returned expected [400] but found [404]">
-<![CDATA[java.lang.AssertionError:  Expected status code returned expected [400] but found [404]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:1419)
-	at org.testng.Assert.assertEquals(Assert.java:1407)
-	at stepDefinations.Batch.gets_with_batch_response_body(Batch.java:174)
-	at ✽.Gets  400 with batch response body(file:///C:/Users/User/Desktop/Git%20Project_Final/RestAssured/src/test/resources/Features/C_programbatch.feature:24)
-]]>
-</failure>
-<system-out><![CDATA[
-Given Authorized with bearer Token "Post_missing_mandatory_fields"..........passed
-When Sends HTTP Post batch request with valid endpoints and Read data "API_hackathon_march24" "" 4 "active" 16323.passed
-Then Gets  400 with batch response body.....................................failed
-]]></system-out>
-</testcase>
-<testcase classname="Post Request Program Batch module" name="create batches with different examples - Example #1.4" time="1.563">
-<failure type="java.lang.AssertionError" message=" Expected status code returned expected [201] but found [404]">
-<![CDATA[java.lang.AssertionError:  Expected status code returned expected [201] but found [404]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:1419)
-	at org.testng.Assert.assertEquals(Assert.java:1407)
-	at stepDefinations.Batch.gets_with_batch_response_body(Batch.java:174)
-	at ✽.Gets  201 with batch response body(file:///C:/Users/User/Desktop/Git%20Project_Final/RestAssured/src/test/resources/Features/C_programbatch.feature:24)
-]]>
-</failure>
-<system-out><![CDATA[
-Given Authorized with bearer Token "Post_missing_additional_fields_null"....passed
-When Sends HTTP Post batch request with valid endpoints and Read data "null" "SDETrestpromss4" 4 "active" 16323.passed
-Then Gets  201 with batch response body.....................................failed
-]]></system-out>
-</testcase>
-<testcase classname="Post Request Program Batch module" name="create batches with different examples - Example #1.5" time="0.485">
-<failure type="java.lang.AssertionError" message=" Expected status code returned expected [400] but found [404]">
-<![CDATA[java.lang.AssertionError:  Expected status code returned expected [400] but found [404]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:1419)
-	at org.testng.Assert.assertEquals(Assert.java:1407)
-	at stepDefinations.Batch.gets_with_batch_response_body(Batch.java:174)
-	at ✽.Gets  400 with batch response body(file:///C:/Users/User/Desktop/Git%20Project_Final/RestAssured/src/test/resources/Features/C_programbatch.feature:24)
-]]>
-</failure>
-<system-out><![CDATA[
-Given Authorized with bearer Token "Post_missing_additional_fields_null"....passed
-When Sends HTTP Post batch request with valid endpoints and Read data "" "SDETapi" 4 "active" 16323.passed
-Then Gets  400 with batch response body.....................................failed
-]]></system-out>
-</testcase>
-<testcase classname="Post Request Program Batch module" name="create batches with different examples - Example #1.6" time="0.347">
-<failure type="java.lang.AssertionError" message=" Expected status code returned expected [400] but found [404]">
-<![CDATA[java.lang.AssertionError:  Expected status code returned expected [400] but found [404]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:1419)
-	at org.testng.Assert.assertEquals(Assert.java:1407)
-	at stepDefinations.Batch.gets_with_batch_response_body(Batch.java:174)
-	at ✽.Gets  400 with batch response body(file:///C:/Users/User/Desktop/Git%20Project_Final/RestAssured/src/test/resources/Features/C_programbatch.feature:24)
-]]>
-</failure>
-<system-out><![CDATA[
-Given Authorized with bearer Token "Invalid_Progam_Id"......................passed
-When Sends HTTP Post batch request with valid endpoints and Read data "API_hackathon_march24" "SDET" 4 "active" 26900.passed
-Then Gets  400 with batch response body.....................................failed
-]]></system-out>
-</testcase>
-<testcase classname="Post Request Program Batch module" name="create batches with different examples - Example #1.7" time="0.314">
-<failure type="java.lang.AssertionError" message=" Expected status code returned expected [400] but found [404]">
-<![CDATA[java.lang.AssertionError:  Expected status code returned expected [400] but found [404]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:1419)
-	at org.testng.Assert.assertEquals(Assert.java:1407)
-	at stepDefinations.Batch.gets_with_batch_response_body(Batch.java:174)
-	at ✽.Gets  400 with batch response body(file:///C:/Users/User/Desktop/Git%20Project_Final/RestAssured/src/test/resources/Features/C_programbatch.feature:24)
-]]>
-</failure>
-<system-out><![CDATA[
-Given Authorized with bearer Token "Post_invalid_data"......................passed
-When Sends HTTP Post batch request with valid endpoints and Read data "API_hackathon_march24" "SDET" 4 "active" 16323.passed
-Then Gets  400 with batch response body.....................................failed
-]]></system-out>
-</testcase>
-<testcase classname="GET BatchId Request Program Batch module" name="Get Batches with BatchId" time="1.485">
-<failure type="java.lang.AssertionError" message="Expected status code returned expected [200] but found [404]">
-<![CDATA[java.lang.AssertionError: Expected status code returned expected [200] but found [404]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:1419)
-	at org.testng.Assert.assertEquals(Assert.java:1407)
-	at stepDefinations.getbatchid.gets_status_code_for_get_batch_id_with_response_body(getbatchid.java:51)
-	at ✽.Gets 200 status code for get batchID with response body(file:///C:/Users/User/Desktop/Git%20Project_Final/RestAssured/src/test/resources/Features/D_getbatchid.feature:9)
-]]>
-</failure>
-<system-out><![CDATA[
-Given GET BatchId Authorized with bearer Token..............................passed
-When Sends HTTP GET batch request with BatchId valid endpoints..............passed
-Then Gets 200 status code for get batchID with response body................failed
-]]></system-out>
-</testcase>
-<testcase classname="GET BatchId Request Program Batch module" name="Get Batches with BatchId as Unauthorized" time="0.25">
-<system-out><![CDATA[
-Given Get batchId token is invalid..........................................passed
-When Sends HTTP GET batch requests  with BatchId valid endpoints............passed
-Then Gets 401 status code for get batchID with unauthorised message.........passed
-]]></system-out>
-</testcase>
-<testcase classname="GET BatchId Request Program Batch module" name="Get Batches with BatchId with invalid enpoints" time="0.366">
-<failure type="java.lang.AssertionError" message="Expected status code returned expected [405] but found [404]">
-<![CDATA[java.lang.AssertionError: Expected status code returned expected [405] but found [404]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:1419)
-	at org.testng.Assert.assertEquals(Assert.java:1407)
-	at stepDefinations.getbatchid.gets_status_for_get_batch_id_with_error_message(getbatchid.java:113)
-	at ✽.Gets 405 status for get batchID with error message(file:///C:/Users/User/Desktop/Git%20Project_Final/RestAssured/src/test/resources/Features/D_getbatchid.feature:19)
-]]>
-</failure>
-<system-out><![CDATA[
-Given GET BatchId Authorized with bearer Token..............................passed
-When Sends HTTP GET batch request with BatchId invalid endpoints............passed
-Then Gets 405 status for get batchID with error message.....................failed
-]]></system-out>
-</testcase>
-<testcase classname="GET BatchId Request Program Batch module" name="Get Batches with Invalid BatchId" time="0.324">
-<failure type="java.lang.AssertionError" message="expected [true] but found [false]">
-<![CDATA[java.lang.AssertionError: expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertTrue(Assert.java:57)
-	at org.testng.Assert.assertTrue(Assert.java:67)
-	at stepDefinations.getbatchid.gets_status_for_get_batch_id_with_error_message(getbatchid.java:121)
-	at ✽.Gets 404 status for get batchID with error message(file:///C:/Users/User/Desktop/Git%20Project_Final/RestAssured/src/test/resources/Features/D_getbatchid.feature:24)
-]]>
-</failure>
-<system-out><![CDATA[
-Given GET BatchId Authorized with bearer Token..............................passed
-When Sends HTTP GET batch request with invalid BatchId and valid endpoints..passed
-Then Gets 404 status for get batchID with error message.....................failed
-]]></system-out>
-</testcase>
-<testcase classname="GET BatchId Request Program Batch module" name="Get Batches with BatchId with search parameter with value" time="0.335">
-<failure type="java.lang.AssertionError" message="Expected status code returned expected [200] but found [404]">
-<![CDATA[java.lang.AssertionError: Expected status code returned expected [200] but found [404]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:1419)
-	at org.testng.Assert.assertEquals(Assert.java:1407)
-	at stepDefinations.getbatchid.gets_status_for_get_batch_id_with_response_body(getbatchid.java:153)
-	at ✽.Gets 200 status for get batchID with response body(file:///C:/Users/User/Desktop/Git%20Project_Final/RestAssured/src/test/resources/Features/D_getbatchid.feature:29)
-]]>
-</failure>
-<system-out><![CDATA[
-Given GET BatchId Authorized with bearer Token..............................passed
-When Sends HTTP GET batch request with BatchId parameter and value..........passed
-Then Gets 200 status for get batchID with response body.....................failed
-]]></system-out>
-</testcase>
-<testcase classname="Get Request for ProgramBatch Module" name="Check if admin able to retrieve a batch without authorization - Example #1.1" time="2.175">
-<system-out><![CDATA[
-Given Admin creates GET Request with program id and unAuth..................passed
-When Admin sends HTTPS Request with endpoint and unAuth.....................passed
-Then Admin receives Status with 401 and statusmessage unauthorized..........passed
-]]></system-out>
-</testcase>
-<testcase classname="Get Request for ProgramBatch Module" name="Check if admin able to retrieve a batch with valid Program ID - Example #1.1" time="1.283">
+<testcase classname="POST REQUEST for Program Module" name="Check if Admin able to create a program with &quot;&lt;scenarioName&gt;&quot; - Example #1.8" time="0.25">
 <failure type="java.lang.AssertionError" message="1 expectation failed.
-Response body doesn't match expectation.
-Expected: The content to match the given JSON schema.
-error: instance type (object) does not match any allowed primitive type (allowed: [&quot;array&quot;])
-    level: &quot;error&quot;
-    schema: {&quot;loadingURI&quot;:&quot;file:/C:/Users/User/Desktop/Git%20Project_Final/RestAssured/target/test-classes/batchProgramId.json#&quot;,&quot;pointer&quot;:&quot;&quot;}
-    instance: {&quot;pointer&quot;:&quot;&quot;}
-    domain: &quot;validation&quot;
-    keyword: &quot;type&quot;
-    found: &quot;object&quot;
-    expected: [&quot;array&quot;]
-
-  Actual: {&quot;timestamp&quot;:&quot;2024-04-02T16:34:37.360+00:00&quot;,&quot;status&quot;:404,&quot;error&quot;:&quot;Not Found&quot;,&quot;path&quot;:&quot;/lms/batches/program/16306/saveprogram&quot;}
+Expected status code &lt;200&gt; but was &lt;500&gt;.
 ">
 <![CDATA[java.lang.AssertionError: 1 expectation failed.
-Response body doesn't match expectation.
-Expected: The content to match the given JSON schema.
-error: instance type (object) does not match any allowed primitive type (allowed: ["array"])
-    level: "error"
-    schema: {"loadingURI":"file:/C:/Users/User/Desktop/Git%20Project_Final/RestAssured/target/test-classes/batchProgramId.json#","pointer":""}
-    instance: {"pointer":""}
-    domain: "validation"
-    keyword: "type"
-    found: "object"
-    expected: ["array"]
+Expected status code <200> but was <500>.
 
-  Actual: {"timestamp":"2024-04-02T16:34:37.360+00:00","status":404,"error":"Not Found","path":"/lms/batches/program/16306/saveprogram"}
-
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
 	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
 	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
 	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:57)
@@ -628,54 +83,8 @@ error: instance type (object) does not match any allowed primitive type (allowed
 	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
 	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
 	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
-	at jdk.internal.reflect.GeneratedMethodAccessor172.invoke(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
-	at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:107)
-	at io.restassured.internal.ValidatableResponseOptionsImpl.body(ValidatableResponseOptionsImpl.java:238)
-	at stepDefinations.Get_Batch_ProgramId.admin_receives_ok_status_with_response_body(Get_Batch_ProgramId.java:68)
-	at ✽.Admin receives 200 OK Status with response body.(file:///C:/Users/User/Desktop/Git%20Project_Final/RestAssured/src/test/resources/Features/E_batch_GetProgramId.feature:19)
-]]>
-</failure>
-<system-out><![CDATA[
-Given Admin creates GET Request with valid ProgramId........................passed
-When Admin sends HTTPS Request with endpoint with programId.................passed
-Then Admin receives 200 OK Status with response body........................failed
-]]></system-out>
-</testcase>
-<testcase classname="Get Request for ProgramBatch Module" name="Check if admin able to retrieve a batch with invalid Program Id - Example #1.1" time="0.741">
-<system-out><![CDATA[
-Given Admin creates GET Request with invalid Program Id.....................passed
-When Admin sends HTTPS Request with endpoint with invalid programId.........passed
-Then Admin receives 404 and Not Found Status with message and boolean success details.passed
-]]></system-out>
-</testcase>
-<testcase classname="Get Request for ProgramBatch Module" name="Check if admin able to retrieve a batch with invalid endpoint - Example #1.1" time="0.296">
-<failure type="java.lang.AssertionError" message="1 expectation failed.
-Expected status code &lt;400&gt; but was &lt;404&gt;.
-">
-<![CDATA[java.lang.AssertionError: 1 expectation failed.
-Expected status code <400> but was <404>.
-
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
-	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
-	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
-	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
-	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
-	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
-	at jdk.internal.reflect.GeneratedMethodAccessor172.invoke(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
 	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
 	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
@@ -684,43 +93,462 @@ Expected status code <400> but was <404>.
 	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
 	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
 	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
-	at stepDefinations.Get_Batch_ProgramId.admin_receives_status_with_error_message_not_found(Get_Batch_ProgramId.java:113)
-	at ✽.Admin receives 400  Status with  error message Not Found.(file:///C:/Users/User/Desktop/Git%20Project_Final/RestAssured/src/test/resources/Features/E_batch_GetProgramId.feature:42)
+	at stepDefinations.Program.admin_receives_status_with_response_body_for_Program(Program.java:118)
+	at ✽.Admin receives 200 "Ok" Status with response body for Program(file:///Users/sathishkumar/git/RestAssured/src/test/resources/Features/B_program.feature:11)
 ]]>
 </failure>
 <system-out><![CDATA[
-Given Admin creates GET Request with invalid endpoint.......................passed
-When Admin sends HTTPS Request with invalid endpoint........................passed
-Then Admin receives 400  Status with  error message Not Found...............failed
+Given User is Authorized....................................................passed
+Given Admin creates "PUT" Request for the LMS with request body "Program" and 9.passed
+When Admin sends "PUT" Request and request Body with endpoint for Program...passed
+Then Admin receives 200 "Ok" Status with response body for Program..........failed
 ]]></system-out>
 </testcase>
-<testcase classname="GET BatchName Request Program Batch module" name="Get Batches with BatchName" time="0.293">
-<failure type="java.lang.AssertionError" message="Expected status code returned expected [200] but found [404]">
-<![CDATA[java.lang.AssertionError: Expected status code returned expected [200] but found [404]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:1419)
-	at org.testng.Assert.assertEquals(Assert.java:1407)
-	at stepDefinations.getbatchname.gets_status_code_for_get_batch_name_with_response_body(getbatchname.java:50)
-	at ✽.Gets 200 status code for get BatchName with response body(file:///C:/Users/User/Desktop/Git%20Project_Final/RestAssured/src/test/resources/Features/E_getbatchname.feature:9)
+<testcase classname="POST REQUEST for Program Module" name="Check if Admin able to create a program with &quot;&lt;scenarioName&gt;&quot; - Example #1.9" time="0.234">
+<system-out><![CDATA[
+Given User is Authorized....................................................passed
+Given Admin creates "PUT" Request for the LMS with request body "Program" and 10.passed
+When Admin sends "PUT" Request and request Body with endpoint for Program...passed
+Then Admin receives 401 "Unauthorized" Status with response body for Program.passed
+]]></system-out>
+</testcase>
+<testcase classname="POST REQUEST for Program Module" name="Check if Admin able to create a program with &quot;&lt;scenarioName&gt;&quot; - Example #1.10" time="0.241">
+<system-out><![CDATA[
+Given User is Authorized....................................................passed
+Given Admin creates "GET" Request for the LMS with request body "Program" and 11.passed
+When Admin sends "GET" Request and request Body with endpoint for Program...passed
+Then Admin receives 405 "Method Not Allowed" Status with response body for Program.passed
+]]></system-out>
+</testcase>
+<testcase classname="POST REQUEST for Program Module" name="Check if Admin able to create a program with &quot;&lt;scenarioName&gt;&quot; - Example #1.11" time="0.315">
+<system-out><![CDATA[
+Given User is Authorized....................................................passed
+Given Admin creates "PUT" Request for the LMS with request body "Program" and 12.passed
+When Admin sends "PUT" Request and request Body with endpoint for Program...passed
+Then Admin receives 404 "Not Found" Status with response body for Program...passed
+]]></system-out>
+</testcase>
+<testcase classname="POST REQUEST for Program Module" name="Check if Admin able to create a program with &quot;&lt;scenarioName&gt;&quot; - Example #1.12" time="0.306">
+<system-out><![CDATA[
+Given User is Authorized....................................................passed
+Given Admin creates "PUT" Request for the LMS with request body "Program" and 13.passed
+When Admin sends "PUT" Request and request Body with endpoint for Program...passed
+Then Admin receives 400 "Bad Request" Status with response body for Program.passed
+]]></system-out>
+</testcase>
+<testcase classname="POST REQUEST for Program Module" name="Check if Admin able to create a program with &quot;&lt;scenarioName&gt;&quot; - Example #1.13" time="0.262">
+<system-out><![CDATA[
+Given User is Authorized....................................................passed
+Given Admin creates "PUT" Request for the LMS with request body "Program" and 16.passed
+When Admin sends "PUT" Request and request Body with endpoint for Program...passed
+Then Admin receives 401 "Unauthorized" Status with response body for Program.passed
+]]></system-out>
+</testcase>
+<testcase classname="POST REQUEST for Program Module" name="Check if Admin able to create a program with &quot;&lt;scenarioName&gt;&quot; - Example #1.14" time="0.328">
+<system-out><![CDATA[
+Given User is Authorized....................................................passed
+Given Admin creates "GET" Request for the LMS with request body "Program" and 17.passed
+When Admin sends "GET" Request and request Body with endpoint for Program...passed
+Then Admin receives 405 "Method Not Allowed" Status with response body for Program.passed
+]]></system-out>
+</testcase>
+<testcase classname="POST REQUEST for Program Module" name="Check if Admin able to create a program with &quot;&lt;scenarioName&gt;&quot; - Example #1.15" time="0.446">
+<system-out><![CDATA[
+Given User is Authorized....................................................passed
+Given Admin creates "PUT" Request for the LMS with request body "Program" and 18.passed
+When Admin sends "PUT" Request and request Body with endpoint for Program...passed
+Then Admin receives 404 "Not Found" Status with response body for Program...passed
+]]></system-out>
+</testcase>
+<testcase classname="POST REQUEST for Program Module" name="Check if Admin able to create a program with &quot;&lt;scenarioName&gt;&quot; - Example #1.16" time="0.281">
+<system-out><![CDATA[
+Given User is Authorized....................................................passed
+Given Admin creates "PUT" Request for the LMS with request body "Program" and 19.passed
+When Admin sends "PUT" Request and request Body with endpoint for Program...passed
+Then Admin receives 400 "Bad Request" Status with response body for Program.passed
+]]></system-out>
+</testcase>
+<testcase classname="POST REQUEST for Program Module" name="Check if Admin able to create a program with &quot;&lt;scenarioName&gt;&quot; - Example #1.17" time="0.533">
+<system-out><![CDATA[
+Given User is Authorized....................................................passed
+Given Admin creates "GET" Request for the LMS with request body "Program" and 22.passed
+When Admin sends "GET" Request and request Body with endpoint for Program...passed
+Then Admin receives 200 "Ok" Status with response body for Program..........passed
+]]></system-out>
+</testcase>
+<testcase classname="POST REQUEST for Program Module" name="Check if Admin able to create a program with &quot;&lt;scenarioName&gt;&quot; - Example #1.18" time="0.234">
+<system-out><![CDATA[
+Given User is Authorized....................................................passed
+Given Admin creates "GET" Request for the LMS with request body "Program" and 23.passed
+When Admin sends "GET" Request and request Body with endpoint for Program...passed
+Then Admin receives 200 "Ok" Status with response body for Program..........passed
+]]></system-out>
+</testcase>
+<testcase classname="POST REQUEST for Program Module" name="Check if Admin able to create a program with &quot;&lt;scenarioName&gt;&quot; - Example #1.19" time="0.367">
+<system-out><![CDATA[
+Given User is Authorized....................................................passed
+Given Admin creates "GET" Request for the LMS with request body "Program" and 24.passed
+When Admin sends "GET" Request and request Body with endpoint for Program...passed
+Then Admin receives 200 "Ok" Status with response body for Program..........passed
+]]></system-out>
+</testcase>
+<testcase classname="POST REQUEST for Program Module" name="Check if Admin able to create a program with &quot;&lt;scenarioName&gt;&quot; - Example #1.20" time="0.32">
+<system-out><![CDATA[
+Given User is Authorized....................................................passed
+Given Admin creates "GET" Request for the LMS with request body "Program" and 25.passed
+When Admin sends "GET" Request and request Body with endpoint for Program...passed
+Then Admin receives 404 "Not Found" Status with response body for Program...passed
+]]></system-out>
+</testcase>
+<testcase classname="POST REQUEST for Program Module" name="Check if Admin able to create a program with &quot;&lt;scenarioName&gt;&quot; - Example #1.21" time="0.237">
+<system-out><![CDATA[
+Given User is Authorized....................................................passed
+Given Admin creates "GET" Request for the LMS with request body "Program" and 26.passed
+When Admin sends "GET" Request and request Body with endpoint for Program...passed
+Then Admin receives 401 "Unauthorized" Status with response body for Program.passed
+]]></system-out>
+</testcase>
+<testcase classname="POST REQUEST for Program Module" name="Check if Admin able to create a program with &quot;&lt;scenarioName&gt;&quot; - Example #1.22" time="0.236">
+<system-out><![CDATA[
+Given User is Authorized....................................................passed
+Given Admin creates "GET" Request for the LMS with request body "Program" and 27.passed
+When Admin sends "GET" Request and request Body with endpoint for Program...passed
+Then Admin receives 404 "Not Found" Status with response body for Program...passed
+]]></system-out>
+</testcase>
+<testcase classname="POST REQUEST for Program Module" name="Check if Admin able to create a program with &quot;&lt;scenarioName&gt;&quot; - Example #1.23" time="0.242">
+<system-out><![CDATA[
+Given User is Authorized....................................................passed
+Given Admin creates "GET" Request for the LMS with request body "Program" and 28.passed
+When Admin sends "GET" Request and request Body with endpoint for Program...passed
+Then Admin receives 401 "Unauthorized" Status with response body for Program.passed
+]]></system-out>
+</testcase>
+<testcase classname="POST REQUEST for Program Module" name="Check if Admin able to create a program with &quot;&lt;scenarioName&gt;&quot; - Example #1.24" time="0.249">
+<system-out><![CDATA[
+Given User is Authorized....................................................passed
+Given Admin creates "GET" Request for the LMS with request body "Program" and 29.passed
+When Admin sends "GET" Request and request Body with endpoint for Program...passed
+Then Admin receives 404 "Not Found" Status with response body for Program...passed
+]]></system-out>
+</testcase>
+<testcase classname="POST REQUEST for Program Module" name="Check if Admin able to create a program with &quot;&lt;scenarioName&gt;&quot; - Example #1.25" time="0.249">
+<system-out><![CDATA[
+Given User is Authorized....................................................passed
+Given Admin creates "GET" Request for the LMS with request body "Program" and 30.passed
+When Admin sends "GET" Request and request Body with endpoint for Program...passed
+Then Admin receives 401 "Unauthorized" Status with response body for Program.passed
+]]></system-out>
+</testcase>
+<testcase classname="POST REQUEST for Program Module" name="Check if Admin able to create a program with &quot;&lt;scenarioName&gt;&quot; - Example #1.26" time="0.244">
+<system-out><![CDATA[
+Given User is Authorized....................................................passed
+Given Admin creates "POST" Request for the LMS with request body "Program" and 31.passed
+When Admin sends "POST" Request and request Body with endpoint for Program..passed
+Then Admin receives 405 "Method Not Allowed" Status with response body for Program.passed
+]]></system-out>
+</testcase>
+<testcase classname="POST REQUEST for Program Module" name="Check if Admin able to create a program with &quot;&lt;scenarioName&gt;&quot; - Example #1.27" time="0.235">
+<system-out><![CDATA[
+Given User is Authorized....................................................passed
+Given Admin creates "POST" Request for the LMS with request body "Program" and 32.passed
+When Admin sends "POST" Request and request Body with endpoint for Program..passed
+Then Admin receives 405 "Method Not Allowed" Status with response body for Program.passed
+]]></system-out>
+</testcase>
+<testcase classname="POST REQUEST for Program Module" name="Check if Admin able to create a program with &quot;&lt;scenarioName&gt;&quot; - Example #1.28" time="0.273">
+<system-out><![CDATA[
+Given User is Authorized....................................................passed
+Given Admin creates "POST" Request for the LMS with request body "Program" and 33.passed
+When Admin sends "POST" Request and request Body with endpoint for Program..passed
+Then Admin receives 405 "Method Not Allowed" Status with response body for Program.passed
+]]></system-out>
+</testcase>
+<testcase classname="POST REQUEST for Program Module" name="Check if Admin able to create a program with &quot;&lt;scenarioName&gt;&quot; - Example #1.29" time="0.262">
+<system-out><![CDATA[
+Given User is Authorized....................................................passed
+Given Admin creates "GET" Request for the LMS with request body "Program" and 34.passed
+When Admin sends "GET" Request and request Body with endpoint for Program...passed
+Then Admin receives 404 "Not Found" Status with response body for Program...passed
+]]></system-out>
+</testcase>
+<testcase classname="POST REQUEST for Program Module" name="Check if Admin able to create a program with &quot;&lt;scenarioName&gt;&quot; - Example #1.30" time="0.356">
+<system-out><![CDATA[
+Given User is Authorized....................................................passed
+Given Admin creates "DELETE" Request for the LMS with request body "Program" and 35.passed
+When Admin sends "DELETE" Request and request Body with endpoint for Program.passed
+Then Admin receives 200 "Ok" Status with response body for Program..........passed
+]]></system-out>
+</testcase>
+<testcase classname="POST REQUEST for Program Module" name="Check if Admin able to create a program with &quot;&lt;scenarioName&gt;&quot; - Example #1.31" time="0.249">
+<system-out><![CDATA[
+Given User is Authorized....................................................passed
+Given Admin creates "DELETE" Request for the LMS with request body "Program" and 36.passed
+When Admin sends "DELETE" Request and request Body with endpoint for Program.passed
+Then Admin receives 200 "Ok" Status with response body for Program..........passed
+]]></system-out>
+</testcase>
+<testcase classname="POST REQUEST for Program Module" name="Check if Admin able to create a program with &quot;&lt;scenarioName&gt;&quot; - Example #1.32" time="0.228">
+<system-out><![CDATA[
+Given User is Authorized....................................................passed
+Given Admin creates "DELETE" Request for the LMS with request body "Program" and 37.passed
+When Admin sends "DELETE" Request and request Body with endpoint for Program.passed
+Then Admin receives 404 "Not Found" Status with response body for Program...passed
+]]></system-out>
+</testcase>
+<testcase classname="POST REQUEST for Program Module" name="Check if Admin able to create a program with &quot;&lt;scenarioName&gt;&quot; - Example #1.33" time="0.235">
+<system-out><![CDATA[
+Given User is Authorized....................................................passed
+Given Admin creates "DELETE" Request for the LMS with request body "Program" and 38.passed
+When Admin sends "DELETE" Request and request Body with endpoint for Program.passed
+Then Admin receives 404 "Not Found" Status with response body for Program...passed
+]]></system-out>
+</testcase>
+<testcase classname="POST REQUEST for Program Module" name="Check if Admin able to create a program with &quot;&lt;scenarioName&gt;&quot; - Example #1.34" time="0.264">
+<system-out><![CDATA[
+Given User is Authorized....................................................passed
+Given Admin creates "DELETE" Request for the LMS with request body "Program" and 39.passed
+When Admin sends "DELETE" Request and request Body with endpoint for Program.passed
+Then Admin receives 401 "Unauthorized" Status with response body for Program.passed
+]]></system-out>
+</testcase>
+<testcase classname="POST REQUEST for Program Module" name="Check if Admin able to create a program with &quot;&lt;scenarioName&gt;&quot; - Example #1.35" time="0.251">
+<system-out><![CDATA[
+Given User is Authorized....................................................passed
+Given Admin creates "DELETE" Request for the LMS with request body "Program" and 40.passed
+When Admin sends "DELETE" Request and request Body with endpoint for Program.passed
+Then Admin receives 401 "Unauthorized" Status with response body for Program.passed
+]]></system-out>
+</testcase>
+<testcase classname="POST REQUEST for Program Module" name="Check if Admin able to create a program with &quot;&lt;scenarioName&gt;&quot; - Example #1.36" time="0.268">
+<system-out><![CDATA[
+Given User is Authorized....................................................passed
+Given Admin creates "DELETE" Request for the LMS with request body "Program" and 41.passed
+When Admin sends "DELETE" Request and request Body with endpoint for Program.passed
+Then Admin receives 404 "Not Found" Status with response body for Program...passed
+]]></system-out>
+</testcase>
+<testcase classname="POST REQUEST for Program Module" name="Check if Admin able to create a program with &quot;&lt;scenarioName&gt;&quot; - Example #1.37" time="0.253">
+<system-out><![CDATA[
+Given User is Authorized....................................................passed
+Given Admin creates "DELETE" Request for the LMS with request body "Program" and 42.passed
+When Admin sends "DELETE" Request and request Body with endpoint for Program.passed
+Then Admin receives 404 "Not Found" Status with response body for Program...passed
+]]></system-out>
+</testcase>
+<testcase classname="POST REQUEST for Program Module" name="Check if Admin able to retrieve a program with invalid baseURI - Example #1.1" time="0.679">
+<system-out><![CDATA[
+Given User is Authorized....................................................passed
+Given Admin creates "GET" Request for the LMS API with programID............passed
+When Admin sends "GET" Request with invalid BaseURI for Program "https://asdf.com/programs/".passed
+Then Admin receives 404 "not found" Status with response body for Program for invalid base url.passed
+]]></system-out>
+</testcase>
+<testcase classname="POST REQUEST for Program Module" name="Check if Admin able to retrieve a program with invalid baseURI - Example #1.2" time="0.398">
+<system-out><![CDATA[
+Given User is Authorized....................................................passed
+Given Admin creates "PUT" Request for the LMS API with programID............passed
+When Admin sends "PUT" Request with invalid BaseURI for Program "https://asdf.com//putprogram/".passed
+Then Admin receives 404 "not found" Status with response body for Program for invalid base url.passed
+]]></system-out>
+</testcase>
+<testcase classname="POST REQUEST for Program Module" name="Check if Admin able to create a program with &quot;&lt;scenarioName&gt;&quot; - Example #1.1" time="0.244">
+<failure type="java.lang.AssertionError" message="1 expectation failed.
+Expected status code &lt;201&gt; but was &lt;400&gt;.
+">
+<![CDATA[java.lang.AssertionError: 1 expectation failed.
+Expected status code <201> but was <400>.
+
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
+	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+	at stepDefinations.Program.admin_receives_status_with_response_body_for_Program(Program.java:118)
+	at ✽.Admin receives 201 "Created" Status with response body for Program(file:///Users/sathishkumar/git/RestAssured/src/test/resources/Features/B_program.feature:75)
 ]]>
 </failure>
 <system-out><![CDATA[
-Given GET BatchName Authorized with bearer Token............................passed
-When Sends HTTP GET batch request with BatchName valid endpoints............passed
-Then Gets 200 status code for get BatchName with response body..............failed
+Given User is Authorized....................................................passed
+Given Admin creates "POST" Request for the LMS with request body "Program" and 1.passed
+When Admin sends "POST" Request and request Body with endpoint for Program..skipped
+Then Admin receives 201 "Created" Status with response body for Program.....failed
+Then Admin receives 400 "Bad Request" Status with response body for Program.skipped
 ]]></system-out>
 </testcase>
-<testcase classname="GET BatchName Request Program Batch module" name="Get Batches with BatchName as Unauthorized" time="0.263">
+<testcase classname="Post Request Program Batch module" name="Create Batches with external excel data" time="0.272">
 <system-out><![CDATA[
-Given Get BatchName token is invalid........................................passed
-When Sends HTTP GET batch requests  with BatchName valid endpoints..........passed
-Then Gets 401 status code for get BatchName with unauthorised message.......passed
+Given Authorized with bearer Token..........................................passed
+When Sends HTTP Post batch request with endpoints and Read data from external file.passed
+Then Gets 201 status code with response body................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="GET BatchName Request Program Batch module" name="Get Batches with BatchName with invalid enpoints" time="1.018">
+<testcase classname="Post Request Program Batch module" name="Create Batches with invalid token" time="0.247">
+<system-out><![CDATA[
+Given Token is expired and invalid..........................................passed
+When Sends Http Post batch request with endpoints...........................passed
+Then gets 401 unauthorised status code with error message...................passed
+]]></system-out>
+</testcase>
+<testcase classname="Post Request Program Batch module" name="Create batches with invalid endpoint" time="0.241">
+<system-out><![CDATA[
+Given Authorized with bearer Token "Invalid endpoint".......................passed
+When Sends HTTP Post batch request  with invalid endpoint and Read data "API_hackathon_march24 " "SDETd5 " 5 "active " 16306.passed
+Then Gets  404 with response body...........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Post Request Program Batch module" name="create batches with different examples - Example #1.1" time="0.293">
+<failure type="java.lang.AssertionError" message="1 expectation failed.
+JSON path batchStatus doesn't match.
+Expected: Active
+  Actual: active
+">
+<![CDATA[java.lang.AssertionError: 1 expectation failed.
+JSON path batchStatus doesn't match.
+Expected: Active
+  Actual: active
+
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:49)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:270)
+	at io.restassured.specification.ResponseSpecification$body$1.callCurrent(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:49)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:212)
+	at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:117)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.body(ValidatableResponseOptionsImpl.java:244)
+	at stepDefinations.Batch.gets_with_batch_response_body(Batch.java:180)
+	at ✽.Gets  201 with batch response body(file:///Users/sathishkumar/git/RestAssured/src/test/resources/Features/C_batch.feature:24)
+]]>
+</failure>
+<system-out><![CDATA[
+Given Authorized with bearer Token "Create_batch_with_new_data".............passed
+When Sends HTTP Post batch request with valid endpoints and Read data "API_hackathon_marchapi" "SDETRESTs9" 4 "active" 16265.passed
+Then Gets  201 with batch response body.....................................failed
+]]></system-out>
+</testcase>
+<testcase classname="Post Request Program Batch module" name="create batches with different examples - Example #1.2" time="0.47">
+<system-out><![CDATA[
+Given Authorized with bearer Token "Create_batch_with_existing_data"........passed
+When Sends HTTP Post batch request with valid endpoints and Read data "API_hackathon_marchapi" "SDETRESTs9" 4 "active" 16265.passed
+Then Gets  400 with batch response body.....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Post Request Program Batch module" name="create batches with different examples - Example #1.3" time="0.474">
+<system-out><![CDATA[
+Given Authorized with bearer Token "Post_missing_mandatory_fields"..........passed
+When Sends HTTP Post batch request with valid endpoints and Read data "API_hackathon_march24" "" 4 "active" 16265.passed
+Then Gets  400 with batch response body.....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Post Request Program Batch module" name="create batches with different examples - Example #1.4" time="0.259">
+<failure type="java.lang.AssertionError" message="1 expectation failed.
+JSON path batchStatus doesn't match.
+Expected: Active
+  Actual: active
+">
+<![CDATA[java.lang.AssertionError: 1 expectation failed.
+JSON path batchStatus doesn't match.
+Expected: Active
+  Actual: active
+
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:270)
+	at io.restassured.specification.ResponseSpecification$body$1.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:117)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.body(ValidatableResponseOptionsImpl.java:244)
+	at stepDefinations.Batch.gets_with_batch_response_body(Batch.java:180)
+	at ✽.Gets  201 with batch response body(file:///Users/sathishkumar/git/RestAssured/src/test/resources/Features/C_batch.feature:24)
+]]>
+</failure>
+<system-out><![CDATA[
+Given Authorized with bearer Token "Post_missing_additional_fields_null"....passed
+When Sends HTTP Post batch request with valid endpoints and Read data "null" "SDETRESTAPIb" 4 "active" 16265.passed
+Then Gets  201 with batch response body.....................................failed
+]]></system-out>
+</testcase>
+<testcase classname="Post Request Program Batch module" name="create batches with different examples - Example #1.5" time="0.606">
+<system-out><![CDATA[
+Given Authorized with bearer Token "Post_missing_additional_fields_null"....passed
+When Sends HTTP Post batch request with valid endpoints and Read data "" "SDETapi" 4 "active" 16265.passed
+Then Gets  400 with batch response body.....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Post Request Program Batch module" name="create batches with different examples - Example #1.6" time="0.441">
+<system-out><![CDATA[
+Given Authorized with bearer Token "Invalid_Progam_Id"......................passed
+When Sends HTTP Post batch request with valid endpoints and Read data "API_hackathon_march24" "SDET" 4 "active" 26900.passed
+Then Gets  400 with batch response body.....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Post Request Program Batch module" name="create batches with different examples - Example #1.7" time="0.457">
+<system-out><![CDATA[
+Given Authorized with bearer Token "Post_invalid_data"......................passed
+When Sends HTTP Post batch request with valid endpoints and Read data "API_hackathon_march24" "SDET" 4 "active" 16265.passed
+Then Gets  400 with batch response body.....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="GET BatchId Request Program Batch module" name="Get Batches with BatchId" time="0.286">
+<system-out><![CDATA[
+Given GET BatchId Authorized with bearer Token..............................passed
+When Sends HTTP GET batch request with BatchId valid endpoints..............passed
+Then Gets 200 status code for get batchID with response body................passed
+]]></system-out>
+</testcase>
+<testcase classname="GET BatchId Request Program Batch module" name="Get Batches with BatchId as Unauthorized" time="0.227">
+<system-out><![CDATA[
+Given Get batchId token is invalid..........................................passed
+When Sends HTTP GET batch requests  with BatchId valid endpoints............passed
+Then Gets 401 status code for get batchID with unauthorised message.........passed
+]]></system-out>
+</testcase>
+<testcase classname="GET BatchId Request Program Batch module" name="Get Batches with BatchId with invalid enpoints" time="0.35">
 <failure type="java.lang.AssertionError" message="Expected status code returned expected [405] but found [404]">
 <![CDATA[java.lang.AssertionError: Expected status code returned expected [405] but found [404]
 	at org.testng.Assert.fail(Assert.java:111)
@@ -729,275 +557,262 @@ Then Gets 401 status code for get BatchName with unauthorised message.......pass
 	at org.testng.Assert.assertEquals(Assert.java:132)
 	at org.testng.Assert.assertEquals(Assert.java:1419)
 	at org.testng.Assert.assertEquals(Assert.java:1407)
-	at stepDefinations.getbatchname.gets_status_for_get_batch_name_with_error_message(getbatchname.java:111)
-	at ✽.Gets 405 status for get BatchName with error message(file:///C:/Users/User/Desktop/Git%20Project_Final/RestAssured/src/test/resources/Features/E_getbatchname.feature:19)
+	at stepDefinations.getbatchid.gets_status_for_get_batch_id_with_error_message(getbatchid.java:115)
+	at ✽.Gets 405 status for get batchID with error message(file:///Users/sathishkumar/git/RestAssured/src/test/resources/Features/D_getbatchid.feature:19)
 ]]>
 </failure>
 <system-out><![CDATA[
-Given GET BatchName Authorized with bearer Token............................passed
-When Sends HTTP GET batch request with BatchName invalid endpoints..........passed
-Then Gets 405 status for get BatchName with error message...................failed
+Given GET BatchId Authorized with bearer Token..............................passed
+When Sends HTTP GET batch request with BatchId invalid endpoints............passed
+Then Gets 405 status for get batchID with error message.....................failed
 ]]></system-out>
 </testcase>
-<testcase classname="GET BatchName Request Program Batch module" name="Get Batches with Invalid BatchName" time="0.289">
+<testcase classname="GET BatchId Request Program Batch module" name="Get Batches with Invalid BatchId" time="0.217">
 <failure type="java.lang.AssertionError" message="expected [true] but found [false]">
 <![CDATA[java.lang.AssertionError: expected [true] but found [false]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1578)
 	at org.testng.Assert.assertTrue(Assert.java:57)
 	at org.testng.Assert.assertTrue(Assert.java:67)
-	at stepDefinations.getbatchname.gets_status_for_get_batch_name_with_error_message(getbatchname.java:120)
-	at ✽.Gets 404 status for get BatchName with error message(file:///C:/Users/User/Desktop/Git%20Project_Final/RestAssured/src/test/resources/Features/E_getbatchname.feature:24)
+	at stepDefinations.getbatchid.gets_status_for_get_batch_id_with_error_message(getbatchid.java:123)
+	at ✽.Gets 404 status for get batchID with error message(file:///Users/sathishkumar/git/RestAssured/src/test/resources/Features/D_getbatchid.feature:24)
 ]]>
 </failure>
+<system-out><![CDATA[
+Given GET BatchId Authorized with bearer Token..............................passed
+When Sends HTTP GET batch request with invalid BatchId and valid endpoints..passed
+Then Gets 404 status for get batchID with error message.....................failed
+]]></system-out>
+</testcase>
+<testcase classname="GET BatchId Request Program Batch module" name="Get Batches with BatchId with search parameter with value" time="0.465">
+<system-out><![CDATA[
+Given GET BatchId Authorized with bearer Token..............................passed
+When Sends HTTP GET batch request with BatchId parameter and value..........passed
+Then Gets 200 status for get batchID with response body.....................passed
+]]></system-out>
+</testcase>
+<testcase classname="GET BatchName Request Program Batch module" name="Get Batches with BatchName" time="0.235">
+<system-out><![CDATA[
+Given GET BatchName Authorized with bearer Token............................passed
+When Sends HTTP GET batch request with BatchName valid endpoints............passed
+Then Gets 200 status code for get BatchName with response body..............passed
+]]></system-out>
+</testcase>
+<testcase classname="GET BatchName Request Program Batch module" name="Get Batches with BatchName as Unauthorized" time="0.224">
+<system-out><![CDATA[
+Given Get BatchName token is invalid........................................passed
+When Sends HTTP GET batch requests  with BatchName valid endpoints..........passed
+Then Gets 401 status code for get BatchName with unauthorised message.......passed
+]]></system-out>
+</testcase>
+<testcase classname="GET BatchName Request Program Batch module" name="Get Batches with BatchName with invalid enpoints" time="0.237">
+<system-out><![CDATA[
+Given GET BatchName Authorized with bearer Token............................passed
+When Sends HTTP GET batch request with BatchName invalid endpoints..........passed
+Then Gets 405 status for get BatchName with error message...................passed
+]]></system-out>
+</testcase>
+<testcase classname="GET BatchName Request Program Batch module" name="Get Batches with Invalid BatchName" time="0.228">
 <system-out><![CDATA[
 Given GET BatchName Authorized with bearer Token............................passed
 When Sends HTTP GET batch request with invalid BatchName and valid endpoints.passed
-Then Gets 404 status for get BatchName with error message...................failed
+Then Gets 404 status for get BatchName with error message...................passed
 ]]></system-out>
 </testcase>
-<testcase classname="GET BatchName Request Program Batch module" name="Get Batches with BatchName with BatchId value as a parameter" time="0.621">
-<failure type="java.lang.AssertionError" message="Expected status code returned expected [200] but found [404]">
-<![CDATA[java.lang.AssertionError: Expected status code returned expected [200] but found [404]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:1419)
-	at org.testng.Assert.assertEquals(Assert.java:1407)
-	at stepDefinations.getbatchname.gets_status_for_get_batch_name_with_response_body(getbatchname.java:154)
-	at ✽.Gets 200 status for get BatchName with response body(file:///C:/Users/User/Desktop/Git%20Project_Final/RestAssured/src/test/resources/Features/E_getbatchname.feature:29)
-]]>
-</failure>
+<testcase classname="GET BatchName Request Program Batch module" name="Get Batches with BatchName with BatchId value as a parameter" time="0.224">
 <system-out><![CDATA[
 Given GET BatchName Authorized with bearer Token............................passed
 When Sends HTTP GET batch request with BatchName parameter and value........passed
-Then Gets 200 status for get BatchName with response body...................failed
+Then Gets 200 status for get BatchName with response body...................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Batch Update" name="GET Batch by ProgramId" time="1.006">
+<testcase classname="Batch Update" name="GET Batch by ProgramId" time="0.254">
 <system-out><![CDATA[
 Given User-batch creates GET Request........................................passed
 When User-batch sends "getBatchbyProgramId" with "Get" Request with endpoint.passed
 Then User-batch receives 200 Created Status with response body..............passed
 ]]></system-out>
 </testcase>
-<testcase classname="Batch Update" name="Update by Batch Id - Example #1.1" time="0.528">
+<testcase classname="Batch Update" name="Update by Batch Id - Example #1.1" time="0.272">
 <system-out><![CDATA[
 Given User-batch creates Put Request with request body "updatebatch", 9984, "updatebatch",5,"Active",17782,"testProarn".passed
 When User-batch sends "updateByBatchID" with "Put" Request with endpoint....passed
 Then User-batch receives 201 Created Status with response body..............passed
 ]]></system-out>
 </testcase>
-<testcase classname="Batch Update" name="Delete Batch by ProgramId" time="0.308">
+<testcase classname="Batch Update" name="Delete Batch by ProgramId" time="0.239">
 <system-out><![CDATA[
 Given User-batch creates Delete Request.....................................passed
 When User-batch sends "deleteBatchbyBatchID" with "Delete" Request with endpoint.passed
 Then User-batch receives 200 Created Status with response body..............passed
 ]]></system-out>
 </testcase>
-<testcase classname="GET Request Program Batch module" name="Get all batches" time="0.587">
-<failure type="java.lang.AssertionError" message="Expected status code returned expected [200] but found [404]">
-<![CDATA[java.lang.AssertionError: Expected status code returned expected [200] but found [404]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:1419)
-	at org.testng.Assert.assertEquals(Assert.java:1407)
-	at stepDefinations.getBatch.gets_status_code_for_get_batch_with_response_body(getBatch.java:55)
-	at ✽.Gets 200 status code for get batch with response body(file:///C:/Users/User/Desktop/Git%20Project_Final/RestAssured/src/test/resources/Features/G_getbatch.feature:9)
-]]>
-</failure>
+<testcase classname="GET Request Program Batch module" name="Get all batches" time="0.384">
 <system-out><![CDATA[
 Given GET Batches Authorized with bearer Token..............................passed
 When Sends HTTP GET batch request with valid endpoints......................passed
-Then Gets 200 status code for get batch with response body..................failed
+Then Gets 200 status code for get batch with response body..................passed
 ]]></system-out>
 </testcase>
-<testcase classname="GET Request Program Batch module" name="Get all batches as Unauthorized" time="0.47">
+<testcase classname="GET Request Program Batch module" name="Get all batches as Unauthorized" time="0.545">
 <system-out><![CDATA[
 Given Get batch token is invalid............................................passed
 When Sends HTTP GET batch request with valid endpoints......................passed
 Then Gets 401 status code for get batch with unauthorised message...........passed
 ]]></system-out>
 </testcase>
-<testcase classname="GET Request Program Batch module" name="Get all batches with invalid enpoints" time="0.508">
+<testcase classname="GET Request Program Batch module" name="Get all batches with invalid enpoints" time="0.236">
 <system-out><![CDATA[
 Given GET Batches Authorized with bearer Token..............................passed
 When Sends HTTP GET batch request with invalid endpoints....................passed
 Then Gets 404 status for get batch with error message Not Found.............passed
 ]]></system-out>
 </testcase>
-<testcase classname="GET Request Program Batch module" name="Get all batches with search string" time="0.248">
-<failure type="java.lang.AssertionError" message="Expected status code returned expected [200] but found [404]">
-<![CDATA[java.lang.AssertionError: Expected status code returned expected [200] but found [404]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:1419)
-	at org.testng.Assert.assertEquals(Assert.java:1407)
-	at stepDefinations.getBatch.gets_status_for_get_batch_with_response_body(getBatch.java:126)
-	at ✽.Gets 200 status for get batch with response body(file:///C:/Users/User/Desktop/Git%20Project_Final/RestAssured/src/test/resources/Features/G_getbatch.feature:24)
-]]>
-</failure>
+<testcase classname="GET Request Program Batch module" name="Get all batches with search string" time="0.391">
 <system-out><![CDATA[
 Given GET Batches Authorized with bearer Token..............................passed
 When Sends HTTP GET batch request with search endpoints.....................passed
-Then Gets 200 status for get batch with response body.......................failed
+Then Gets 200 status for get batch with response body.......................passed
 ]]></system-out>
 </testcase>
-<testcase classname="GET Request Program Batch module" name="Get all batches with search parameter with value" time="0.534">
-<failure type="java.lang.AssertionError" message="Expected status code returned expected [200] but found [404]">
-<![CDATA[java.lang.AssertionError: Expected status code returned expected [200] but found [404]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:1419)
-	at org.testng.Assert.assertEquals(Assert.java:1407)
-	at stepDefinations.getBatch.gets_status_for_get_batch_with_response_body(getBatch.java:126)
-	at ✽.Gets 200 status for get batch with response body(file:///C:/Users/User/Desktop/Git%20Project_Final/RestAssured/src/test/resources/Features/G_getbatch.feature:29)
-]]>
-</failure>
+<testcase classname="GET Request Program Batch module" name="Get all batches with search parameter with value" time="0.596">
 <system-out><![CDATA[
 Given GET Batches Authorized with bearer Token..............................passed
 When Sends HTTP GET batch request with parameter and value..................passed
-Then Gets 200 status for get batch with response body.......................failed
+Then Gets 200 status for get batch with response body.......................passed
 ]]></system-out>
 </testcase>
-<testcase classname="User Module" name="Check if user is able to create a new Admin,Staff &amp; Student with valid endpoint and request body with mandatory fields - Example #1.1" time="0.859">
+<testcase classname="User Module" name="Check if user is able to create a new Admin,Staff &amp; Student with valid endpoint and request body with mandatory fields - Example #1.1" time="0.287">
 <system-out><![CDATA[
 Given User creates POST Request for the LMS with request body "USER" and 1..passed
 When User sends "LMScreateUser" with "Post" Request with endpoint...........passed
 Then User receives 201 Created Status with response body....................passed
 ]]></system-out>
 </testcase>
-<testcase classname="User Module" name="Check if user is able to create a new Admin,Staff &amp; Student with valid endpoint and request body with mandatory fields - Example #1.2" time="0.439">
+<testcase classname="User Module" name="Check if user is able to create a new Admin,Staff &amp; Student with valid endpoint and request body with mandatory fields - Example #1.2" time="0.256">
 <system-out><![CDATA[
 Given User creates POST Request for the LMS with request body "USER" and 2..passed
 When User sends "LMScreateUser" with "Post" Request with endpoint...........passed
 Then User receives 201 Created Status with response body....................passed
 ]]></system-out>
 </testcase>
-<testcase classname="User Module" name="Check if user is able to create a new Admin,Staff &amp; Student with valid endpoint and request body with mandatory fields - Example #1.3" time="1.01">
+<testcase classname="User Module" name="Check if user is able to create a new Admin,Staff &amp; Student with valid endpoint and request body with mandatory fields - Example #1.3" time="0.267">
 <system-out><![CDATA[
 Given User creates POST Request for the LMS with request body "USER" and 3..passed
 When User sends "LMScreateUser" with "Post" Request with endpoint...........passed
 Then User receives 201 Created Status with response body....................passed
 ]]></system-out>
 </testcase>
-<testcase classname="User Module" name="Check if user is able to create a new user with valid endpoint and invalid values in request body with mandatory fields - Example #1.1" time="0.338">
+<testcase classname="User Module" name="Check if user is able to create a new user with valid endpoint and invalid values in request body with mandatory fields - Example #1.1" time="0.297">
 <system-out><![CDATA[
 Given User creates POST request with all fields "New User Admin","BCA","MCA","FirstUser", "Last","linkedin","234353","update05@gmail.com","M", "3435457693","R01","Active","EST","H4-EAD".passed
 When User sends "LMScreateUser" with "Post" Request with endpoint...........passed
 Then User receives 400 Created Status with response body....................passed
 ]]></system-out>
 </testcase>
-<testcase classname="User Module" name="Check if Admin able to create a Admin missing mandatory fields in request body - Example #1.1" time="0.457">
+<testcase classname="User Module" name="Check if Admin able to create a Admin missing mandatory fields in request body - Example #1.1" time="0.23">
 <system-out><![CDATA[
 Given User creates POST request with all fields "New User Admin","BCA","MCA","FirstUser", "Last","www.linkedin.com","234353","update06@gmail.com","M", "9887909761","R01","Active","","H4".passed
 When User sends "LMScreateUser" with "Post" Request with endpoint...........passed
 Then User receives 400 Created Status with response body....................passed
 ]]></system-out>
 </testcase>
-<testcase classname="User Module" name="Check if user is able to get all users" time="0.338">
+<testcase classname="User Module" name="Check if user is able to get all users" time="0.241">
 <system-out><![CDATA[
 Given User creates get request with Authorization...........................passed
 When User sends "LMSgetAllUsers" with "Get" Request with endpoint...........passed
 Then User receives 200 Created Status with response body....................passed
 ]]></system-out>
 </testcase>
-<testcase classname="User Module" name="Check if user is able to get all users" time="0.28">
+<testcase classname="User Module" name="Check if user is able to get all users" time="0.215">
 <system-out><![CDATA[
 Given User creates get request with Authorization...........................passed
 When User sends "LMSgetAllusersWithRols" with "Get" Request with endpoint...passed
 Then User receives 200 Created Status with response body....................passed
 ]]></system-out>
 </testcase>
-<testcase classname="User Module" name="Check if user is able to get the user" time="0.61">
+<testcase classname="User Module" name="Check if user is able to get the user" time="0.228">
 <system-out><![CDATA[
 Given User creates get request with Authorization...........................passed
 When User sends "LMSgetSingleUser" with "Get" Request with endpoint.........passed
 Then User receives 200 Created Status with response body....................passed
 ]]></system-out>
 </testcase>
-<testcase classname="User Module" name="Check if user is able to get the user" time="0.304">
+<testcase classname="User Module" name="Check if user is able to get the user" time="0.353">
 <system-out><![CDATA[
 Given User creates get request with Authorization...........................passed
 When User sends "LMSgetAllRoles" with "Get" Request with endpoint...........passed
 Then User receives 200 Created Status with response body....................passed
 ]]></system-out>
 </testcase>
-<testcase classname="User Module" name="Check if user is able to get the user" time="0.342">
+<testcase classname="User Module" name="Check if user is able to get the user" time="0.25">
 <system-out><![CDATA[
 Given User creates get request with Authorization...........................passed
 When User sends "LMSgetRolestatus" with "Get" Request with endpoint.........passed
 Then User receives 200 Created Status with response body....................passed
 ]]></system-out>
 </testcase>
-<testcase classname="User Module" name="Check if user is able to get the user" time="0.741">
+<testcase classname="User Module" name="Check if user is able to get the user" time="0.219">
 <system-out><![CDATA[
 Given User creates get request with Authorization...........................passed
 When User sends "LMSgetAllactivUsers" with "Get" Request with endpoint......passed
 Then User receives 200 Created Status with response body....................passed
 ]]></system-out>
 </testcase>
-<testcase classname="User Module" name="Check if user is able to get the user" time="0.253">
+<testcase classname="User Module" name="Check if user is able to get the user" time="0.303">
 <system-out><![CDATA[
 Given User creates get request with Authorization...........................passed
 When User sends "LMSgetUsersWithRoleId" with "Get" Request with endpoint....passed
 Then User receives 200 Created Status with response body....................passed
 ]]></system-out>
 </testcase>
-<testcase classname="User Module" name="Check if user is able to get the user" time="0.328">
+<testcase classname="User Module" name="Check if user is able to get the user" time="0.242">
 <system-out><![CDATA[
 Given User creates get request with Authorization...........................passed
 When User sends "LMSgetUsersByRoleIdV2" with "Get" Request with endpoint....passed
 Then User receives 200 Created Status with response body....................passed
 ]]></system-out>
 </testcase>
-<testcase classname="User Module" name="Check if admin is able to update role status of a Admin with valid Admin id - Example #1.1" time="0.403">
+<testcase classname="User Module" name="Check if admin is able to update role status of a Admin with valid Admin id - Example #1.1" time="0.302">
 <system-out><![CDATA[
 Given User creates POST request with all fields "User Updated","BCA","MCA","User Updated", "Last","M","www.linkedin.com", "USA","55","EST","H4-EAD".passed
 When User sends "LMSupdateUser" with "Put" Request with endpoint............passed
 Then User receives 200 Created Status with response body....................passed
 ]]></system-out>
 </testcase>
-<testcase classname="User Module" name="Check if admin is able to update role status of a Admin with valid Admin id - Example #1.1" time="0.398">
+<testcase classname="User Module" name="Check if admin is able to update role status of a Admin with valid Admin id - Example #1.1" time="0.242">
 <system-out><![CDATA[
 Given User creates PUT request with all fields "R03","Inactive".............passed
 When User sends "LMSupdateUserStatus" with "Put" Request with endpoint......passed
 Then User receives 200 Created Status with response body....................passed
 ]]></system-out>
 </testcase>
-<testcase classname="User Module" name="Check if admin is able to update role ID - Example #1.1" time="0.286">
+<testcase classname="User Module" name="Check if admin is able to update role ID - Example #1.1" time="0.252">
 <system-out><![CDATA[
 Given User creates PUT request with all fields "R01"........................passed
 When User sends "LMSupdateUserRoleId" with "Put" Request with endpoint......passed
 Then User receives 200 Created Status with response body....................passed
 ]]></system-out>
 </testcase>
-<testcase classname="User Module" name="Check if admin is able to update UserLoginStatus - Example #1.1" time="0.334">
+<testcase classname="User Module" name="Check if admin is able to update UserLoginStatus - Example #1.1" time="0.239">
 <system-out><![CDATA[
 Given User creates PUT request with all fields "Active","123","R01","Active","stest1234@gmail.com".passed
 When User sends "LMSupdateUserLoginStatus" with "Put" Request with endpoint.passed
 Then User receives 200 Created Status with response body....................passed
 ]]></system-out>
 </testcase>
-<testcase classname="User Module" name="Check if admin is able to update UserRoleProgramBatchStatus" time="0.331">
+<testcase classname="User Module" name="Check if admin is able to update UserRoleProgramBatchStatus" time="0.266">
 <system-out><![CDATA[
 Given User creates PUT request with all fields..............................passed
 When User sends "LMSupdateUserRoleProgramBatchStatus" with "Put" Request with endpoint.passed
 Then User receives 200 Created Status with response body....................passed
 ]]></system-out>
 </testcase>
-<testcase classname="User Module" name="Check if Admin able to delete a Staff with valid Admin Id" time="0.263">
+<testcase classname="User Module" name="Check if Admin able to delete a Staff with valid Admin Id" time="0.229">
 <failure type="java.lang.NullPointerException" message="Cannot invoke &quot;io.restassured.specification.RequestSpecification.when()&quot; because &quot;stepDefinations.User.res7&quot; is null">
 <![CDATA[java.lang.NullPointerException: Cannot invoke "io.restassured.specification.RequestSpecification.when()" because "stepDefinations.User.res7" is null
 	at stepDefinations.User.user_sends_with_request_with_endpoint(User.java:191)
-	at ✽.User sends "LMSdeleteUser" with "Delete" Request with endpoint(file:///C:/Users/User/Desktop/Git%20Project_Final/RestAssured/src/test/resources/Features/H_user.feature:167)
+	at ✽.User sends "LMSdeleteUser" with "Delete" Request with endpoint(file:///Users/sathishkumar/git/RestAssured/src/test/resources/Features/H_user.feature:167)
 ]]>
 </failure>
 <system-out><![CDATA[
@@ -1006,19 +821,19 @@ When User sends "LMSdeleteUser" with "Delete" Request with endpoint.........fail
 Then User receives 200 Created Status with response body....................skipped
 ]]></system-out>
 </testcase>
-<testcase classname="User Module" name="Check if Admin able to delete a Student with valid Admin Id" time="0.533">
+<testcase classname="User Module" name="Check if Admin able to delete a Student with valid Admin Id" time="0.522">
 <system-out><![CDATA[
 Given User creates post Request to delete Student details...................passed
 When User sends "LMSdeleteUser" with "Delete" Request with endpoint.........passed
 Then User receives 200 Created Status with response body....................passed
 ]]></system-out>
 </testcase>
-<testcase classname="UserRoleProgramBatchMap Module" name="Check if admin is able to retreive all admin with assigned program batches" time="0.634">
+<testcase classname="UserRoleProgramBatchMap Module" name="Check if admin is able to retreive all admin with assigned program batches" time="0.26">
 <failure type="java.lang.NullPointerException" message="Cannot invoke &quot;Object.toString()&quot; because the return value of &quot;io.restassured.path.json.JsonPath.get(String)&quot; is null">
 <![CDATA[java.lang.NullPointerException: Cannot invoke "Object.toString()" because the return value of "io.restassured.path.json.JsonPath.get(String)" is null
 	at Utilities.ReusableMethod.getJsonPath(ReusableMethod.java:71)
 	at stepDefinations.UseRoleProgramBatchMap.user_role_program_batch_map_receives_created_status_with_response_body(UseRoleProgramBatchMap.java:73)
-	at ✽.UserRoleProgramBatchMap receives 200 Created Status with response body(file:///C:/Users/User/Desktop/Git%20Project_Final/RestAssured/src/test/resources/Features/I_UserRoleProgramBatchMap.feature:12)
+	at ✽.UserRoleProgramBatchMap receives 200 Created Status with response body(file:///Users/sathishkumar/git/RestAssured/src/test/resources/Features/I_UserRoleProgramBatchMap.feature:12)
 ]]>
 </failure>
 <system-out><![CDATA[
@@ -1027,12 +842,12 @@ When UserRoleProgramBatchMap sends "LMSgetProgramBatche" with "Get" Request with
 Then UserRoleProgramBatchMap receives 200 Created Status with response body.failed
 ]]></system-out>
 </testcase>
-<testcase classname="UserRoleProgramBatchMap Module" name="Check if admin is able to retreive assigned program batches for valid AdminId" time="0.309">
+<testcase classname="UserRoleProgramBatchMap Module" name="Check if admin is able to retreive assigned program batches for valid AdminId" time="0.272">
 <failure type="java.lang.NullPointerException" message="Cannot invoke &quot;Object.toString()&quot; because the return value of &quot;io.restassured.path.json.JsonPath.get(String)&quot; is null">
 <![CDATA[java.lang.NullPointerException: Cannot invoke "Object.toString()" because the return value of "io.restassured.path.json.JsonPath.get(String)" is null
 	at Utilities.ReusableMethod.getJsonPath(ReusableMethod.java:71)
 	at stepDefinations.UseRoleProgramBatchMap.user_role_program_batch_map_receives_created_status_with_response_body(UseRoleProgramBatchMap.java:73)
-	at ✽.UserRoleProgramBatchMap receives 200 Created Status with response body(file:///C:/Users/User/Desktop/Git%20Project_Final/RestAssured/src/test/resources/Features/I_UserRoleProgramBatchMap.feature:17)
+	at ✽.UserRoleProgramBatchMap receives 200 Created Status with response body(file:///Users/sathishkumar/git/RestAssured/src/test/resources/Features/I_UserRoleProgramBatchMap.feature:17)
 ]]>
 </failure>
 <system-out><![CDATA[
@@ -1041,12 +856,12 @@ When UserRoleProgramBatchMap sends "LMSgetUserProgramBatch" with "Get" Request w
 Then UserRoleProgramBatchMap receives 200 Created Status with response body.failed
 ]]></system-out>
 </testcase>
-<testcase classname="UserRoleProgramBatchMap Module" name="Check if admin is able to retreive assigned program batches for Invalid AdminId" time="0.351">
+<testcase classname="UserRoleProgramBatchMap Module" name="Check if admin is able to retreive assigned program batches for Invalid AdminId" time="0.294">
 <failure type="java.lang.NullPointerException" message="Cannot invoke &quot;Object.toString()&quot; because the return value of &quot;io.restassured.path.json.JsonPath.get(String)&quot; is null">
 <![CDATA[java.lang.NullPointerException: Cannot invoke "Object.toString()" because the return value of "io.restassured.path.json.JsonPath.get(String)" is null
 	at Utilities.ReusableMethod.getJsonPath(ReusableMethod.java:71)
 	at stepDefinations.UseRoleProgramBatchMap.user_role_program_batch_map_receives_created_status_with_response_body(UseRoleProgramBatchMap.java:73)
-	at ✽.UserRoleProgramBatchMap receives 404 Created Status with response body(file:///C:/Users/User/Desktop/Git%20Project_Final/RestAssured/src/test/resources/Features/I_UserRoleProgramBatchMap.feature:23)
+	at ✽.UserRoleProgramBatchMap receives 404 Created Status with response body(file:///Users/sathishkumar/git/RestAssured/src/test/resources/Features/I_UserRoleProgramBatchMap.feature:23)
 ]]>
 </failure>
 <system-out><![CDATA[
@@ -1055,12 +870,12 @@ When UserRoleProgramBatchMap sends "LMSgetUserProgramBatchInvalid" with "Get" Re
 Then UserRoleProgramBatchMap receives 404 Created Status with response body.failed
 ]]></system-out>
 </testcase>
-<testcase classname="UserRoleProgramBatchMap Module" name="Check if admin is able to delete the program batch for a Admin" time="0.367">
+<testcase classname="UserRoleProgramBatchMap Module" name="Check if admin is able to delete the program batch for a Admin" time="0.233">
 <failure type="java.lang.NullPointerException" message="Cannot invoke &quot;Object.toString()&quot; because the return value of &quot;io.restassured.path.json.JsonPath.get(String)&quot; is null">
 <![CDATA[java.lang.NullPointerException: Cannot invoke "Object.toString()" because the return value of "io.restassured.path.json.JsonPath.get(String)" is null
 	at Utilities.ReusableMethod.getJsonPath(ReusableMethod.java:71)
 	at stepDefinations.UseRoleProgramBatchMap.user_role_program_batch_map_receives_created_status_with_response_body(UseRoleProgramBatchMap.java:73)
-	at ✽.UserRoleProgramBatchMap receives 200 Created Status with response body(file:///C:/Users/User/Desktop/Git%20Project_Final/RestAssured/src/test/resources/Features/I_UserRoleProgramBatchMap.feature:30)
+	at ✽.UserRoleProgramBatchMap receives 200 Created Status with response body(file:///Users/sathishkumar/git/RestAssured/src/test/resources/Features/I_UserRoleProgramBatchMap.feature:30)
 ]]>
 </failure>
 <system-out><![CDATA[
@@ -1069,112 +884,18 @@ When UserRoleProgramBatchMap sends "LMSDeleteProgramBatche" with "Delete" Reques
 Then UserRoleProgramBatchMap receives 200 Created Status with response body.failed
 ]]></system-out>
 </testcase>
-<testcase classname="UserRoleProgramBatchMap Module" name="Check if UserRoleProgramBatchMap is able to delete the program batch for invalid Admin" time="0.355">
+<testcase classname="UserRoleProgramBatchMap Module" name="Check if UserRoleProgramBatchMap is able to delete the program batch for invalid Admin" time="0.256">
 <failure type="java.lang.NullPointerException" message="Cannot invoke &quot;Object.toString()&quot; because the return value of &quot;io.restassured.path.json.JsonPath.get(String)&quot; is null">
 <![CDATA[java.lang.NullPointerException: Cannot invoke "Object.toString()" because the return value of "io.restassured.path.json.JsonPath.get(String)" is null
 	at Utilities.ReusableMethod.getJsonPath(ReusableMethod.java:71)
 	at stepDefinations.UseRoleProgramBatchMap.user_role_program_batch_map_receives_created_status_with_response_body(UseRoleProgramBatchMap.java:73)
-	at ✽.UserRoleProgramBatchMap receives 404 Created Status with response body(file:///C:/Users/User/Desktop/Git%20Project_Final/RestAssured/src/test/resources/Features/I_UserRoleProgramBatchMap.feature:37)
+	at ✽.UserRoleProgramBatchMap receives 404 Created Status with response body(file:///Users/sathishkumar/git/RestAssured/src/test/resources/Features/I_UserRoleProgramBatchMap.feature:37)
 ]]>
 </failure>
 <system-out><![CDATA[
 Given UserRoleProgramBatchMap creates delete request with Authorization.....passed
 When UserRoleProgramBatchMap sends "LMSDeleteProgramBatcheInvalid" with "Delete" Request with endpoint.passed
 Then UserRoleProgramBatchMap receives 404 Created Status with response body.failed
-]]></system-out>
-</testcase>
-<testcase classname="Get Request for ProgramBatch Module" name="Check if admin able to delete a Batch with valid Batch ID - Example #1.1" time="0.395">
-<failure type="java.lang.AssertionError" message="1 expectation failed.
-Expected status code &lt;200&gt; but was &lt;404&gt;.
-">
-<![CDATA[java.lang.AssertionError: 1 expectation failed.
-Expected status code <200> but was <404>.
-
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
-	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
-	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
-	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
-	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
-	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
-	at jdk.internal.reflect.GeneratedMethodAccessor172.invoke(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
-	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
-	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
-	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
-	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
-	at stepDefinations.Delete_BatchId.admin_receives_ok_status_with_message(Delete_BatchId.java:40)
-	at ✽.Admin receives 200 Ok status with message(file:///C:/Users/User/Desktop/Git%20Project_Final/RestAssured/src/test/resources/Features/J_DeleteBatchId.feature:9)
-]]>
-</failure>
-<system-out><![CDATA[
-Given Admin creates DELETE Request with valid BatchId.......................passed
-When Admin sends HTTPS Request  with endpoint and batchId...................passed
-Then Admin receives 200 Ok status with message..............................failed
-]]></system-out>
-</testcase>
-<testcase classname="Get Request for ProgramBatch Module" name="Check if admin able to delete a Batch with invalid endpoint - Example #1.1" time="0.276">
-<failure type="java.lang.AssertionError" message="1 expectation failed.
-Expected status code &lt;400&gt; but was &lt;404&gt;.
-">
-<![CDATA[java.lang.AssertionError: 1 expectation failed.
-Expected status code <400> but was <404>.
-
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
-	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
-	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
-	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
-	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
-	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
-	at jdk.internal.reflect.GeneratedMethodAccessor172.invoke(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
-	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
-	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
-	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
-	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
-	at stepDefinations.Delete_BatchId.admin_receives_not_found(Delete_BatchId.java:67)
-	at ✽.Admin receives 400 not found(file:///C:/Users/User/Desktop/Git%20Project_Final/RestAssured/src/test/resources/Features/J_DeleteBatchId.feature:19)
-]]>
-</failure>
-<system-out><![CDATA[
-Given Admin creates DELETE Request with valid BatchId and invalid enpoint...passed
-When Admin sends HTTPS Request  with invalid endpoint and batchId...........passed
-Then Admin receives 400 not found...........................................failed
-]]></system-out>
-</testcase>
-<testcase classname="Get Request for ProgramBatch Module" name="Check if admin able to delete a Batch with invalid Batch ID - Example #1.1" time="0.275">
-<system-out><![CDATA[
-Given Admin creates DELETE Request with invalid BatchId.....................passed
-When Admin sends HTTPS Request  with endpoint and invalid batchId...........passed
-Then Admin receives 404 Not Found Status with message and boolean success details.passed
-]]></system-out>
-</testcase>
-<testcase classname="Get Request for ProgramBatch Module" name="Check if admin able to delete a Batch without authorization - Example #1.1" time="0.412">
-<system-out><![CDATA[
-Given Admin creates DELETE Request with valid BatchId and unAuth............passed
-When Admin sends HTTPS Request  with endpoint and without authorization.....passed
-Then Admin receives 401 and message  "Unauthorized".........................passed
 ]]></system-out>
 </testcase>
 </testsuite>

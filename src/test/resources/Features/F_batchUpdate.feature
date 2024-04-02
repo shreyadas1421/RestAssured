@@ -1,4 +1,4 @@
-@tag
+@batch
 Feature: Batch Update
 
   @get_batch

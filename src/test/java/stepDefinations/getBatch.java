@@ -40,8 +40,8 @@ public void get_batches_authorized_with_bearer_token() throws IOException {
 public void sends_http_get_batch_request_with_valid_endpoints() throws IOException {
 	geta=given()
 			 .header("Authorization","Bearer "+AppConfig.TOKEN)
-			 .spec(reusableSpecBuilder())
-			 .get("/batches")
+			 //.spec(reusableSpecBuilder())
+			 .get("https://lms-marchapi-hackathon-a258d2bbd43b.herokuapp.com/lms/batches")
 		     .then().extract()
 			 .response();
    
@@ -89,8 +89,8 @@ public void gets_status_code_for_get_batch_with_unauthorised_message(Integer cod
 public void sends_http_get_batch_request_with_invalid_endpoints() throws IOException {
 	getb=given()
 		     .header("Authorization","Bearer "+AppConfig.TOKEN)
-			 .spec(reusableSpecBuilder())
-			 .get("/batch")
+			 //.spec(reusableSpecBuilder())
+			 .get("https://lms-marchapi-hackathon-a258d2bbd43b.herokuapp.com/lms/batch")
 			 .then().extract()
 			 .response();
    
@@ -112,8 +112,8 @@ public void gets_status_for_get_batch_with_error_message_not_found(Integer code)
 public void sends_http_get_batch_request_with_search_endpoints() throws IOException {
 	getc=given()
 		     .header("Authorization","Bearer "+AppConfig.TOKEN)
-			 .spec(reusableSpecBuilder())
-			 .get("/batches?search")
+			 //.spec(reusableSpecBuilder())
+			 .get("https://lms-marchapi-hackathon-a258d2bbd43b.herokuapp.com/lms/batches?search")
 			 .then().extract()
 			 .response();
    
@@ -137,8 +137,8 @@ public void gets_status_for_get_batch_with_response_body(Integer code) {
 public void sends_http_get_batch_request_with_parameter_and_value() throws IOException {
 	getc=given()
 		     .header("Authorization","Bearer "+AppConfig.TOKEN)
-			 .spec(reusableSpecBuilder())
-			 .get("/batches?batches=400")
+			 //.spec(reusableSpecBuilder())
+			 .get("https://lms-marchapi-hackathon-a258d2bbd43b.herokuapp.com/lms/batches?batches=400")
 			 .then().extract()
 			 .response();
 	t.logout();
